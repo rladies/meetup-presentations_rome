@@ -23,7 +23,7 @@ Here you will find presentations of our meetups ordered by year and month, [see 
 
 ## Community mission
 
-R-Ladies Rome is an on-line community learning environmet for all of you who'd like to learn more about how to use R and RStudio for data analysis, visualization and modeling. We promote diversity allowing interaction among communities of different race, gender and nationality as well as spoken languages.  
+R-Ladies Rome is an online community learning environment for all of you who'd like to learn more about how to use R and RStudio for data analysis, visualization, and modeling. We promote diversity allowing interaction among communities of different races, gender, and nationality as well as spoken languages.  
 
 We are members of R-ladies Global find us on the [dashboard](https://gqueiroz.shinyapps.io/rshinylady/), and here is [how you can get involved](https://rladies.org/about-us/).
 
