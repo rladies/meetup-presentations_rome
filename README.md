@@ -13,7 +13,7 @@ Watch videos on the YouTube [RLadiesGlobal playlists R-Ladies Rome](https://www.
 
 ## Overview
 
-Here you will find presentations of our meetups ordered by year and month, [see 2022 events](https://github.com/rladies/meetup-presentations_rome/tree/master/2022).
+Here you will find presentations of our meetups ordered by year and month, [see 2022 events](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2022).
 
 ### Volunteers
 
