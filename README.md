@@ -9,8 +9,6 @@ Find our events on meetup.com [hhttps://www.meetup.com/rladies-rome/](https://ww
 
 To share the location of this GitHub repo please use [https://tinyurl.com/rladiesRome](https://tinyurl.com/rladiesRome)
 
-Join the conversation on Slack please use [this invitation](https://join.slack.com/t/r-ladiesrome/shared_invite/zt-8ymmwijo-nKR2~U7aYjMn0sFdQspH1w)
-
 Watch videos on the YouTube [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
 
 ## Overview
