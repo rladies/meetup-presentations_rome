@@ -7,7 +7,7 @@ For news follow us on Twitter [https://twitter.com/RLadiesRome](https://twitter.
 
 Find our events on meetup.com [hhttps://www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/)
 
-To share the location of this GitHub repo please use [https://tinyurl.com/rladiesRome](https://tinyurl.com/rladiesRome)
+To share the location of this GitHub repo please use [https://github.com/rladies/meetup-presentations_rome](https://github.com/rladies/meetup-presentations_rome)
 
 Watch videos on the YouTube [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
 
