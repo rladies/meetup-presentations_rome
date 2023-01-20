@@ -1,5 +1,4 @@
 # RLadies Rome Chapter volunteers
-We would like to express our thanks to the organisers and helpers that have made events possible through the time.
 
 If you are interested in helping out please reach out to us, and we will onboard you as a organiser or helper! rome@rladies.org
 
