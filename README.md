@@ -6,19 +6,18 @@
 
 For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
-Find our events on meetup.com [https://www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/)
+Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
 
 To share the location of this GitHub repo please use <https://github.com/rladies/meetup-presentations_rome>
 
-We also have a LinkedIn page: https://www.linkedin.com/company/r-ladies-rome
-
+We also have a LinkedIn page: <https://www.linkedin.com/company/r-ladies-rome>
 
 Watch videos on the YouTube:
 
-- [R-Ladies Rome](https://www.youtube.com/@rladiesrome)
-- [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
+-   [R-Ladies Rome](https://www.youtube.com/@rladiesrome)
+-   [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
 
-Email: rome@rladies.org
+Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
 
 ## Overview
 
