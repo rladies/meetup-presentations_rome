@@ -4,6 +4,8 @@
 
 This repository contains all about the R-Ladies Rome talks taken throughout the Year.
 
+See the intro slides: <https://rpubs.com/fgazzelloni/rladiesrome_intro>
+
 | Date       | Speaker                   | Event                                                                       |
 |------------|---------------------------|-----------------------------------------------------------------------------|
 | 2023/01/24 | **Julia Silge**           | [MLOps with vetiver](https://www.meetup.com/rladies-rome/events/289517054/) |

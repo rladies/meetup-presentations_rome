@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+_extensions
+intro.html
+intro.qmd
+images
+rsconnect
