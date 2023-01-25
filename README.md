@@ -6,7 +6,7 @@
 
 ## Overview
 
-[The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
+🔭 [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
 
 
