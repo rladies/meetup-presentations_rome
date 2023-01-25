@@ -10,7 +10,7 @@
 
 🔭 [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
-To be involved, or suggest a topic talk Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
+To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
 
 For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
