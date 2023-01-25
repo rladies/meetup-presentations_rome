@@ -8,8 +8,6 @@
 
 🔭 [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
-
-
 For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
 Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
@@ -24,8 +22,6 @@ Watch videos on the YouTube:
 -   [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
 
 Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
-
-
 
 ### Volunteers
 

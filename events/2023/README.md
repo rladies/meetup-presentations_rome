@@ -6,10 +6,10 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 See the intro slides: <https://rpubs.com/fgazzelloni/rladiesrome_intro>
 
-| Date       | Speaker                   | Event                                                                       | Material                                                                             | Recording                                                                                                 |
-|-------------|-------------|--------------------|-------------|-------------|
-| 2023/01/24 | **Julia Silge**           | [MLOps with vetiver](https://www.meetup.com/rladies-rome/events/289517054/) | [mlops-r-ladies-rome presentation](https://juliasilge.github.io/mlops-r-ladies-rome) | [R-Ladies Rome (English) - MLOps with Vetiver - Julia Silge](https://www.youtube.com/watch?v=PPB-iG8SexE) |
-| 2023/02/13 | **Mine Cetinkaya-Rundel** | [RLadies Quarto](https://www.meetup.com/rladies-rome/events/290673316/)     |                                                                                      |                                                                                                           |
-|            |                           |                                                                             |                                                                                      |                                                                                                           |
+| Date        | Speaker                                           | Event                                                                       | Material                                                                             | Recording                                                                                                 |
+|--------------------------------------------|----------------------------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------------------------------------|
+| 2023/01/24  | [**Julia Silge**](https://juliasilge.com/)        | [MLOps with vetiver](https://www.meetup.com/rladies-rome/events/289517054/) | [mlops-r-ladies-rome presentation](https://juliasilge.github.io/mlops-r-ladies-rome) | [R-Ladies Rome (English) - MLOps with Vetiver - Julia Silge](https://www.youtube.com/watch?v=PPB-iG8SexE) |
+| 2023/02/13  | [**Mine Cetinkaya-Rundel**](https://mine-cr.com/) | [RLadies Quarto](https://www.meetup.com/rladies-rome/events/290673316/)     |                                                                                      |                                                                                                           |
+| 2023/03/... | **Isabella Velasquez**                            | TBD                                                                         |                                                                                      |                                                                                                           |
 
 : 2023 Events
