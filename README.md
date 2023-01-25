@@ -4,6 +4,12 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/RLadiesRome.svg?style=social)](https://twitter.com/RLadiesRome)
 
+## Overview
+
+[The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
+
+
+
 For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
 Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
@@ -19,9 +25,7 @@ Watch videos on the YouTube:
 
 Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
 
-## Overview
 
-Here you will find presentations of our meetups ordered by year and month, [see 2023 events](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023).
 
 ### Volunteers
 
