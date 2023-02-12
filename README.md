@@ -8,9 +8,9 @@
 
 > `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
 
-🔭 [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
+## 🔭  [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
-To be involved, or suggest a topic's talk Email: [rome@rladies.org](mailto:rome@rladies.org)
+To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
 
 For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
