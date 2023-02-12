@@ -4,7 +4,7 @@
 
 This repository contains all about the R-Ladies Rome talks taken throughout the Year.
 
-See the intro slides: <https://rpubs.com/fgazzelloni/rladiesrome_intro>
+See the intro slides: <https://rpubs.com/fgazzelloni/rladiesrome_intro_february>
 
 | Date        | Speaker                                           | Event                                                                       | Material                                                                             | Recording                                                                                                 |
 |--------------------------------------------|----------------------------------------------------------|-------------------------------------------------|------------------------------------------|------------------------------------------------------------------|
