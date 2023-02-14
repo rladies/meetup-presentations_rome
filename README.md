@@ -8,19 +8,19 @@
 
 > `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
 
-## 🔭  [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
+## 🔭 Click here: [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
-To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
+-   To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
 
-For news follow us on Twitter <https://twitter.com/RLadiesRome>
+-   For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
-Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
+-   Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
 
-To share the location of this GitHub repo please use <https://github.com/rladies/meetup-presentations_rome>
+-   To share the location of this GitHub repo please use <https://github.com/rladies/meetup-presentations_rome>
 
-We also have a LinkedIn page: <https://www.linkedin.com/company/r-ladies-rome>
+-   We also have a LinkedIn page: <https://www.linkedin.com/company/r-ladies-rome>
 
-Watch videos on the YouTube:
+### Watch videos on the YouTube:
 
 -   [R-Ladies Rome](https://www.youtube.com/@rladiesrome)
 -   [RLadiesGlobal playlists R-Ladies Rome](https://www.youtube.com/c/RLadiesGlobal/playlists)
