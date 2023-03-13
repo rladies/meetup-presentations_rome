@@ -4,8 +4,6 @@
 
 This repository contains all about the R-Ladies Rome talks taken throughout the Year.
 
-See the intro slides: [https://rpubs.com/fgazzelloni/rladiesrome_intro_february](https://fgazzelloni.quarto.pub/welcome-to-r-ladies-rome-feb23/){.uri}
-
 | Date        | Speaker                                                      | Event                                                                                | Material                                                                             | Recording                                                                                                       | Intro                                                                                      |
 |------------|------------|------------|------------|------------|------------|
 | 2023/01/24  | [**Julia Silge**](https://juliasilge.com/)                   | [MLOps with vetiver](https://www.meetup.com/rladies-rome/events/289517054/)          | [mlops-r-ladies-rome presentation](https://juliasilge.github.io/mlops-r-ladies-rome) | [R-Ladies Rome (English) - MLOps with Vetiver - Julia Silge](https://www.youtube.com/watch?v=PPB-iG8SexE)       | [Intro presentation-Jan23](https://fgazzelloni.quarto.pub/welcome-to-r-ladies-rome/)       |
