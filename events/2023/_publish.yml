@@ -6,3 +6,7 @@
   quarto-pub:
     - id: e7e73172-f48e-4ac9-bfb0-cbdaa7e0a6ef
       url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-2122'
+- source: intro_03.qmd
+  quarto-pub:
+    - id: 3e78c361-1fc1-4a69-a94a-4f5bd9108463
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-16fc'
