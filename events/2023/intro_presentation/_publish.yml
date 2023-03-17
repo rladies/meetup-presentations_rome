@@ -1,0 +1,4 @@
+- source: intro_03.qmd
+  quarto-pub:
+    - id: c27f392a-bc72-43d1-817e-8a094cc1e887
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-0d06'

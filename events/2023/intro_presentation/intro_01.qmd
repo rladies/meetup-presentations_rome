@@ -1,0 +1,93 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "MLOps with Vetiver<br><br>January 24, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+---
+
+# Materials for tonight
+
+-   All materials will be shared during the presentation, the **MLOps with Vetiver** vignette can be found here: <https://vetiver.rstudio.com/>
+-   Have [R](https://cran.r-project.org/) and the latest release of [RStudio (version: 2022.12.0+353)](https://posit.co/download/rstudio-desktop/) installed on your computer
+
+```{r eval=FALSE,echo=TRUE}
+mlops_packages <- c("tidymodels","vetiver")
+install.packages(mlops_packages)
+```
+
+::: notes
+Welcome Everyone! This is the official launch of the R-Ladies Rome chapter. I am Federica Gazzelloni one of the organizers of the chapter along with Nina Deliu here. We are joined by Julia Silge, who will be the speaker tonight.
+
+Benvenuti! Questo è il primo evento per questo gruppo RLadies Rome. Io sono FG una delle organizzatrici insieme a ND. Siamo in compagnia di JS, la nostra relatrice per questa sera. Tutto il materiale verrà condiviso durante la presentazione se volete potete dare un'occhiata alla documentazione relativa a Vetiver, il pacchetto di cui parleremo stasera.
+:::
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 206 chapters and more than 93,000 members globally. For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="60%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+## R-Ladies Rome {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
+
+`2023 fall schedule`
+
+-   `January`: MLOps with Vetiver, speaker [Julia Silge](https://juliasilge.com/)
+-   `February`: RLadies Quarto, speaker [Mine Çetinkaya-Rundel](https://mine-cr.com/)
+-   `March`: to be determined
+-   ...
+
+### Organizers and Volunteers
+
+`Founder` of the chapter is [Claudia Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is also a Co-founder of `R-Ladies Global`<br> `Organizer` of the chapter is [Federica Gazzelloni](https://federicagazzelloni.netlify.app)<br> `Co-Organizer` of the chapter is [Nina Deliu](https://web.uniroma1.it/memotef/users/deliu-nina)<br>
+
+<br>
+
+> **Would you like to be involved?**<br>**Would you like to propose a talk, or discuss about something in particular?**
+
+<br>
+
+Get in touch here: [rome\@rladies.org](rome@rladies.org)
+
+Twitter: [\@rladiesrome](https://twitter.com/RLadiesRome)
+
+GitHub: [meetup-presentations_rome](https://github.com/rladies/meetup-presentations_rome)
+
+LinkedIn: [\@R-LadiesRome](https://www.linkedin.com/company/r-ladies-rome)
+:::
+
+# Disclaimer {background-color="#562457"}
+
+All `R-Ladies Rome` talks will be recorded and posted on [Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Feel free to turn off your cameras if you do not want to be recorded
+-   Please make sure to turn off your microphone during the talk
+-   Please consider any pop-ups (audio/video) that are not related to the talk to be excluded from your machine during the talk.
+-   Feel free to use the chat to ask questions
+
+<https://rladies.org/code-of-conduct/>
+
+# Tonight presentation {.smaller}
+
+Tonight speaker is **Julia Silge**, for those of you who do not know about her...
+
+Julia is a data scientist and software engineer at **Posit PBC** where she works on open source machine learning tools. She holds a PhD in astrophysics and has worked as a data scientist in tech and the nonprofit sector, as well as a technical advisory committee member for the US Bureau of Labor Statistics. She is an author, an international keynote speaker, and a real-world practitioner focusing on data analysis and machine learning. Julia loves text analysis, making beautiful charts, and communicating about technical topics with diverse audiences.
+
+In this meetup, we will be learning what **Machine learning operations (MLOps)** is, what principles can be used to create a practical MLOps strategy, and what kinds of tasks and components are involved.
+
+At the end of the meetup we will be hosting a `Q&A session`.

@@ -2,9 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-_extensions
-events/2023/intro*.html
-events/2023/intro*.qmd
+events/2023/intro_presentations
 images
 events/2023/rsconnect
 events/2023/_extensions
