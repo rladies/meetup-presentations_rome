@@ -56,7 +56,7 @@ thrilled to have you all here tonight. We are also delighted to be
 joined by ***`Isabella Velásquez`***, who will be our esteemed speaker
 for the evening.\
 \
-Benvenuti! Questo è il secondo evento per questo gruppo RLadies Rome. Io
+Benvenuti! Questo è il terzo evento per questo gruppo RLadies Rome. Io
 sono Federica Gazzelloni una delle organizzatrici. Siamo in compagnia di
 **Isabella Velásquez**, la nostra relatrice per questa sera. Tutto il
 materiale verrà condiviso durante la presentazione se volete potete dare
@@ -115,7 +115,7 @@ We expect more co-organizers to join us soon.
 ### 2023 fall schedule
 
 | When       | Event                                                                                                                | Speaker                                                                                                                             |
-|------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+|--------------|---------------------------|-------------------------------|
 | `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                                                              |
 | `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                                                       |
 | `March`    | What's new in the tidyverse                                                                                          | [Isabella Velásquez](https://ivelasq.rbind.io/about.html)                                                                           |
