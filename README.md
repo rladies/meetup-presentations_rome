@@ -1,6 +1,6 @@
 # Welcome to R Ladies Rome
 
-![](https://secure.meetupstatic.com/photos/event/a/9/b/f/highres_501943455.jpeg)
+[![R-Ladies Rome logo](https://secure.meetupstatic.com/photos/event/7/c/7/0/highres_512251856.webp)](https://www.meetup.com/rladies-rome/)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/RLadiesRome.svg?style=social)](https://twitter.com/RLadiesRome)
 
