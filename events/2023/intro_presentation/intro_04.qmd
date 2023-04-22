@@ -114,7 +114,7 @@ We expect more co-organizers to join us soon.
 
 <br>
 
-### 2023 fall schedule
+### Rome 2023 fall schedule
 
 | When       | Event                                                                                                                | Speaker                                                                                         |
 |------------------|--------------------------|----------------------------|
@@ -128,10 +128,25 @@ We expect more co-organizers to join us soon.
 
 ### R-Ladies NYC
 
-::: {style="color: #88398A"}
+> `R-Ladies NYC` is a local chapter of `R-Ladies Global` dedicated to promoting gender diversity in the R language community.
+We are open to all members with an interest in coding, particularly R programming. We are focused on increasing the representation of women and gender minorities in the global R community through meetups, mentorship, and collaborative learning and support.
 
-:::
+Organizers and Volunteers:
 
+`Founder` of the chapter is `Soumya Kalra`
+
+`Organizer` of the chapter is `Dorota Rizik`
+
+`Co-Organizers` are `Ayanthi Gunawardana`, `Kristin Akey`, `Mei Guan`, `Jacqueline Buros`, and `Clara Wang`.
+
+
+### NYC 2023 fall schedule
+
+
+We have two in-person events coming up! Details will be posted on our Meetup page: [https://www.meetup.com/rladies-newyork/](https://www.meetup.com/rladies-newyork/)
+
+- In May, we are planning a `"code-llaboration"` meetup at a café NYC. Come and spend some time working on personal projects with us.
+- In June we are planning our `Summer Social` to meet fellow R-Ladies. It's always a blast. 
 
 
 ### News
