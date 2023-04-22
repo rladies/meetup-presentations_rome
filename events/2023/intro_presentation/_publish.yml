@@ -2,3 +2,7 @@
   quarto-pub:
     - id: c27f392a-bc72-43d1-817e-8a094cc1e887
       url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-mar23'
+- source: intro_04.qmd
+  quarto-pub:
+    - id: b40150d3-ba80-44c6-a287-e32507f35b3b
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-apr23'
