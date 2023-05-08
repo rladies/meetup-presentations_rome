@@ -22,7 +22,9 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 | 2023/06/12 | **Simina Boca**                                                                                 |                                                                                       |                                                                                                |                                                                                                                                 |                                                                                            |
 | 2023/06/30 | Laura Kahn                                                                                      |                                                                                       |                                                                                                |                                                                                                                                 |                                                                                            |
 
-: 2023 Events - To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
+: 2023 Events 
+
+- To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
 
 -   For news follow us on Twitter <https://twitter.com/RLadiesRome>
 
