@@ -1,7 +1,5 @@
-# Welcome to R Ladies Rome
-
-[![R-Ladies Rome logo](organisersKit/logo/logo.png)](https//www.meetup.com/rladies-rome/)
-
+# Welcome to R Ladies Rome<img src="organisersKit/logo/logo.png" align="right" alt="R Ladies Rome" width="300" height="300">
+  
 [![Twitter Follow](https://img.shields.io/twitter/follow/RLadiesRome.svg?style=social)](https://twitter.com/RLadiesRome)
 
 ## Overview
