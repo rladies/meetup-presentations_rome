@@ -1,9 +1,3 @@
----
-output: 
-  html_document: 
-    self_contained: no
----
-
 # Welcome to R Ladies Rome
 
 [![R-Ladies Rome logo](organisersKit/logo/logo.png)](https//www.meetup.com/rladies-rome/)
