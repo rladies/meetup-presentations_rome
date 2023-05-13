@@ -1,3 +1,8 @@
+---
+output: 
+  html_document: 
+    theme: journal
+---
 # Welcome to R Ladies Rome
 
 [![R-Ladies Rome logo](organisersKit/logo/logo.png)](https//www.meetup.com/rladies-rome/)
