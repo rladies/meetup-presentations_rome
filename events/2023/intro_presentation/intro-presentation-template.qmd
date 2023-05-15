@@ -1,0 +1,158 @@
+---
+title: "Welcome to<br>R-Ladies Rome"
+subtitle: "event name<br><br>date"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+[Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Feel free to turn off your cameras, if you do not want to be recorded
+-   Please make sure to keep your microphone off during the talk
+-   Please consider any pop-ups (audio/video) that are not related to the talk to be excluded from your machine during the talk
+-   Feel free to use the chat to ask questions or raise your hand
+
+All of our attendees are committed to follow a Code of Conduct:
+[https://rladies.org/code-of-conduct/](https://rladies.org/code-of-conduct/){.uri style="color: #0071bc"}
+
+
+# Materials for tonight {.smaller}
+
+This section depends on the event requirenments
+
+
+**`Watch & Learn`**
+
+-   All materials will be shared during the presentation: **event title**.
+
+**`Do & Learn`**
+
+-   Make sure you have the latest R and RStudio otherwise you can download it here:
+    <https://posit.co/download/rstudio-desktop/>
+
+-  If you do not want to install anything, you can access all of the R capabilities from `Posit Cloud`: [https://login.posit.cloud/](https://login.posit.cloud/)   
+
+-   We will be using the `{pckg}` package/s.
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages("pckg")
+library(pckg)
+```
+
+# Welcome Everyone! {.smaller}
+
+Welcome to the ..event number.. event hosted by the `R-Ladies Rome` chapter. 
+My name is ..your name.., one of the chapter's organizers, and I am
+thrilled to have you all here tonight. 
+
+We are also delighted to be
+joined by ***`speaker for the evening`***, who will be our esteemed speaker
+for the evening.
+
+Benvenuti! Questo è il ..numero.. evento per questo gruppo `RLadies Rome`. Io
+sono ..il tuo nome.. una delle organizzatrici. Siamo in compagnia di
+**speaker**, la nostra relatrice per questa sera. 
+Tutto il materiale verrà condiviso durante la presentazione se volete potete dare
+un'occhiata alla documentazione relativa a ...evento.. di cui parleremo.
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language and for empowering women at all user levels by building a
+    collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 218 chapters in
+    29 countries and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We expect more co-organizers to join us soon.
+
+<br>
+
+### Rome 2023 fall schedule
+
+| When       | Event                                                                                                                | Speaker                                                                                         |
+|------------------|--------------------------|----------------------------|
+| `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                          |
+| `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                   |
+| `March`    | What's new in the tidyverse                                                                                          | [Isabella Velasquez](https://ivelasq.rbind.io/about.html)                                       |
+| `April`    | [R-Ladies New York](https://www.meetup.com/rladies-newyork/) & [R-Ladies Rome](https://www.meetup.com/rladies-rome/) | [Jacqueline Buros & Federica Gazzelloni](https://www.meetup.com/rladies-rome/events/292629944/) |
+| `May`      | [R4DS Community Learning](https://www.rfordatasci.com/)                                                              | [Jon Harmon](https://www.linkedin.com/in/jonthegeek/)                                           |
+| `June`     | TBD                                                                                                                  | [Simina Boca](https://twitter.com/siminaboca)                                                   |
+| `July`     | `R kick start`                                                                                                       |                                                                                                 |
+
+
+
+### News
+
+::: {style="color: #88398A"}
+Important upcoming: ...
+:::
+::: columns
+::: {.column width="50%"}
+
+:::
+
+::: {.column width="50%"}
+
+
+:::
+:::
+:::
+
+
+
+
+# Tonight's presentation {.smaller}
+
+Welcome to this exciting event where we will be exploring the world of

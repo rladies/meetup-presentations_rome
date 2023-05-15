@@ -115,7 +115,7 @@ We expect more co-organizers to join us soon.
 ### 2023 fall schedule
 
 | When       | Event                                                                                                                | Speaker                                                                                                                             |
-|------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+|--------------|---------------------------|-------------------------------|
 | `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                                                              |
 | `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                                                       |
 | `March`    | What's new in the tidyverse                                                                                          | [Isabella Velásquez](https://ivelasq.rbind.io/about.html)                                                                           |
