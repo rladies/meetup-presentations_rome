@@ -1,5 +1,5 @@
 ---
-title: "Welcome to<br>R-Ladies Rome & R-Ladies NYC"
+title: "Welcome to <br> R-Ladies Rome & R-Ladies NYC"
 subtitle: "Modeling infectious diseases<br><br>April 22, 2023"
 format: 
   rladies-revealjs:

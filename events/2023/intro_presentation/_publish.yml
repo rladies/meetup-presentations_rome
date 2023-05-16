@@ -2,11 +2,25 @@
   quarto-pub:
     - id: c27f392a-bc72-43d1-817e-8a094cc1e887
       url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-mar23'
+    - id: 77067a86-5753-4f50-8296-6185f752d300
+      url: 'https://quartopub.com/sites/rladiesrome/mar222023'
 - source: intro_04.qmd
   quarto-pub:
     - id: b40150d3-ba80-44c6-a287-e32507f35b3b
       url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-apr23'
+    - id: dd0b1740-7375-47cd-9065-c4e748591fc7
+      url: 'https://quartopub.com/sites/rladiesrome/apr222023'
 - source: intro_05.qmd
   quarto-pub:
     - id: 2259d492-f363-49a7-ad8b-45146f17eb9f
       url: 'https://quartopub.com/sites/fgazzelloni/welcome-tobrr-ladies-rome'
+    - id: fc0cab4f-f06a-4130-a3b7-f12d61a3e8ee
+      url: 'https://quartopub.com/sites/rladiesrome/may172023'
+- source: intro_01.qmd
+  quarto-pub:
+    - id: ecd08edf-dd7b-4a70-bca7-176b8fe0d420
+      url: 'https://quartopub.com/sites/rladiesrome/jan242023'
+- source: intro_02.qmd
+  quarto-pub:
+    - id: d8b28eee-e672-4f65-8e94-02859ba20576
+      url: 'https://quartopub.com/sites/rladiesrome/feb132023'

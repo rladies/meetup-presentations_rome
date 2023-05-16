@@ -1,5 +1,5 @@
 ---
-title: "Welcome to<br>R-Ladies Rome"
+title: "Welcome to R-Ladies Rome"
 subtitle: "Why I Hate Summer Time: Coordinating a Global Community of Learners<br><br>May 17, 2023"
 format: 
   rladies-revealjs:
