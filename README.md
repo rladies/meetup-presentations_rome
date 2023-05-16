@@ -6,7 +6,7 @@
 
 > `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
 
-## NEW WEBSITE: [https://fgazzelloni.quarto.pub/r-ladies-rome/](https://rladiesrome.quarto.pub/website/)
+## NEW WEBSITE: [https://rladiesrome.quarto.pub/website/](https://rladiesrome.quarto.pub/website/)
 
 ## 🔭 Click here: [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
 
