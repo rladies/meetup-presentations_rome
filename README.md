@@ -64,7 +64,7 @@ R-Ladies Rome is dedicated to providing a harassment-free event experiences for 
 
 ## Community Policies
 
-Please note, cis men are welcome to join our meetups if they come as a guest of a women participant. We highly encourage speakers and teachers at R-Ladies Rome events to be of minority genders.
+Please note, men are welcome to join our meetups if they come as a guest of a women participant. We highly encourage speakers and teachers at R-Ladies Rome events to be of minority genders.
 
 ## Images/ Media
 
