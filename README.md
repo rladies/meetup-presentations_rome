@@ -37,8 +37,6 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 - Meetup <https://www.meetup.com/rladies-rome/>
 
-- GitHub <https://github.com/rladies/meetup-presentations_rome>
-
 - LinkedIn <https://www.linkedin.com/company/r-ladies-rome>
 
 - Mastodon <https://fosstodon.org/@rladiesrome>
