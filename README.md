@@ -29,15 +29,21 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 : 2023 Events
 
--   To be involved, or suggest a topic's talk Email: [rome\@rladies.org](mailto:rome@rladies.org)
+### Email: <rome@rladies.org>
 
--   For news follow us on Twitter <https://twitter.com/RLadiesRome>
+### Social Networks:
 
--   Find our events on meetup.com <https://www.meetup.com/rladies-rome/>
+- Twitter <https://twitter.com/RLadiesRome>
 
--   To share the location of this GitHub repo please use <https://github.com/rladies/meetup-presentations_rome>
+- Meetup <https://www.meetup.com/rladies-rome/>
 
--   We also have a LinkedIn page: <https://www.linkedin.com/company/r-ladies-rome>
+- GitHub <https://github.com/rladies/meetup-presentations_rome>
+
+- LinkedIn <https://www.linkedin.com/company/r-ladies-rome>
+
+- Mastodon <https://fosstodon.org/@rladiesrome>
+
+
 
 ### Watch videos on the YouTube:
 
