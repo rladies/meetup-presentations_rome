@@ -29,7 +29,7 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 : 2023 Events
 
-### Email: [rome\@rladies.org](mailto:rome@rladies.org){.email}
+### Email: [rome@rladies.org](mailto:rome@rladies.org)
 
 ### Social Networks:
 
