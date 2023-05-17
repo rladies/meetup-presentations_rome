@@ -39,7 +39,7 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 -   LinkedIn <https://www.linkedin.com/company/r-ladies-rome>
 
--   Mastodon [https://fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome){.uri}
+-   Mastodon [https://fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome)
 
 ### Watch videos on the YouTube:
 
