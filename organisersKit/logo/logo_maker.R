@@ -43,6 +43,21 @@ ggdraw()+
   draw_image("base_logo.png")
 ggsave("logo.png", width = 4.5,height = 4.5,bg=NA)
 
-# magick::image_read("logo.png")
+
 # rstudioapi::restartSession()
+
+
+
+
+# write a SVG logo
+library(magick)
+
+# Read in the PNG image
+png_image <- image_read("base_logo.png")
+
+# Convert the PNG image to SVG format
+svg_image <- image_convert(png_image, format = "svg")
+
+# Save the SVG image to a file
+image_write(svg_image, "output.svg")
 

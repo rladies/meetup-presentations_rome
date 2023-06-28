@@ -1,6 +1,6 @@
 ---
-title: "Welcome to<br>R-Ladies Rome"
-subtitle: "event name<br><br>date"
+title: "Welcome to R-Ladies Rome"
+subtitle: "One Health and the Politics of Coronaviruses<br><br>June 30, 2023"
 format: 
   rladies-revealjs:
     footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
@@ -17,17 +17,18 @@ This talk is recorded and will be posted on
 [Youtube](https://www.youtube.com/@rladiesrome)
 
 -   Feel free to turn off your cameras, if you do not want to be recorded
--   Please make sure to keep your microphone off during the talk
--   Please consider any pop-ups (audio/video) that are not related to the talk to be excluded from your machine during the talk
--   Feel free to use the chat to ask questions or raise your hand
+-   Please remember that all our attendees are expected to adhere to our `Code of Conduct`: https://rladies.org/code-of-conduct/{.uri style="color: #0071bc"}. 
 
-All of our attendees are committed to follow a Code of Conduct:
-[https://rladies.org/code-of-conduct/](https://rladies.org/code-of-conduct/){.uri style="color: #0071bc"}
+> We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.
+
+-   Feel free to use the chat or raise your hand to ask questions.
+
+
 
 
 # Materials for tonight {.smaller}
 
-This section depends on the event requirenments
+This section depends on the event requirements.
 
 
 **`Watch & Learn`**
