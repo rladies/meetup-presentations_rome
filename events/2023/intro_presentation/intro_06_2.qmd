@@ -21,9 +21,7 @@ This talk is recorded and will be posted on
 -   Please remember that all our attendees are expected to adhere to our
     `Code of Conduct`: <https://rladies.org/code-of-conduct/>.
 
-> We prioritize creating a safe and inclusive space, free from any form
-> of harassment, fostering a respectful environment for everyone to
-> learn and connect.
+> `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
 
 -   Feel free to use the chat or raise your hand to ask questions.
 
@@ -40,7 +38,7 @@ I am delighted to have you here today for this groundbreaking research's talk be
 
 We are delighted to be joined by ***`Dr. Laura Kahn`***, our esteemed speaker for today.
 
-Benvenuti! Questo è il settimo evento per `RLadies Rome`. Io sono Katie Wood una delle organizzatrici con Federica Gazzelloni. Oggi siamo in compagnia della **Dottoressa Laura Kahn**, che ci parlerà del suo ultimo libro. Tutto il materiale e la registrazione di questo evento verranno condivisi su GitHub, Twitter, Youtube e sul nostro sito: 
+Benvenuti! Questo è il settimo evento per `RLadies Rome`. Io sono Katie Wood una delle organizzatrici con Federica Gazzelloni. Oggi siamo in compagnia della **Dottoressa Laura Kahn**, che ci parlerà del suo ultimo libro. Tutto il materiale e la registrazione di questo evento verranno condivisi su GitHub, Twitter, Youtube e sul nostro sito: <https://rladiesrome.quarto.pub/website/>
 
 
 # What is R-Ladies? {.smaller}
