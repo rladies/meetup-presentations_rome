@@ -32,3 +32,7 @@
   quarto-pub:
     - id: 324d5b7b-e695-4d85-9645-45955b9c2cca
       url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome-june23'
+- source: intro_07.qmd
+  quarto-pub:
+    - id: c8e87cc9-27a1-4122-9d1e-18ea9c706fb3
+      url: 'https://quartopub.com/sites/rladiesrome/july272023'
