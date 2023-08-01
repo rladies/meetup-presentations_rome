@@ -29,15 +29,15 @@ This talk is recorded and will be posted on
 
 # Set-up: Materials for today {.smaller}
 
+This is for all of you who already know how to do it; for all the others, we are going to show you the steps.
 
 Please follow these steps:
 
 1.  Get inside your `Posit Cloud account` at <https://posit.cloud/>
 
-2.  Follow this link: <https://posit.cloud/spaces/393298/join?access_code=d7Fy8Ojr0XYw3BKAYqCVQUEqEqKHGl4Rj0kb3sks>
+2.  Follow the link in the chat
 
-
-Please have these packages installed on your cloud:
+3.  Please have these packages installed on your cloud:
 ```{r}
 #| eval: false
 #| echo: true
@@ -45,7 +45,7 @@ install.packages("tidyverse")
 install.packages("tidytuesdayR")
 ```
 
-Load the packages:
+4.  Load the packages:
 ```{r}
 #| eval: false
 #| echo: true
