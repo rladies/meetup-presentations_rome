@@ -67,8 +67,11 @@ Please note, men are welcome to join our meetups if they come as a guest of a wo
 
 Photos, Films and all other media/recordings: Photographs and/or video/other media will be taken at events held by this community. By taking part in an R-Ladies Rome event you grant the community organisers full rights to use the images resulting from the photography/video filming/media, and any reproductions or adaptations of the images for publicity, fundraising or other purposes to help achieve the community's aims. This might include (but is not limited to), the right to use them in their printed and online publicity, social media, press releases and funding applications. If you do not wish to be recorded in these media please inform a community organizer.
 
-Find us on Twitter and on Mastodon: 
-- [@RLadiesRome](https://twitter.com/RLadiesRome)
-<a rel="me" href="https://fosstodon.org/@rladiesrome">Mastodon</a> for more information on news, presentations and code!
+Citations: Structure of this README inspired by: [R-Ladies Brisbane](https://github.com/rladies/meetup-presentations_brisbane)
 
-Structure of this README inspired by: [R-Ladies Brisbane](https://github.com/rladies/meetup-presentations_brisbane)
+<body>
+Find us on Twitter and on Mastodon: 
+
+- Twitter: [@RLadiesRome](https://twitter.com/RLadiesRome)
+- Mastodon: <a rel="me" href="https://fosstodon.org/@rladiesrome">fosstodon.org/@rladiesrome</a>
+</body>
