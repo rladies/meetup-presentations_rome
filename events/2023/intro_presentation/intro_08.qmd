@@ -56,10 +56,7 @@ This talk is recorded and will be posted on
 Welcome to this event hosted by the `R-Ladies Rome` chapter. This is our eighth event, the first of this kind as we are `in person in Rome` at the Department of Statistics of La Sapienza University.
 :::
 ::: fragment
-I'm `Katie Wood`, one of the chapter's organizers, Marketing Manager experienced in various industry sectors across global markets.
-:::
-::: fragment
-Today, I'm thrilled to have you all here, and I'm happy to introduce you to my colleague `Federica Gazzelloni`, Statistician and Actuary interested in all things related to Data Science.
+My name is `Federica Gazzelloni`, lead organizer of R-Ladies Rome. I am a statistician and an actuary with a diverse range of experience in both academic and industry sectors. I have a keen interest in all aspects of Data Science.
 :::
 
 # What is R-Ladies? {.smaller}
