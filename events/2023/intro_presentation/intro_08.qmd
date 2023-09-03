@@ -53,7 +53,7 @@ This talk is recorded and will be posted on
 # Welcome Everyone!
 
 ::: fragment
-Welcome to this event hosted by the `R-Ladies Rome` chapter. This is our eighth event, the first of this kind as we are `in person in Rome` at the Department of Statistics of La Sapienza University.
+Welcome to this event hosted by the `R-Ladies Rome` chapter. This is our August event, the first of this kind as we are `in person in Rome` at the Department of Statistics of La Sapienza University.
 :::
 ::: fragment
 My name is `Federica Gazzelloni`, lead organizer of R-Ladies Rome. I am a statistician and an actuary with a diverse range of experience in both academic and industry sectors. I have a keen interest in all aspects of Data Science.
