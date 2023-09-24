@@ -23,7 +23,7 @@ This talk is recorded and will be posted on [Youtube @rladiesrome](https://www.y
 `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
 
 -   Please remember that all our attendees are expected to adhere to our
-    `Code of Conduct` 👉 <https://rladies.org/code-of-conduct/>
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
 -   Use the chat for introducing yourself and ask questions (or raise
     your hand ✋)
 

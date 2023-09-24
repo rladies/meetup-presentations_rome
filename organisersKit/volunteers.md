@@ -8,3 +8,4 @@ If you are interested in helping out please reach out to us, and we will onboard
 ## Co-organisers
 - Federica Gazzelloni | [@fgazzelloni](https://twitter.com/FGazzelloni) |
 - Katie Wood | [LinkedIn: katie-wood-omca](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/) |
+- Francesca Picone | [LinkedIn: Francesca Picone](https://www.linkedin.com/in/francesca-picone-481783175/) |

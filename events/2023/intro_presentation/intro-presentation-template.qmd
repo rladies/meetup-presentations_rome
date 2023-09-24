@@ -17,7 +17,7 @@ This talk is recorded and will be posted on
 [Youtube](https://www.youtube.com/@rladiesrome)
 
 -   Feel free to turn off your cameras, if you do not want to be recorded
--   Please remember that all our attendees are expected to adhere to our `Code of Conduct`: https://rladies.org/code-of-conduct/{.uri style="color: #0071bc"}. 
+-   Please remember that all our attendees are expected to adhere to our `Code of Conduct`: https://rladies.org/coc/{.uri style="color: #0071bc"}. 
 
 > We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.
 
