@@ -1,6 +1,6 @@
 ---
 title: "Welcome to R-Ladies Rome"
-subtitle: "One Health and the Politics of Coronaviruses<br><br>June 30, 2023"
+subtitle: "Career Development Talk<br><br>October 27, 2023"
 format: 
   rladies-revealjs:
     footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
@@ -26,46 +26,15 @@ This talk is recorded and will be posted on [Youtube @rladiesrome](https://www.y
     your hand ✋)
 
 
-# Materials for tonight {.smaller}
-
-This section depends on the event requirements.
-
-
-**`Watch & Learn`**
-
--   All materials will be shared during the presentation: **event title**.
-
-**`Do & Learn`**
-
--   Make sure you have the latest R and RStudio otherwise you can download it here:
-    <https://posit.co/download/rstudio-desktop/>
-
--  If you do not want to install anything, you can access all of the R capabilities from `Posit Cloud`: [https://login.posit.cloud/](https://login.posit.cloud/)   
-
--   We will be using the `{pckg}` package/s.
-
-```{r}
-#| eval: false
-#| echo: true
-install.packages("pckg")
-library(pckg)
-```
 
 # Welcome Everyone! {.smaller}
 
-Welcome to the ..event number.. event hosted by the `R-Ladies Rome` chapter. 
-My name is ..your name.., one of the chapter's organizers, and I am
-thrilled to have you all here tonight. 
+Welcome to the October event hosted by the `R-Ladies Rome chapter`.
 
-We are also delighted to be
-joined by ***`speaker for the evening`***, who will be our esteemed speaker
-for the evening.
+I'm `Federica Gazzelloni`, one of the chapter's organizers, and I'm absolutely delighted to have each and every one of you here with us tonight.
 
-Benvenuti! Questo è il ..numero.. evento per questo gruppo `RLadies Rome`. Io
-sono ..il tuo nome.. una delle organizzatrici. Siamo in compagnia di
-**speaker**, la nostra relatrice per questa sera. 
-Tutto il materiale verrà condiviso durante la presentazione se volete potete dare
-un'occhiata alla documentazione relativa a ...evento.. di cui parleremo.
+It brings me great joy to introduce you to `Francesca Picone`, our newest co-organizer, Statistician, and Actuary with a rich background in data analysis and risk management. Francesca's expertise it is a valuable addition to our team.
+
 
 # What is R-Ladies? {.smaller}
 
@@ -90,7 +59,6 @@ For more information, please visit [rladies.org](rladies.org)
 ::: panel-tabset
 ### R-Ladies Rome
 
-
 > **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
 
 Organizers and Volunteers:
@@ -113,24 +81,41 @@ We are always open to new joiners, so if you'd like to contribute to our Rome ch
 
 <br>
 
-### Rome Chapter Schedule
+### Rome Chapter Schedule - Year 2023
 
-                                          |
+> **`Join us as we explore the fascinating world of data visualization!`**
+
+Looking forward to the upcoming months, we're excited to announce that our events will be focusing on `data visualizations`. Get ready for a deep journey into the art of data visualization, taking place on `November 10th and 30th`.
+
+Our featured speakers for these sessions are none other than `Cédric Scherer` and `Cara Thompson`, gurus in the field of data visualization techniques. 
+
+
+
+In recent months, `R-Ladies Rome` has been buzzing with a diverse array of events, including `talks`, `hands-on workshops`, `coding sessions`, and engaging `panel discussions`. These gatherings have all shared a common theme: our passion for `R programming`, `data science`, and `statistics.`
+
+Recent highlights include discussions on topics such as `Machine Learning`, `Quarto`, and the `tidyverse`. We've delved into `infectious disease modeling` and other fascinating subjects by experts in the field.
+
 
 
 ### News & Announcements
 
 ::: {style="color: #88398A"}
-Important upcoming: ...
+
+
+> **`Your support and involvement are crucial to our success.`**
+
 :::
 ::: columns
 ::: {.column width="50%"}
+- We're proud to have the support of `R Consortium`, a key `sponsor` that shares our passion for advancing the world of data science and R programming. 
 
+![](images/rconsortium.png)
 :::
 
 ::: {.column width="50%"}
+- As an `open collective`, we rely on the contributions and engagement of our members to continue our mission and expand our community. 
 
-
+![](images/opencollective.png)
 :::
 :::
 :::
@@ -138,6 +123,16 @@ Important upcoming: ...
 
 
 
-# Taday's presentation {.smaller}
+# Taday's Event {.smaller}
 
-Welcome to this exciting event where we will be exploring the world of
+Welcome to this event dedicated to exploring the world of `Career and Development` in Data Science, Statistics, and STEM fields, in general.  
+
+We would like to hear about your individual career journeys, the challenges you've encountered, and the valuable experiences you've gained. Most importantly, we would like you to share your insights into the world of data science, statistics, and R programming from the perspective of women in science.
+
+By sharing our stories and experiences, we can all learn from one another and gain a deeper understanding of the exciting paths that await us in these fields.
+
+
+
+
+
+
