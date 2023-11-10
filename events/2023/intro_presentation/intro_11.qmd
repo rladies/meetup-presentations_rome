@@ -1,0 +1,163 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "(Even More) Exciting Data Visualizations with ggplot2 Extensions<br>Speaker: Cédric Scherer<br>November 10, 2023"
+format: 
+  rladies-revealjs:
+    embed-resources: true
+    progress: true
+    logo: images/logo.png
+    footer: "[R-Ladies Rome](https://rladies.org/) sponsored by [R Consortium](https://www.r-consortium.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+<center>[Youtube.com/@rladiesrome](https://www.youtube.com/@rladiesrome)</center>
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>.
+
+> `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Feel free to use the chat or raise your hand ✋ to ask questions.
+
+
+# Materials for today {.smaller}
+
+
+This is a **`Watch & Learn`** session, all materials will be shared during the presentation. 
+
+If you'd like to **`Do & Learn`**:
+
+-   Make sure you have the latest R and RStudio otherwise you can download it here:
+    <https://posit.co/download/rstudio-desktop/>
+
+-  If you do not want to install anything, you can access all of the R capabilities from `Posit Cloud`: [https://login.posit.cloud/](https://login.posit.cloud/)   
+
+
+
+# Welcome Everyone! {.smaller}
+
+Welcome to the first `Data Visualization Event` of November. This month holds a special significance for `exploratory data analysis`, and we're fortunate to host not one but two fabulous events featuring expert data visualization professionals. `Cédric Scherer`, our speaker for this session, and `Cara Thompson` joining us on November 30th. 
+
+::: columns
+::: {.column width="60%"}
+<br><br>We are honored to welcome `Cédric`, a mentor, and a tremendous inspiration. Cédric is a field expert and the founder of the `#30DayChartChallenge`, providing an excellent opportunity for practice and networking within the data visualization community.
+:::
+
+::: {.column width="40%"}
+![](gif/viz-animation-cedric.gif)
+:::
+
+:::
+
+I'll be sharing more about our chapter activities and initiatives before handing over the floor to our speaker.
+
+
+# Who are we? {.smaller}
+
+My name is `Federica Gazzelloni`, and I am the Lead Organizer for `R-Ladies Rome` Events. We organize talks, workshops and tutorials, generously sponsored by the `R Consortium`, all with the mission of `promoting the R language` within the `Data Science community`. Personally, as Statistician and Actuary, I'm passionate about Data Visualization. I actively participate in competitions like `#TidyTuesday`, `#30DayChartChallenge`, and the ongoing `#30DayMapChallenge`.
+
+![](images/rladiesrome_team.png){fig-align="center" width="900"}
+
+
+
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Lead Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Organizer` is [Francesca
+Picone](https://www.linkedin.com/in/francesca-picone-481783175/)
+
+`Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+
+We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: [rome@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### Rome Chapter Schedule
+
+In recent months, `R-Ladies Rome` has been buzzing with a diverse array of events, including `talks`, `hands-on workshops`, `coding sessions`, and engaging `panel discussions`. These gatherings have all shared a common theme: our passion for `R programming`, `data science`, and `statistics.`
+
+Recent highlights include discussions on topics such as `Machine Learning`, `Quarto`, and the `tidyverse`. We've delved into `infectious disease modeling` and other fascinating subjects by experts in the field.
+
+Our next event will be on the 30th of November with `Cara Thompson`, continuing with the Data Visualization Month. She will lead us through `Ten tips for better text: typography meets ggplot and friends`.
+
+In December, we will be partnering with `R-Ladies Paris`. More info is coming soon. Stay tuned!
+
+
+### News & Announcements
+
+::: {style="color: #88398A"}
+
+
+> **`Your support and involvement are crucial to our success.`**\n Click 👉 <https://opencollective.com/r-ladies-rome> support `R-Ladies Rome`!
+
+:::
+::: columns
+::: {.column width="50%"}
+- We're proud to have the support of `R Consortium`, a key `sponsor` that shares our passion for advancing the world of data science and R programming. 
+
+![](images/rconsortium.png)
+:::
+
+::: {.column width="50%"}
+- As an `open collective`, we rely on the contributions and engagement of our members to continue our mission and expand our community. 
+
+![](images/opencollective.png)
+:::
+:::
+:::
+
+
+
+# Today's presentation {.smaller .r-fit-text}
+
+`Dr. Cédric Scherer`, is a data visualization designer, consultant, and educator. With a background in ecology, he blends analytical expertise with design passion, applying skills to diverse disciplines. Known for his `#TidyTuesday` contributions, Cédric's mission revolves around `merging data analysis and design principles` to deliver effective and visually appealing visualizations.
+
+
+Without further ado, I'm thrilled to hand over the virtual stage to `Cédric Scherer`. His expertise and insights promise to make this Data Visualization Event an exciting experience for us all. 
+
+<center>🚀 `Let's dive in!` 🌟</center>
+
+##  {background-image="images/banner-portfolio-centered.png"}

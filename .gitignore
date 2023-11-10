@@ -8,4 +8,6 @@ events/2023/rsconnect
 events/2023/_extensions
 *.html
 events_presentation
-.DS_Store$
+.DS_Store
+gif
+banner-portfolio-centered.png
