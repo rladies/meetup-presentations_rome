@@ -38,13 +38,17 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 ### Social Networks:
 
--   Twitter <https://twitter.com/RLadiesRome>
+-   Twitter [twitter.com/RLadiesRome](https://twitter.com/RLadiesRome){.uri}
 
--   Meetup <https://www.meetup.com/rladies-rome/>
+-   Meetup [www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/){.uri}
 
--   LinkedIn <https://www.linkedin.com/company/r-ladies-rome>
+-   LinkedIn [www.linkedin.com/company/r-ladies-rome](https://www.linkedin.com/company/r-ladies-rome){.uri}
 
--   Mastodon [https://fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome)
+-   Mastodon [fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome)
+
+-   Instagram [www.instagram.com/rladiesrome/](https://www.instagram.com/rladiesrome/)
+
+-   Whatsapp [www.whatsapp.com/channel/0029Va8QxrA1NCrPtKcBut3Z](https://www.whatsapp.com/channel/0029Va8QxrA1NCrPtKcBut3Z)
 
 ### Watch videos on the YouTube:
 
