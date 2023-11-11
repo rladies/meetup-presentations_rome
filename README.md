@@ -8,7 +8,7 @@
 
 ## NEW WEBSITE: <https://rladiesrome.quarto.pub/website/>
 
-## 🔭 Click here: [The 2023 presentation events materials](https://github.com/rladies/meetup-presentations_rome/tree/main/events/2023)
+## 🔭 Support us Click here: [opencollective.com/r-ladies-rome](https://opencollective.com/r-ladies-rome#category-CONTRIBUTE)
 
 This repository contains all about the R-Ladies Rome talks taken throughout the Year.
 
