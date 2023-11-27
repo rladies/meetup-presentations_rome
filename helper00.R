@@ -40,7 +40,10 @@ gitcreds::gitcreds_set() # inserisci token
 usethis::use_git() # ti chiede: Is it ok to commit it? sure!
 # i comandi che seguono sono per controllare se è tutto ok
 # se non funziona prosegui con i comandi successivi
-usethis::pr_init("<la-tua-nuova-branch>")
+usethis::pr_init("<la-tua-nuova-branch>") # iniziazione della nuova branch (informa git che c'è una nuova branch)
+# commit i cambiamenti fatti e poi inviali
+usethis::pr_push() # manda i cambiamenti
+
 
 # se dice "upstream = <not configured>" - fa sapere all'origine della nuova branch
 # IN TERMINAL
@@ -48,9 +51,6 @@ git remote add upstream https://github.com/<your-user-name>/meetup-presentations
 # controlla che l'origine sia fissata
 git remote add origin https://github.com/rladies/meetup-presentations_rome
 
-# manda la presentazione e setta la nuova branch
-git push --set-upstream origin <la-tua-nuova-branch>
-# controlla che tutto sia passato al repository originale
 
 # in generale quando le credenziali sono fissate si possono usare i seguenti comandi
 # IN TERMINAL
