@@ -11,3 +11,6 @@ events_presentation
 .DS_Store
 gif
 banner-portfolio-centered.png
+.Rdata
+.httr-oauth
+.quarto
