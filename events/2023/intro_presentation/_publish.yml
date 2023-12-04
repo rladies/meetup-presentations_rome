@@ -52,3 +52,7 @@
   quarto-pub:
     - id: e3fdbf6a-c7f7-4884-b58b-1896ecd0a4e9
       url: 'https://quartopub.com/sites/rladiesrome/november112023'
+- source: intro_11_2.qmd
+  quarto-pub:
+    - id: 27441dc9-5ae7-4a1d-986e-cf998250b376
+      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome'
