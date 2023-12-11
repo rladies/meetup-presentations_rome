@@ -1,6 +1,6 @@
 ---
 title: "Welcome to R-Ladies Rome"
-subtitle: "One Health and the Politics of Coronaviruses<br><br>June 30, 2023"
+subtitle: "Data Visualization Practice Session<br>in Italian<br><br>15 Dicembre, 2023"
 format: 
   rladies-revealjs:
     footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
