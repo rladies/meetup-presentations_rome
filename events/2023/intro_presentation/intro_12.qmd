@@ -38,19 +38,21 @@ Step da seguire per il set-up:
 - Crea un nuovo `project` chiamato: `dataviz_practice`.
 - Apri un .qmd file e chiamalo `example`
 - Installa i pacchetti necessari usando `install.packages("<nome del pacchetto>")`
-- Carica i pacchetti
 
 ```{r}
 #| eval: false
 #| echo: true
-pkgs <- c("tidyverse","ggtext","sysfonts","showtext","ggthemes","cowplot")
-library(pkgs)
+pkgs <- c("tidyverse","gapminder","ggtext",
+          "sysfonts","showtext","ggthemes","cowplot")
+install.packages(pkgs)
 ```
 
 # Benvenuti! {.smaller}
 
 Benvenuti! Questo è il terzo evento di Data Visualization per `R-Ladies Rome`.
-Io sono `Federica Gazzelloni`, con me c'è `Francesca Picone` e siamo le organizzatrici di questi eventi. Per qualsiasi domanda su eventi futuri, possibilità di entrare a far parte dell'organizzazione, potete rivolgervi a noi.
+Io sono `Federica Gazzelloni` Lead Organizer degli eventi di `R-Ladies Rome`.
+
+Per qualsiasi domanda su eventi futuri, possibilità di entrare a far parte dell'organizzazione, potete scriverci a <rome@rladies.org>.
 
 
 
@@ -82,7 +84,7 @@ Per maggiori informazioni su `R-Ladies Global`, please visit [rladies.org](rladi
 Organizziamo uno o più eventi al mese, in base alle richieste o alla disponibilità degli speakers. Ci teniamo ad avere eventi che siano di utilità per parlare di carriera, statistica/matematica, e in particolare come usare R. 
 Se avete idee per un futuro evento, non esitate a proporle!
 
-![](images/rladiesrome_team.png){fig-align="center" width="900"}
+![](images/rladiesrome_team.png){fig-align="center" width="900",heigh="500"}
 
 Se vuoi entrare a far parte del nostro gruppo come volontaria non esitare a scriverci:  [rome@rladies.org](mailto:rome@rladies.org){.email}
 
@@ -124,3 +126,6 @@ Guarda sul nostro sito: <https://rladiesrome.quarto.pub/website/talks/2023/>
 # Sessione Pratica {.smaller}
 
 Benvenuti a questa sessione pratica di Data Visualization, a questo punto dovreste avere installato tutti i pacchetti ed essere pronti per iniziare. 
+
+
+
