@@ -38,9 +38,9 @@
 
 ### Social Networks:
 
--   Twitter [twitter.com/RLadiesRome](https://twitter.com/RLadiesRome){.uri}
+-   Twitter [twitter.com/RLadiesRome](https://twitter.com/RLadiesRome)
 
--   LinkedIn [www.linkedin.com/company/r-ladies-rome](https://www.linkedin.com/company/r-ladies-rome){.uri}
+-   LinkedIn [www.linkedin.com/company/r-ladies-rome](https://www.linkedin.com/company/r-ladies-rome)
 
 -   Mastodon [fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome)
 
