@@ -1,0 +1,4 @@
+- source: intro_02.qmd
+  quarto-pub:
+    - id: 4001bc9d-b6c6-4d19-a460-4fe0b1b364e5
+      url: 'https://rladiesrome.quarto.pub/02202024'
