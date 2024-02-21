@@ -97,7 +97,7 @@ Gazzelloni](https://federicagazzelloni.netlify.app)
 - January - `Introduction to Quarto` with Torin White & R-Ladies Paris
 - February 17 - `Building a CahtBot with Shiny and R` with James Wade & TunisR User Group
 - February 20 - `Debugging in R` with Shannon Pileggi
-- March 20 - `Vetiver and model deployment` with Isabel Zimmerman
+- March 22 - `Vetiver and model deployment` with Isabel Zimmerman
 - April - `Causal Inference` with Jennifer Hill & R-Ladies NYC
 - May - `Hadley Wickham`
 - June - `rOpenSci` with Yanina Bellini Saibene
