@@ -26,12 +26,14 @@ recorded!
 -   Use the chat for introducing yourself and ask questions (or raise
     your hand ✋)
 
-# Set up Material for Today {.smaller}
+# What to expect from this talk? {.smaller}
 
-**All material will be provided during the talk**
+Whether you're a beginner or an experienced data practitioner, this
+session promises to provide actionable strategies and tips for enhancing
+your data science capabilities!
 
 ![](https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png){fig-align="center"
-width="750"}
+width="507"}
 
 ![](images/positPBC.png)
 
@@ -45,8 +47,8 @@ honor of welcoming our `speaker`, **`Isabel Zimmerman`**, who will be
 sharing insights on extending the data science workflow with the
 `{vetiver}` and `{pins}` packages.
 
-![](https://rladiesrome.quarto.pub/website/about/organizers_picts/background.png){style="fig-align: center"
-fig-align="center" width="57%"}
+![](https://rladiesrome.quarto.pub/website/about/organizers_picts/background.png){fig-align="center"
+style="fig-align: center" width="50%"}
 
 # What is R-Ladies?
 
