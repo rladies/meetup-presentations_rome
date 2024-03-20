@@ -2,3 +2,7 @@
   quarto-pub:
     - id: 4001bc9d-b6c6-4d19-a460-4fe0b1b364e5
       url: 'https://rladiesrome.quarto.pub/02202024'
+- source: intro_03.qmd
+  quarto-pub:
+    - id: cf0db282-7b29-4018-a346-8b788a4fd053
+      url: 'https://rladiesrome.quarto.pub/welcome-to-r-ladies-rome'
