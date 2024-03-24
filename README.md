@@ -8,12 +8,6 @@
 
 #### To understand a bit more about who we are and what we do, have a look at our website 🔗 <https://rladiesrome.quarto.pub/website/>
 
-#### We are an open-source non profit organization, and so rely on your help and support.
-
-------------------------------------------------------------------------
-
-#### 🎗 Support us 👉 Click here: [opencollective.com/r-ladies-rome](https://opencollective.com/r-ladies-rome#category-CONTRIBUTE)
-
 ------------------------------------------------------------------------
 
 ### To attend one of our events you need to sign-up here: [Meetup www.meetup.com/rladies-rome/](Meetup%20www.meetup.com/rladies-rome/)
