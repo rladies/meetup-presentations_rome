@@ -47,7 +47,7 @@
 - source: intro_10.qmd
   quarto-pub:
     - id: 8faf726a-a99b-4c04-8a90-81bc4f751244
-      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome'
+      url: 'https://rladiesrome.quarto.pub/october272023'
 - source: intro_11.qmd
   quarto-pub:
     - id: e3fdbf6a-c7f7-4884-b58b-1896ecd0a4e9

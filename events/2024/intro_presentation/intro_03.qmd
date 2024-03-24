@@ -134,7 +134,7 @@ Please scan this QR code or head to <https://slido.com> and type
 :::
 :::
 
-# Taday's presentation {.smaller}
+# Today's presentation {.smaller}
 
 It's now time to hand the floor over to our esteemed speaker.
 
@@ -142,7 +142,7 @@ Please join me in welcoming `Isabel Zimmerman`, *software engineer at
 Posit, PBC (formerly RStudio)* where she works primarily on tools for
 MLOps tasks. She also serves as the current Editor in Chief at
 pyOpenSci, where she helps facilitate open scientific software in the
-Python ecosystem.\*
+Python ecosystem.
 
 Without further ado, welcome to
 **`Extending the Data Science Workflow with{vetiver} and {pins}`**!

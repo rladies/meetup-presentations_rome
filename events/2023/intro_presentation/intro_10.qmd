@@ -123,7 +123,7 @@ Recent highlights include discussions on topics such as `Machine Learning`, `Qua
 
 
 
-# Taday's Event {.smaller}
+# Today's Event {.smaller}
 
 Welcome to this event dedicated to exploring the world of `Career and Development` in Data Science, Statistics, and STEM fields, in general.  
 

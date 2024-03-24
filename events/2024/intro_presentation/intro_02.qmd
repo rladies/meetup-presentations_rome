@@ -126,7 +126,7 @@ Please scan this QR code or head to slido.com and type #debuggingR
 
 
 
-# Taday's presentation {.smaller}
+# Today's presentation {.smaller}
 
 Welcome to this exciting event where we will be exploring the world of Debugging in R, this will be an interactive session where you can expand your knowledge about R learning code troubleshooting tips. 
 
