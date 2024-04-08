@@ -1,0 +1,128 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "R for geospatial data science and public health surveillance<br>Speaker: Dr. Paula Moraga<br><br>16 April, 2024"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/rladies/meetup-presentations_rome)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# What to expect from this talk? {.smaller}
+
+- Discover the indispensable role of geospatial health data in shaping public health strategies and policies.
+
+- Gain insights into how these data discover temporal patterns, identify risk factors, and enable rapid outbreak detection.
+
+- Delve into the world of Geospatial with R, enhancing your understanding of public health dynamics.
+
+![](https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png){fig-align="center"
+width="507"}
+
+
+# Welcome Everyone! {.smaller}
+
+Welcome to our April event hosted by `R-Ladies Rome`! I'm
+`Federica Gazzelloni,` chapter's organizer of R-Ladies Rome, and I'm thrilled to have you all here tonight. We're also delighted to be joined by `Silvana Acosta` and `Rafaela Ribeiro Lucas`. Today, we have the honor of welcoming our `speaker`, **`Dr. Paula Moraga`**, author of **`Spatial Statistics for Data Science`** and **` Geospatial Health Data`**.
+
+![](https://rladiesrome.quarto.pub/website/about/organizers_picts/background.png){fig-align="center"
+style="fig-align: center" width="50%"}
+
+# What is R-Ladies?
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif){width="70%"}
+:::
+:::
+
+`R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally. For more information, please visit [rladies.org](rladies.org)
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
+`R-Ladies Global`.
+
+`Lead Organizer` of the chapter is [Federica
+Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+
+`Organizers` are [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+and [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+
+::: callout-tip
+## We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: <https://forms.gle/SkBiab8LhLcehpKu6>
+:::
+
+### 2024 Rome Chapter Schedule
+
+-   January - `Introduction to Quarto` with Torin White & R-Ladies Paris
+-   February 17 - `Building a CahtBot with Shiny and R` with James Wade
+    & TunisR User Group
+-   February 20 - `Debugging in R` with Shannon Pileggi
+-   March 22 - `Vetiver and model deployment` with Isabel Zimmerman
+-   April 16 - `R for geospatial data science and public health surveillance` with Dr. Paula Moraga
+-   May 24 - An Evening with Dr.Hadley Wickham
+-   June - `rOpenSci` with Yanina Bellini Saibene
+-   July - TBD
+-   August - `Nasa-Openescapes` with Julia Stewart Lowndes
+
+### Slido Survey
+
+::: {style="color: black"}
+Please scan this QR code or head to <https://slido.com> and type
+`#geohealth`
+:::
+
+![](images/geohealth.png){style="fig-align: center" width="80%"}
+
+::: columns
+::: {.column width="50%"}
+:::
+
+::: {.column width="50%"}
+:::
+:::
+:::
+
+# Today's presentation {.smaller}
+
+It's now time to hand the floor over to our esteemed speaker.
+
+Please join me in welcoming `Dr. Paula Moraga`, Assistant Professor of Statistics at the University of Science and Technology - KAUST.
+
+With a Master's in Biostatistics from Harvard University and a Ph.D. in Mathematics from the University of Valencia, Dr. Moraga brings extensive expertise in geospatial data analysis and health surveillance. 
+
+Her research has influenced policy decisions, addressing diseases like malaria and cancer globally. Dr. Moraga's contributions include developing R packages for risk modeling and disease surveillance and creating educational materials. 
+
+Let's warmly welcome Dr. Paula Moraga.
