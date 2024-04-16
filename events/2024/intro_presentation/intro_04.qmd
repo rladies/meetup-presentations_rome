@@ -86,16 +86,19 @@ and [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
 
 ### 2024 Rome Chapter Schedule
 
--   January - `Introduction to Quarto` with Torin White & R-Ladies Paris
--   February 17 - `Building a CahtBot with Shiny and R` with James Wade
+-   January - `Introduction to Quarto` with [Torin White](https://www.linkedin.com/in/torinwhite/) & R-Ladies Paris
+-   February 17 - `Building a CahtBot with Shiny and R` with [James Wade](https://www.linkedin.com/in/james-h-wade/)
     & TunisR User Group
--   February 20 - `Debugging in R` with Shannon Pileggi
--   March 22 - `Vetiver and model deployment` with Isabel Zimmerman
--   April 16 - `R for geospatial data science and public health surveillance` with Dr. Paula Moraga
--   May 24 - An Evening with Dr.Hadley Wickham
--   June - `rOpenSci` with Yanina Bellini Saibene
--   July - TBD
--   August - `Nasa-Openescapes` with Julia Stewart Lowndes
+-   February 20 - `Debugging in R` with [Shannon Pileggi](https://www.linkedin.com/in/shannon-m-pileggi/)
+-   March 22 - `Vetiver and model deployment` with [Isabel Zimmerman](https://www.linkedin.com/in/isabel-zimmerman/)
+-   April 16 - `R for geospatial data science and public health surveillance` with [Dr. Paula Moraga](https://www.paulamoraga.com/)
+-   May 24 - An Evening with [Dr.Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)
+
+Future Speakers: 
+
+- `rOpenSci` with [Yanina Bellini Saibene](https://www.linkedin.com/in/yabellini/)
+-  `Nasa-Openescapes` with [Julia Stewart Lowndes](https://www.linkedin.com/in/julia-stewart-lowndes/)
+- `Internal Revenue Service` - Data Scientist with [Gwynn Gebeyehu](https://www.linkedin.com/in/gwynn-gebeyehu-83694280/)
 
 ### Slido Survey
 
