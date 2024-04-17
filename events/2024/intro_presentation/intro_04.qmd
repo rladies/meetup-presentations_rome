@@ -3,7 +3,7 @@ title: "Welcome to R-Ladies Rome"
 subtitle: "R for geospatial data science and public health surveillance<br>Speaker: Dr. Paula Moraga<br><br>16 April, 2024"
 format: 
   rladies-revealjs:
-    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/rladies/meetup-presentations_rome)."
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
 incremental: false
 embed-resources: true
 editor: 
