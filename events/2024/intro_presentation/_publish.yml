@@ -10,3 +10,7 @@
   quarto-pub:
     - id: 90feccce-9b5c-4003-b47c-e2c6947ae4c5
       url: 'https://rladiesrome.quarto.pub/april162024'
+- source: intro_05.qmd
+  quarto-pub:
+    - id: 592af8a7-70ab-49a9-9ade-bce41add1674
+      url: 'https://rladiesrome.quarto.pub/r-ladies-rome-introduction'
