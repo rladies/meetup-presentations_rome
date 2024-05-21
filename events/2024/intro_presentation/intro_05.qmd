@@ -1,8 +1,10 @@
 ---
 title: "R-Ladies Rome Introduction"
-subtitle: "R in Production: an evening with Dr.Hadley Wickham<br><br>24 May, 2024"
+subtitle: "R in Production: An Evening with Dr.Hadley Wickham<br>24 May, 2024"
 format: 
   rladies-revealjs:
+    title-slide-attributes:
+        data-background-image: "images/background.png"
     footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
 incremental: false
 embed-resources: true
@@ -22,9 +24,9 @@ editor:
 
 ::: columns
 ::: {.column width="60%"}
-As a local chapter of **`R-Ladies Global`** we are dedicated to promoting inclusivity in the R language community. 
+As a local chapter of **`R-Ladies Global`** we are dedicated to promoting `inclusivity` in the R language community. 
 
-Our monthly meetings provide a platform to discuss current trends and **hot topics in R**  💜 .
+Our monthly meetings provide a platform to discuss `current trends` and `hot topics in R`  💜 .
 :::
 
 ::: {.column width="40%"}
@@ -100,11 +102,15 @@ tot_members%>%
 For more information, please visit [rladiesrome.org](rladiesrome.org)
 :::
 
+
+
 ## R-Ladies {.smaller}
 
-::: panel-tabset
+::::: panel-tabset
 ### R-Ladies Rome Team
 
+:::: {.columns}
+::: {.column width="40%"}
 Organizers and Volunteers:
 
 `Founder` of the chapter is [Claudia
@@ -120,12 +126,19 @@ and [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
 # JONI US!
 
 We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: 
+👇 <https://forms.gle/SkBiab8LhLcehpKu6>
 
-<br>
-<center>
-👉 <https://forms.gle/SkBiab8LhLcehpKu6>
-</center>
 :::
+
+
+:::
+
+::: {.column width="60%"}
+![](images/rladiesrome-team.png){width="100%"}
+:::
+::::
+
+
 
 ### 2024 Rome Chapter Schedule
 
@@ -160,17 +173,15 @@ Please scan this QR code or head to <https://slido.com> and type
 
 ![](images/rinproduction.png){style="fig-align: center" width="80%"}
 
-::: columns
-::: {.column width="50%"}
-:::
 
-::: {.column width="50%"}
-:::
-:::
-:::
+:::::
 
 # R-Ladies Rome & NYC present: {.smaller}
 
-It's now time to hand the floor over to our esteemed speaker.
+It's now time to hand the floor over to our esteemed speaker. Tonight's event, we have the honor of hosting Dr. Hadley Wickham, Chief Scientist at Posit PBC (formerly RStudio), and a renowned figure in the world of data science.
 
-Please join me in welcoming `Dr. Hadley Wickham`.
+Dr. Wickham is not only an Adjunct Professor of Statistics at the University of Auckland, Stanford University, and Rice University, but he's also the mastermind behind some of the most widely-used tools and packages in the R programming language. His contributions to the field have revolutionized the way we approach data analysis, visualization, and software development in R.
+
+Tonight, Dr. Wickham will be talking 'R in Production,' sharing insights and best practices on how to deploy R solutions effectively in real-world environments. 
+
+So without further ado, please join me in welcoming `Dr. Hadley Wickham`.
