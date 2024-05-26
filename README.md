@@ -2,8 +2,6 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/RLadiesRome.svg?style=social)](https://twitter.com/RLadiesRome)
 
-## Overview
-
 > `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
 
 ## To understand a bit more about who we are and what we do, have a look at our website 🔗 <https://rladiesrome.org>
