@@ -6,9 +6,9 @@ If you are interested in helping out please reach out to us, and we will onboard
 [R-Ladies Golbal](https://x.com/RLadiesGlobal) Claudia Vitolo [@clavitolo](https://x.com/clavitolo). Founded RLadies Rome in January 2022.
 
 ## Co-organisers
-- Federica Gazzelloni | [@fgazzelloni](https://x.com/FGazzelloni) |
-- Sivana Acosta | [@silacos](https://x.com/silacos) |
-- Rafaela Ribeiro | [@rafaelagrlucas](https://www.linkedin.com/in/rafaelagrlucas/)|
+- Federica Gazzelloni | [Twitter/X: @fgazzelloni](https://x.com/FGazzelloni) |
+- Sivana Acosta | [Twitter/X: @silacos](https://x.com/silacos) |
+- Rafaela Ribeiro | [Linkedin: @rafaelagrlucas](https://www.linkedin.com/in/rafaelagrlucas/)|
 
 ## Former Co-organizers
 - Katie Wood | [LinkedIn: katie-wood-omca](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/) |
