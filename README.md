@@ -8,9 +8,9 @@
 
 ## To understand a bit more about who we are and what we do, have a look at our website 🔗 <https://rladiesrome.org>
 
-------------------------------------------------------------------------
-
 ### To attend one of our events you need to sign-up here: [www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/)
+
+## Our Sponsor: [R Consortium](https://www.r-consortium.org/)
 
 ##### This repository contains all about the R-Ladies Rome talks taken throughout the Year 2024. Past Events can be found here: <https://github.com/rladies/meetup-presentations_rome/tree/main/events>
 
@@ -83,6 +83,6 @@ Citations: Structure of this README inspired by: [R-Ladies Brisbane](https://git
 
 Find us on all Social Media:
 
--   [linktr.ee]: [https://linktr.ee/rladiesrome](https://linktr.ee/rladiesrome)
+- linktr.ee: [https://linktr.ee/rladiesrome](https://linktr.ee/rladiesrome)
 
 </body>
