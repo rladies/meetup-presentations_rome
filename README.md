@@ -10,7 +10,7 @@
 
 ------------------------------------------------------------------------
 
-### To attend one of our events you need to sign-up here: [www.meetup.com/rladies-rome/](www.meetup.com/rladies-rome/)
+### To attend one of our events you need to sign-up here: [www.meetup.com/rladies-rome/](www.meetup.com/it/rladies-rome/)
 
 ##### This repository contains all about the R-Ladies Rome talks taken throughout the Year 2024. Past Events can be found here: <https://github.com/rladies/meetup-presentations_rome/tree/main/events>
 
