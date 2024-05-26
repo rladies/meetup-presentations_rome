@@ -81,9 +81,8 @@ Citations: Structure of this README inspired by: [R-Ladies Brisbane](https://git
 
 <body>
 
-Find us on Twitter and on Mastodon:
+Find us on all Social Media:
 
--   Twitter: [\@RLadiesRome](https://twitter.com/RLadiesRome)
--   Mastodon: <a rel="me" href="https://fosstodon.org/@rladiesrome">fosstodon.org/@rladiesrome</a>
+-   [linktr.ee]: [https://linktr.ee/rladiesrome](https://linktr.ee/rladiesrome)
 
 </body>
