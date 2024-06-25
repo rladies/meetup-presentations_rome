@@ -1,6 +1,6 @@
 ---
-title: "R-Ladies Rome Introduction"
-subtitle: "R in Production: An Evening with Dr.Hadley Wickham<br>24 May, 2024"
+title: "R-Ladies Rome Presents:"
+subtitle: "Building a Website in R<br>Speaker: Federica Gazzelloni<br>28 June, 2024"
 format: 
   rladies-revealjs:
     title-slide-attributes:
@@ -12,7 +12,6 @@ editor:
   markdown: 
     wrap: 72
 ---
-
 
 
 # Welcome to R-Ladies Rome 
@@ -37,18 +36,32 @@ Our monthly meetings provide a platform to discuss `current trends` and `hot top
 
 ## About R-Ladies Rome 
 
-`R-Ladies Rome` is now a **`well recognized community`**. From January 2023 to May 2024, we have hosted **`23`** events, with **`1,643`** RSVPs, and reached **`985`** members on meetup.
-
+`R-Ladies Rome` is now a **`well recognized community`**. From January 2023 to June 2024, we have hosted **`24`** events, with more than **`1,600`** RSVPs, and reached **`1K+`** members on meetup.
 
 
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
+#| eval: false
 library(meetupr)
-library(tidyverse)
-
 rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+
+```{r}
 events_rsvp <- rladies_rome %>%
   select(id,time,going)%>%
   mutate(time = as.Date(time,origin="1970-01-01"),
@@ -58,7 +71,7 @@ events_rsvp <- rladies_rome %>%
   reframe(going = sum(going))%>%
   mutate(tot_going = cumsum(going))
 
-rladies_rome_members <- meetupr::get_members("rladies-rome")
+
 tot_members <- rladies_rome_members%>%
   mutate(created = as.Date(created,origin="1970-01-01"))%>%
   group_by(created)%>%
@@ -72,15 +85,15 @@ tot_members <- rladies_rome_members%>%
 events_rsvp%>%
   ggplot(aes(x = time, y = tot_going)) +
   geom_line() +
-  scale_x_date(date_labels = "%b-%Y",date_breaks="4 months") +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
   labs(title = "R-Ladies Rome Events RSVP",
        subtitle = "Cumulative number of reservations",
        x = "Time(month-year)",
        y = "Number of Attendees",
   caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
   theme_minimal()+
-    theme(plot.title = element_text(size=18,face="bold"),
-        plot.subtitle = element_text(size=14,face="bold"),
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
         plot.caption = element_text(size=10,face="italic"))
 
   
@@ -88,18 +101,17 @@ tot_members%>%
   ggplot(aes(x = created,y=tot)) +
   geom_line() +
   geom_point(size=0.2) +
-  scale_x_date(date_labels = "%b-%Y") +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
   labs(title = "R-Ladies Rome Membership Registration Growth",
        subtitle = "Cumulative number of members",
        x = "Time(month-year)",
        y = "Number of Members",
        caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
   theme_minimal() +
-  theme(plot.title = element_text(size=18,face="bold"),
-        plot.subtitle = element_text(size=14,face="bold"),
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
         plot.caption = element_text(size=10,face="italic"))
 ```
-
 
 :::{.callout .callout-info}
 For more information, please visit [rladiesrome.org](rladiesrome.org)
@@ -120,10 +132,11 @@ Organizers and Volunteers:
 Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
 `R-Ladies Global`.
 
-`Lead Organizer` of the chapter is [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+`Organizer` of the chapter are:
 
-`Organizers` are [Silvana Acosta](https://www.linkedin.com/in/silacos/)
-and [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+- [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+- [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+- [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
 
 ::: callout-tip
 # JONI US!
@@ -150,11 +163,12 @@ We are always open to new joiners, so if you'd like to contribute to our Rome ch
     & TunisR User Group
 -   February 20 - `Debugging in R` with [Shannon Pileggi](https://www.linkedin.com/in/shannon-m-pileggi/)
 -   March 22 - `Vetiver and model deployment` with [Isabel Zimmerman](https://www.linkedin.com/in/isabel-zimmerman/)
--   April 16 - `R for geospatial data science and public health surveillance` with [Dr. Paula Moraga](https://www.paulamoraga.com/)
+-   April 16 - `R for geospatial ds and public health surveillance` with [Dr. Paula Moraga](https://www.paulamoraga.com/)
+-   May 24 - R in Production: An Evening with [Dr.Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)
 
 <center>
 
-> **TODAY: May 24 - R in Production: An Evening with [Dr.Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)**
+> **TODAY: June 24 - `Building a Website in R` with [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)**
 
 </center>
 
@@ -167,24 +181,12 @@ We are always open to new joiners, so if you'd like to contribute to our Rome ch
 
 
 
-### Slido Survey
-
-::: {style="color: black"}
-Please scan this QR code or head to <https://slido.com> and type
-`#rinproduction` to join our interactive survey. We'd love to hear your thoughts.
-:::
-
-![](images/rinproduction.png){style="fig-align: center" width="80%"}
 
 
 :::::
 
 # R-Ladies Rome & NYC present: {.smaller}
 
-It's now time to hand the floor over to our esteemed speaker. Tonight's event, we have the honor of hosting Dr. Hadley Wickham, Chief Scientist at Posit PBC (formerly RStudio), and a renowned figure in the world of data science.
+Today's workshop is lead by our R-Ladies Rome Organizer Federica Gazzelloni. She is a Statistician and an Actuary interested in machine learning application to health data. More about her ongoing projects and teaching experiences can be found here: <https://federicagazzelloni.com/>
 
-Dr. Wickham is not only an Adjunct Professor of Statistics at the University of Auckland, Stanford University, and Rice University, but he's also the mastermind behind some of the most widely-used tools and packages in the R programming language. His contributions to the field have revolutionized the way we approach data analysis, visualization, and software development in R.
-
-Tonight, Dr. Wickham will be talking 'R in Production,' sharing insights and best practices on how to deploy R solutions effectively in real-world environments. 
-
-So without further ado, please join me in welcoming `Dr. Hadley Wickham`.
+So without further ado, let's get started developping our brand new Website in R! 🚀

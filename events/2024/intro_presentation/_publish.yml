@@ -14,3 +14,7 @@
   quarto-pub:
     - id: 592af8a7-70ab-49a9-9ade-bce41add1674
       url: 'https://rladiesrome.quarto.pub/may242024'
+- source: intro_06.qmd
+  quarto-pub:
+    - id: 088abdde-5cec-429b-bf01-63e5c7314ae1
+      url: 'https://rladiesrome.quarto.pub/june282024'
