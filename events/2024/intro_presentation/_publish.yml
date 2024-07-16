@@ -18,3 +18,7 @@
   quarto-pub:
     - id: 088abdde-5cec-429b-bf01-63e5c7314ae1
       url: 'https://rladiesrome.quarto.pub/june282024'
+- source: intro_0718.qmd
+  quarto-pub:
+    - id: ec8c66ee-5b3c-4ab8-80fc-1e5b3253f401
+      url: 'https://rladiesrome.quarto.pub/r-ladies-rome-presents'
