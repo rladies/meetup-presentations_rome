@@ -40,7 +40,7 @@ innovation and progress.
 -   👥 Open Science in Practice
 ```
 
-# Welcome Everyone!
+# Welcome Everyone!{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTZpazc0YzR5YmMyeG1ja2k3Nml6N2t2b3VrdWJnYm1maWduMDAxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEdvaojSrAwM3Qqxa/giphy.gif" background-opacity=0.5}
 
 Happy to welcome you to our November event! 
 
@@ -72,7 +72,7 @@ promoting `inclusivity` in the R language community.
 Our monthly meetings provide a platform to discuss current trends and hot topics in R 💜.**
 
 
-## R-Ladies Rome in Numbers
+## R-Ladies Rome in Numbers{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNjb2xqdXUyZmtudG1sdW51YmhubjMyNDVvdndqemJobWJ1bzlreCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iZGpuaRKdEZoI/giphy.gif" background-opacity=0.5}
 
 ::: {.callout .callout-info}
 For more information, please visit [rladiesrome.org](rladiesrome.org)
@@ -222,7 +222,7 @@ propose a speaker or workshop, please scan the `QR-Code` and fill out the form:
 :::::::
 
 
-# R-Ladies Rome presents: {.smaller}
+# R-Ladies Rome presents: {.smaller background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3F5N2FwNGZnZ2s1b2hlY2ppbXU0bmIwa2JhN3U1MDNzOTcyYXdtZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ySvZaRKnzCdvG/giphy.gif" background-opacity=0.5}
 
 We are thrilled to have with us **`Julia Stewart Lowndes`**, the Director of **`NASA-Openscapes`**, who will be sharing her insights on the transformative power of **`“forking”`** in the world of open science.
 
