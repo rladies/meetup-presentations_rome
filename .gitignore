@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-events/2023/intro_presentations
 images
 events/2023/rsconnect
 events/2023/_extensions
@@ -16,3 +15,5 @@ banner-portfolio-centered.png
 ~/Library/Application Support/meetupr/meetupr-token.rds
 data
 events/2024/intro_presentation/data
+rladies_rome_members.rds
+rladies_rome.rds
