@@ -88,3 +88,7 @@ Find us on all Social Media:
 -   linktr.ee: <https://linktr.ee/rladiesrome>
 
 </body>
+
+### Support us
+
+If you would like to support us, please visit our [funding page](https://github.com/sponsors/fgazzelloni). You can also mention the GitHub username `fgazzelloni` for funding.

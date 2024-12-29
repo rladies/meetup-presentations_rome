@@ -88,3 +88,7 @@ Find us on Twitter and on Mastodon:
 -   Mastodon: <a rel="me" href="https://fosstodon.org/@rladiesrome">fosstodon.org/@rladiesrome</a>
 
 </body>
+
+### Support us
+
+If you would like to support us, please visit our [funding page](https://github.com/sponsors/fgazzelloni). You can also mention the GitHub username `fgazzelloni` for funding.
