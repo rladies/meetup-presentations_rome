@@ -2,9 +2,9 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/RLadiesRome.svg?style=social)](https://twitter.com/RLadiesRome) [![Mastodon Follow](https://img.shields.io/mastodon/follow/110298024852860267?domain=https%3A%2F%2Ffosstodon.org)](https://fosstodon.org/@rladiesrome) [![Meetup Follow](https://img.shields.io/badge/Meetup-Follow-blue)](https://www.meetup.com/rladies-rome/)
 
-> `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter 📧 [rome\@rladies.org](rome@rladies.org) \
+> `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter 📧 [rome\@rladies.org](rome@rladies.org) 
 
-### Our Sponsor is [R Consortium](https://www.r-consortium.org/)<img src="https://pbs.twimg.com/profile_images/634062278057439233/oTDwjhnZ_400x400.png" alt="RConsortium" align="right" width="100" height="100"/> \
+### Our Sponsor is [R Consortium](https://www.r-consortium.org/)<img src="https://pbs.twimg.com/profile_images/634062278057439233/oTDwjhnZ_400x400.png" alt="RConsortium" align="right" width="100" height="100"/> 
 
 ### 🌐 To understand a bit more about who we are and what we do, have a look at our website 🔗 <https://rladiesrome.org>
 
