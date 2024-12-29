@@ -6,7 +6,7 @@
 
 > `R-Ladies Rome` is a local chapter of `R-Ladies Global`<br>We will meet once a month for talking about hot topics in the R language<br>You are welcome to provide suggestions, comments and get in touch to be part of this chapter.
 
-## NEW WEBSITE: <https://rladiesrome.quarto.pub/website/>
+## NEW WEBSITE: <https://rladiesrome.org>
 
 ## 🔭 Support us Click here: [opencollective.com/r-ladies-rome](https://opencollective.com/r-ladies-rome#category-CONTRIBUTE)
 
