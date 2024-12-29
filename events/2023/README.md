@@ -8,9 +8,13 @@
 
 ## NEW WEBSITE: <https://rladiesrome.org>
 
-## 🔭 Support us Click here: [opencollective.com/r-ladies-rome](https://opencollective.com/r-ladies-rome#category-CONTRIBUTE)
+### Support us
 
-This repository contains all about the R-Ladies Rome talks taken throughout the Year.
+If you would like to support us, please visit our [funding page](https://github.com/sponsors/fgazzelloni). You can also mention the GitHub username `fgazzelloni` for funding.
+
+---
+
+## 2024 R-Ladies Rome talks taken throughout the Year.
 
 | Date | Speaker | Event | Material | Recording | Intro |
 |------------|------------|------------|------------|------------|------------|
@@ -39,11 +43,11 @@ This repository contains all about the R-Ladies Rome talks taken throughout the 
 
 ### Social Networks:
 
--   Twitter [twitter.com/RLadiesRome](https://twitter.com/RLadiesRome){.uri}
+-   Twitter [twitter.com/RLadiesRome](https://twitter.com/RLadiesRome)
 
--   Meetup [www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/){.uri}
+-   Meetup [www.meetup.com/rladies-rome/](https://www.meetup.com/rladies-rome/)
 
--   LinkedIn [www.linkedin.com/company/r-ladies-rome](https://www.linkedin.com/company/r-ladies-rome){.uri}
+-   LinkedIn [www.linkedin.com/company/r-ladies-rome](https://www.linkedin.com/company/r-ladies-rome)
 
 -   Mastodon [fosstodon.org/\@rladiesrome](https://fosstodon.org/@rladiesrome)
 
@@ -88,7 +92,3 @@ Find us on Twitter and on Mastodon:
 -   Mastodon: <a rel="me" href="https://fosstodon.org/@rladiesrome">fosstodon.org/@rladiesrome</a>
 
 </body>
-
-### Support us
-
-If you would like to support us, please visit our [funding page](https://github.com/sponsors/fgazzelloni). You can also mention the GitHub username `fgazzelloni` for funding.
