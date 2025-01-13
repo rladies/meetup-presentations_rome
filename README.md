@@ -18,7 +18,7 @@
 
 | Date | Speaker | Event | Material | Recording | Intro |
 |----|----|----|----|----|----|
-| 2025-01-09 | [Eli Holder](https://3iap.com/about/) | [Deathly Dataviz: How public health dashboards can backfire, and what can we do instead.](https://www.meetup.com/rladies-rome/events/305279450) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/january092025/) |
+| 2025-01-09 | [Eli Holder](https://3iap.com/about/) | [Deathly Dataviz: How public health dashboards can backfire, and what can we do instead.](https://www.meetup.com/rladies-rome/events/305279450) | [Slides](https://3iap.com/rladies2025) | [Recording](https://youtu.be/y1bqK6fnKGY) | [Intro](https://rladiesrome.quarto.pub/january092025/) |
 | 2025-02-? | [Isabella Velásquez](https://www.linkedin.com/in/ivelasq/) | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-03-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-04-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
