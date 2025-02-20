@@ -2,3 +2,7 @@
   quarto-pub:
     - id: 66e69fb1-e6b8-4fe9-80ab-92fd4204d053
       url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
+- source: intro_02.qmd
+  quarto-pub:
+    - id: cb6b6a7c-54ae-41e7-aee5-acf839eed873
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
