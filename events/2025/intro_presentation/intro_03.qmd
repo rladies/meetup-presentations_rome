@@ -31,7 +31,7 @@ recorded!
 
 # Welcome Everyone!{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjU1d2E1a2R0bmdubWphazdqdDFraGg4bmhtNGxtM2J0Nzk0ZGVtMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YQM4ykMCGpMd2/giphy.gif" background-opacity=0.2}
 
-Happy to welcome you to our February Event! 
+Happy to welcome you to our March Event! 
 
 I’m **`Rafaela Ribeiro`**, **`R-Ladies Rome`** chapter Organizer.
 
