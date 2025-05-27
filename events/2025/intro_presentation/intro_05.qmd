@@ -1,0 +1,49 @@
+---
+title: "Why Small Git Commits Matter (and How to Make Them!)"
+subtitle: "Speaker: Maëlle Salmon" 
+date: "2025-05-27"
+author: <span style="color:#ff66c4;">R-Ladies Rome</span>
+footer: "[Visit our Website: rladiesrome.org](http://www.rladiesrome.org)"
+logo: images/logo.png 
+logo-alt: "rladiesrome"
+format: 
+  revealjs:
+    theme: [blood, custom.scss]
+    scrollable: true
+    transition: slide
+    background-transition: fade
+    incremental: true
+    slide-number: true
+editor: visual
+---
+
+# Welcome<br>Everyone! {background-image="images/logo.png" background-size="400px" background-position="right"}
+
+# Disclaimer {.smaller}
+
+This talk is recorded and will be posted on [Youtube \@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+Please remember that all our attendees are expected to adhere to our `Code of Conduct` 👉 <https://rladies.org/coc/>
+
+<br>
+
+**`We ensure a safe, inclusive, and harassment-free space for learning. We are committed to providing a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+# Who we are?
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**`R-Ladies Rome` is a local chapter of `R-Ladies Global` dedicated to promoting `continuous learning` in the Open Source Community. Our monthly meetings provide a platform to discuss current trends and hot topics, such as `Git` 😈 and `Python` 🐍**
+
+# Join us! {background-image="images/background-joinus.png" background-size="800px" background-position="right"}
+
+If you’d like to join our team and contribute to our community, we have a few open positions!
+
+<br>
+
+Fill out the form here 👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+

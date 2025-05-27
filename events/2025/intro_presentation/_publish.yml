@@ -10,3 +10,7 @@
   quarto-pub:
     - id: 3a5c7eae-cf3a-47bc-98d0-07fe4a9f7b60
       url: https://rladiesrome.quarto.pub/march272025
+- source: intro_05.qmd
+  quarto-pub:
+    - id: c9169347-6973-44e3-8c18-83ebff449bf5
+      url: https://rladiesrome.quarto.pub/may272025
