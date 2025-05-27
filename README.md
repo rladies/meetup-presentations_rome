@@ -22,7 +22,7 @@
 | 2025-02-26 | [Isabella Velásquez](https://www.linkedin.com/in/ivelasq/) | [Interactive R, Python, and Shiny in the Browser with Quarto and Shinylive]() | [Slides](https://ivelasq.github.io/2025-02-21_r-python-shiny-in-the-browser/) | [Recording](https://youtu.be/59DSo_jjTpI) | [Intro](https://rladiesrome.quarto.pub/february212025/) |
 | 2025-03-27 | [Federica Gazzelloni](https://federicagazzelloni.com/) | [AI, Actuarial Science, and R: A New Era of Risk Modeling](https://www.meetup.com/rladies-rome/events/306750776) | [Slides](https://fgazzelloni.quarto.pub/ai-actuarial-science-and-r/) | [Recording](https://youtu.be/tah6-upp2qw) | [Intro](https://rladiesrome.quarto.pub/march272025/) |
 | 2025-04-27 | [Federica Gazzelloni](https://federicagazzelloni.com/) | [From R to Python: A Gentle Introduction](https://www.meetup.com/rladies-rome/events/307416804) | [Slides](https://fgazzelloni.quarto.pub/from-r-to-python-a-gentle-introduction) | [Recording](https://youtu.be/PVnTzUIsbAI) | [Intro](https://rladiesrome.quarto.pub/from-r-to-python-a-gentle-introduction) |
-| 2025-05-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
+| 2025-05-27 | [Maëlle Salmon](https://masalmon.eu/) | [Why Small Git Commits Matter (and How to Make Them!)](https://www.meetup.com/rladies-rome/events/307952060) | [Slides](https://rome-git.netlify.app/#/) | [Recording]() | [Intro]() |
 | 2025-06-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-07-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-08-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
