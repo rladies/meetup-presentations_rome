@@ -14,3 +14,7 @@
   quarto-pub:
     - id: c9169347-6973-44e3-8c18-83ebff449bf5
       url: https://rladiesrome.quarto.pub/may272025
+- source: intro_07.qmd
+  quarto-pub:
+    - id: 53d0b5d5-3304-4163-a7c8-330bf1771018
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents

@@ -1,0 +1,131 @@
+---
+title: "Speaking Many Languages: Finding Power and Joy in R and Python"
+subtitle: "Speaker: Federica Gazzelloni" 
+date: "2025-06-16"
+author: <span style="color:#ff66c4;">R-Ladies Rome</span>
+footer: "[Visit our Website: rladiesrome.org](http://www.rladiesrome.org)"
+logo: images/logo.png 
+logo-alt: "rladiesrome"
+format: 
+  revealjs:
+    theme: [blood, custom.scss]
+    scrollable: true
+    transition: slide
+    background-transition: fade
+    incremental: true
+    slide-number: true
+editor: visual
+---
+
+# Welcome<br>Everyone! {background-image="images/logo.png" background-size="400px" background-position="right"}
+
+# Disclaimer {.smaller}
+
+This talk is recorded and will be posted on [Youtube \@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+Please remember that all our attendees are expected to adhere to our `Code of Conduct` 👉 <https://rladies.org/coc/>
+
+<br>
+
+**`We ensure a safe, inclusive, and harassment-free space for learning. We are committed to providing a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+# Who we are?
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**`R-Ladies Rome` is a local chapter of `R-Ladies Global` dedicated to promoting `continuous learning` in the Open Source Community. Our monthly meetings provide a platform to discuss current trends and hot topics, such as `Git` 😈 and `Python` 🐍**
+
+# Join us! {background-image="images/background-joinus.png" background-size="800px" background-position="right"}
+
+If you’d like to join our team and contribute to our community, we have a few open positions!
+
+<br>
+
+Fill out the form here 👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+## R-Ladies Rome in Numbers {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnp5YmxpZTFoYWd2bDFpbHVnMDVhcDhkcmtrbmo2eXlrdXlhYXJhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TrOMR6REnWN1u/giphy.gif" background-opacity="0.5"}
+
+::: {.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+**`R-Ladies Rome`** has grown into a **`widely recognized community`**.
+
+Since January 2023, we’ve welcomed over **`1.2K members`** on Meetup, gained **`2K+ RSVPs`**, and successfully organized **`25+ events`**.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+```{r}
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+```

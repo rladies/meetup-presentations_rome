@@ -24,7 +24,8 @@
 | 2025-04-27 | [Federica Gazzelloni](https://federicagazzelloni.com/) | [From R to Python: A Gentle Introduction](https://www.meetup.com/rladies-rome/events/307416804) | [Slides](https://fgazzelloni.quarto.pub/from-r-to-python-a-gentle-introduction) | [Recording](https://youtu.be/PVnTzUIsbAI) | [Intro](https://rladiesrome.quarto.pub/from-r-to-python-a-gentle-introduction) |
 | 2025-05-27 | [Maëlle Salmon](https://masalmon.eu/) | [Why Small Git Commits Matter (and How to Make Them!)](https://www.meetup.com/rladies-rome/events/307952060) | [Slides](https://rome-git.netlify.app/#/) | [Recording]() | [Intro](https://rladiesrome.quarto.pub/may272025) |
 | 2025-06-16 | [PyData x R-Ladies x Rome R Users Group](https://www.meetup.com/pydata-roma-capitale/events/308302003/) | [Speaking Many Languages: Finding Power and Joy in R and Python](https://www.meetup.com/rladies-rome/events/308302084) | [Slides](https://speaking-many-languages.my.canva.site/) | [Recording]() | [Intro]() |
-| 2025-07-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
+| 2025-07-03 | [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) | [Forecasting Time Series with Linear Regression: A Feature-Driven Approach](https://www.meetup.com/rladies-rome/events/308574280) | [Slides](https://github.com/RamiKrispin/r-ladies-rome-workshop) | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july032025) |
+| 2025-07-22 | [Rita Giordano](https://www.linkedin.com/in/ritagiordano/) | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-08-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-09-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-10-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
