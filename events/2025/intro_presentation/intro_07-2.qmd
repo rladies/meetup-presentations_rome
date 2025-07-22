@@ -1,0 +1,99 @@
+---
+title: "Benvenuti a R-Ladies Rome"
+subtitle: "Visualizzare dati per i pazienti<br>Speaker: Rita Giordano<br>in Italian<br><br>22 Luglio, 2025"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Avviso {background-color="#562457"}
+
+Questa presentazione è registrata e sarà pubblicata su `Youtube/@rladiesrome`
+
+🚫 Sentiti libero di spegnere le telecamere, se non desideri essere registrato!
+
+Ricorda che ci aspettiamo che tutti i partecipanti rispettino il nostro
+Codice di Condotta 👉 <https://rladies.org/coc/>
+
+`Diamo priorità alla creazione di uno spazio sicuro e inclusivo, privo di qualsiasi forma di molestia, favorendo un ambiente rispettoso in cui tutti possono imparare e connettersi.`
+
+Utilizza la chat per presentarti e fare domande (o alza la
+mano ✋)
+
+
+# Benvenuti! {.smaller}
+
+Benvenuti! Questo è il secondo evento di Luglio per `R-Ladies Rome`.
+Io sono `Federica Gazzelloni` Lead Organizer degli eventi di `R-Ladies Rome`.
+
+Per qualsiasi domanda su eventi futuri, possibilità di entrare a far parte dell'organizzazione, potete scriverci a <rome@rladies.org>.
+
+
+
+# Che cosa è R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` è un organizzazione con la missione di promuovere il linguaggio di programmazione R nelle varie comunità locali, in particolare per rafforzare il potere della conoscenza nelle donne. Per diminuire le disparità e fare networking!
+-   Fondata nel 2012 da [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+-   Oggi `R-Ladies` è un organizazione a livello Globale con circa 219 chapters in 63 paesi, 3943 eventi e più di 93,000 membri.
+
+Per maggiori informazioni su `R-Ladies Global`, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+
+> **`R-Ladies Rome`** è uno dei gruppi, chiamati `chapters` di **`R-Ladies Global`**.
+Organizziamo uno o più eventi al mese, in base alle richieste o alla disponibilità degli speakers. Ci teniamo ad avere eventi che siano di utilità per parlare di carriera, statistica/matematica, e in particolare come usare R. 
+Se avete idee per un futuro evento, non esitate a proporle!
+
+![](images/rladiesrome-team.png){fig-align="center" width="900",heigh="500"}
+
+Se vuoi entrare a far parte del nostro gruppo come volontaria non esitare a scriverci:  [rome@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### Rome Chapter Calendario
+
+    Abbiamo 12 mesi di eventi pazzeschi tutti OPEN SOURCE 
+    
+Guarda sul nostro sito: <https://rladiesrome.org/talks/2025/>
+
+
+### News & Announcements
+
+::: {style="color: #88398A"}
+> **`Il Tuo supporto è fondamentale!` SEGUICI**<br>👉 <https://linktr.ee/rladiesrome> support `R-Ladies Rome`!
+:::
+
+
+:::
+
+
+
+
+# Sessione Pratica {.smaller}
+
+Rita Giordano è una data scientist freelance esperta di visualizzazione dei dati con R e comunicazione accessibile in ambito scientifico. Dopo una laurea in fisica a Catania con tesi al CERN e un dottorato in statistica applicata alla cristallografia presso l’ESRF in Francia, ha lavorato in diversi Paesi europei tra ricerca e industria. Ha collaborato con LinkedIn e Pearson UK su progetti educativi e ha insegnato data visualization all’Università di Cambridge. Nel 2024 ha fondato Clarum, una startup di digital health a Cambridge.
+
+Rita ci guiderà in una riflessione su come rendere le visualizzazioni di dati sanitari accessibili e comprensibili, soprattutto per le persone direttamente coinvolte nei percorsi di cura. Un talk che unisce data visualization, empatia e comunicazione efficace.
+
+
+

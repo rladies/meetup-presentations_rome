@@ -18,3 +18,7 @@
   quarto-pub:
     - id: 53d0b5d5-3304-4163-a7c8-330bf1771018
       url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
+- source: intro_07-2.qmd
+  quarto-pub:
+    - id: 3477c2bb-1cd3-4b01-9bcc-81d524a998f7
+      url: https://rladiesrome.quarto.pub/benvenuti-a-r-ladies-rome
