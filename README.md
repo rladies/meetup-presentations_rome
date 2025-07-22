@@ -26,7 +26,7 @@
 | 2025-06-16 | [PyData x R-Ladies x Rome R Users Group](https://www.meetup.com/pydata-roma-capitale/events/308302003/) | [Speaking Many Languages: Finding Power and Joy in R and Python](https://www.meetup.com/rladies-rome/events/308302084) | [Slides](https://speaking-many-languages.my.canva.site/) | [Recording]() | [Intro]() |
 | 2025-07-03 | [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) | [Forecasting Time Series with Linear Regression: A Feature-Driven Approach](https://www.meetup.com/rladies-rome/events/308574280) | [Slides](https://github.com/RamiKrispin/r-ladies-rome-workshop) | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july032025) |
 | 2025-07-22 | [Rita Giordano](https://www.linkedin.com/in/ritagiordano/) | [Visualizzare dati per i pazienti](https://www.meetup.com/rladies-rome/events/308889291/) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july222025/) |
-| 2025-08-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
+| 2025-08-25 | [Derek Sollberger]() | [Interactive Dashboards with Quarto](https://www.meetup.com/rladies-rome/events/310110479) | [Slides]() | [Recording]() | [Intro]() |
 | 2025-09-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-10-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-11-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
