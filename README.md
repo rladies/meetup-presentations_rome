@@ -17,7 +17,7 @@
 ## 2025 Events Calendar 📅
 
 | Date | Speaker | Event | Material | Recording | Intro |
-|----|----|----|----|----|----|
+|------------|------------|------------|------------|------------|------------|
 | 2025-01-09 | [Eli Holder](https://3iap.com/about/) | [Deathly Dataviz: How public health dashboards can backfire, and what can we do instead.](https://www.meetup.com/rladies-rome/events/305279450) | [Slides](https://3iap.com/rladies2025) | [Recording](https://youtu.be/y1bqK6fnKGY) | [Intro](https://rladiesrome.quarto.pub/january092025/) |
 | 2025-02-26 | [Isabella Velásquez](https://www.linkedin.com/in/ivelasq/) | [Interactive R, Python, and Shiny in the Browser with Quarto and Shinylive]() | [Slides](https://ivelasq.github.io/2025-02-21_r-python-shiny-in-the-browser/) | [Recording](https://youtu.be/59DSo_jjTpI) | [Intro](https://rladiesrome.quarto.pub/february212025/) |
 | 2025-03-27 | [Federica Gazzelloni](https://federicagazzelloni.com/) | [AI, Actuarial Science, and R: A New Era of Risk Modeling](https://www.meetup.com/rladies-rome/events/306750776) | [Slides](https://fgazzelloni.quarto.pub/ai-actuarial-science-and-r/) | [Recording](https://youtu.be/tah6-upp2qw) | [Intro](https://rladiesrome.quarto.pub/march272025/) |
@@ -26,7 +26,7 @@
 | 2025-06-16 | [PyData x R-Ladies x Rome R Users Group](https://www.meetup.com/pydata-roma-capitale/events/308302003/) | [Speaking Many Languages: Finding Power and Joy in R and Python](https://www.meetup.com/rladies-rome/events/308302084) | [Slides](https://speaking-many-languages.my.canva.site/) | [Recording]() | [Intro]() |
 | 2025-07-03 | [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) | [Forecasting Time Series with Linear Regression: A Feature-Driven Approach](https://www.meetup.com/rladies-rome/events/308574280) | [Slides](https://github.com/RamiKrispin/r-ladies-rome-workshop) | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july032025) |
 | 2025-07-22 | [Rita Giordano](https://www.linkedin.com/in/ritagiordano/) | [Visualizzare dati per i pazienti](https://www.meetup.com/rladies-rome/events/308889291/) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july222025/) |
-| 2025-08-25 | [Derek Sollberger]() | [Interactive Dashboards with Quarto](https://www.meetup.com/rladies-rome/events/310110479) | [Slides]() | [Recording]() | [Intro]() |
+| 2025-08-24 | [Derek Sollberger]() | [Interactive Dashboards with Quarto](https://www.meetup.com/rladies-rome/events/310110479) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/august242025/) |
 | 2025-09-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-10-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-11-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
