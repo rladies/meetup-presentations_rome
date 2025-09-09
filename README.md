@@ -27,7 +27,7 @@
 | 2025-07-03 | [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) | [Forecasting Time Series with Linear Regression: A Feature-Driven Approach](https://www.meetup.com/rladies-rome/events/308574280) | [Slides](https://github.com/RamiKrispin/r-ladies-rome-workshop) | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july032025) |
 | 2025-07-22 | [Rita Giordano](https://www.linkedin.com/in/ritagiordano/) | [Visualizzare dati per i pazienti](https://www.meetup.com/rladies-rome/events/308889291/) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july222025/) |
 | 2025-08-24 | [Derek Sollberger]() | [Interactive Dashboards with Quarto](https://www.meetup.com/rladies-rome/events/310110479) | [Slides]() | [Recording](https://www.youtube.com/watch?v=N1BBsv-zNNI) | [Intro](https://rladiesrome.quarto.pub/august242025/) |
-| 2025-09-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
+| 2025-09-29 | [Chuck Huber](https://www.linkedin.com/in/chuck-huber-33a39212/) | [Using Python Within Stata](https://www.meetup.com/rladies-rome/events/310946113) | [Slides]() | [Recording]() | [Intro]() |
 | 2025-10-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-11-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 | 2025-12-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
