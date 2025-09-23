@@ -1,5 +1,5 @@
 ---
-title: "R-Ladies Rome Presents:"
+title: "R-Ladies Rome Presents"
 subtitle: "Interactive Quarto Dashboards<br>Speaker: Derek E. Sollberger<br>24 August, 2025"
 format: 
   rladies-revealjs:
