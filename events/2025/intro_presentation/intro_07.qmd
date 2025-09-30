@@ -51,10 +51,8 @@ July 22, 2025
 
 Event in Italian for healthcare professionals, focusing on data visualization for patient care.
 
-# R-Ladies Rome presents: {.smaller background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHI4YTBjaGF4OXp6N3dldXEzb3ltM21xdzF3Z2x6ZHRocDUyZmFiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Ztah2Jo4BQReDIs/giphy.gif" background-opacity=0.7}
+# R-Ladies Rome presents: {.smaller background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHI4YTBjaGF4OXp6N3dldXEzb3ltM21xdzF3Z2x6ZHRocDUyZmFiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Ztah2Jo4BQReDIs/giphy.gif" background-opacity="0.7"}
 
 We’re very excited to welcome [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) to R-Ladies Rome! Rami leads the Data Science and Engineering team at Apple Finance – Services and Infra, where he helps transform complex business questions into data-driven solutions using machine learning and statistical modeling.
 
 He’s also an open-source contributor and the author of Hands-On Time Series Analysis with R. Today, he’s joining us to share practical insights on feature-driven time series forecasting using linear regression. Please give a warm welcome to Rami Krispin!
-
-
