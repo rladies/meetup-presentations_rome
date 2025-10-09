@@ -1,0 +1,13 @@
+---
+title: "R-Ladies Rome & Rome R Users Group Present"
+#subtitle: "Using Python Within Stata<br>Speaker: Chuck Huber<br>29 September, 2025"
+format: 
+  rladies-revealjs: 
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"    
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
