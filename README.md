@@ -28,7 +28,7 @@
 | 2025-07-22 | [Rita Giordano](https://www.linkedin.com/in/ritagiordano/) | [Visualizzare dati per i pazienti](https://www.meetup.com/rladies-rome/events/308889291/) | [Slides]() | [Recording]() | [Intro](https://rladiesrome.quarto.pub/july222025/) |
 | 2025-08-24 | [Derek Sollberger]() | [Interactive Dashboards with Quarto](https://www.meetup.com/rladies-rome/events/310110479) | [Slides]() | [Recording](https://www.youtube.com/watch?v=N1BBsv-zNNI) | [Intro](https://rladiesrome.quarto.pub/august242025/) |
 | 2025-09-29 | [Chuck Huber](https://www.linkedin.com/in/chuck-huber-33a39212/) | [Using Python Within Stata](https://www.meetup.com/rladies-rome/events/310946113) | [Slides](https://tinyurl.com/statapython) | [Recording](https://youtu.be/9-79GUH6bSI) | [Intro](https://www.canva.com/design/DAG0KN-atg8/vvPKYb1lFxaDtC6KIDGgfQ/view?utm_content=DAG0KN-atg8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha06002729f) |
-| 2025-10-10 | [Kelly Marques](https://www.linkedin.com/in/kelly-marques-de-oliveiralopes/) | [BNPL and Machine Learning: Decisions That Scale](https://www.meetup.com/rladies-rome/events/311323771) | [Slides]() | [Recording]() | Intro |
+| 2025-10-10 | [Kelly Marques](https://www.linkedin.com/in/kelly-marques-de-oliveiralopes/) | [BNPL and Machine Learning: Decisions That Scale](https://www.meetup.com/rladies-rome/events/311323771) | [Slides]() | [Recording]() | [Intro](https://tinyurl.com/bdht95ss) |
 | 2025-11-04 | [Nicola Rennie](https://www.linkedin.com/in/nicola-rennie/) | [Developing your data visualisation skills in ggplot2](https://www.meetup.com/rladies-rome) | [Slides]() | [Recording]() | [Intro]() |
 | 2025-12-? | [More info soon]() | [More info soon]() | [Slides]() | [Recording]() | [Intro]() |
 
