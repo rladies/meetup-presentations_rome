@@ -79,7 +79,7 @@ For more information, please visit [rladiesrome.org](rladiesrome.org)
 Here are the filled-in statistics for R-Ladies Rome: Since January 2023, we’ve welcomed over **1.7K members** on Meetup, gained **3K+ RSVPs**, and successfully organized **40+ events**.
 
 ::: {#fig-members layout-ncol="2"}
-![Members-August25](images/rladiesrome-members-august25.png){#fig-members}
+![Members-August25](images/rladiesrome-events-rsvp-growth.png){#fig-members width="80%"}
 
 ![Members by Event](images/rladiesrome-members-by-event.png){#fig-event}
 
@@ -92,10 +92,11 @@ R-Ladies Rome Members Growth (left) and Members by Event (right)
 #| warning: false
 #| eval: false
 library(meetupr)
-rladies_rome <- get_events("rladies-rome")
-rladies_rome_members <- meetupr::get_members("rladies-rome")
-saveRDS(rladies_rome, "data/rladies_rome.rds")
-saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+
+rladies_rome <- meetupr::get_group_events("rladies-rome", "past")
+rladies_rome_members <- meetupr::get_group_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome-11-25.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members-11-25.rds")
 ```
 
 ```{r}
@@ -104,8 +105,8 @@ saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
 #| warning: false
 #| eval: false
 library(tidyverse)
-rladies_rome <- readRDS("data/rladies_rome.rds")
-rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+rladies_rome <- readRDS("data/rladies_rome-11-25.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members-11-25.rds")
 ```
 
 ```{r}
@@ -114,20 +115,20 @@ rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
 #| warning: false
 #| eval: false
 events_rsvp <- rladies_rome %>%
-  select(id,time,going)%>%
-  mutate(time = as.Date(time,origin="1970-01-01"),
-         time_id=row_number(time)) %>%
+  select(id,date_time,rsvps_count)%>%
+  mutate(date_time = as.Date(date_time,origin="1970-01-01"),
+         time_id=row_number(date_time)) %>%
   arrange(time_id)%>%
-  group_by(time_id,time) %>%
-  reframe(going = sum(going))%>%
+  group_by(time_id,date_time) %>%
+  reframe(going = sum(rsvps_count))%>%
   mutate(tot_going = cumsum(going))
 
 
-tot_members <- rladies_rome_members%>%
-  mutate(created = as.Date(created,origin="1970-01-01"))%>%
-  group_by(created)%>%
-  reframe(members=n())%>%
-  mutate(tot=cumsum(members))
+# tot_members <- rladies_rome_members%>%
+#   mutate(created = # as.Date(created,origin="1970-01-01"))%>%
+#   group_by(created)%>%
+#   reframe(members=n())%>%
+#   mutate(tot=cumsum(members))
 ```
 
 ```{r}
@@ -137,7 +138,7 @@ tot_members <- rladies_rome_members%>%
 #| warning: false
 #| eval: false
 events_rsvp%>%
-  ggplot(aes(x = time, y = tot_going)) +
+  ggplot(aes(x = date_time, y = tot_going)) +
   geom_line() +
   geom_smooth(color = "purple", se = F)+
   scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
@@ -151,7 +152,17 @@ events_rsvp%>%
         plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
         plot.caption = element_text(size=10,face="italic"))
 
-  
+ggsave("images/rladiesrome-events-rsvp-growth.png",
+       width=8,height=5)
+```
+
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
 tot_members%>%
   ggplot(aes(x = created,y=tot)) +
   geom_line() +
@@ -166,6 +177,8 @@ tot_members%>%
   theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
         plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
         plot.caption = element_text(size=10,face="italic"))
+
+
 ```
 
 ##  {.smaller}
