@@ -1,0 +1,50 @@
+---
+title: "![](images/logo.png){width=200px} **R-Ladies Rome Presents:**"
+subtitle: "From Data to Decisions: Using Digital Twins for Smarter Maintenance,<br>Speaker: Priyanka Schnell<br>16 February, 2026"
+format: 
+  rladies-revealjs:
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: true
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-image="images/feb2026/1118-disclaimer.png" background-opacity=0.35}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+**`Ensuring a safe, inclusive, and harassment-free space is our priority. We are committed to promoting a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# {background-image="images/feb2026/2.png"  background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/3.png"  background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/4.png"  background-size="contain" background-position="center"} 
+
+# {background-image="images/feb2026/5.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/6.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/7.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/8.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/9.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/10.png" background-size="contain" background-position="center"}
+
+# {background-image="images/feb2026/11.png" background-size="contain" background-position="center"}
+
+
+
