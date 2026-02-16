@@ -17,6 +17,7 @@
 | Date | Speaker | Event | Material | Recording | Intro |
 |----|----|----|----|----|----|
 | 2026/01/29 | [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni) | [Git & GitHub: Practical Version Control for Data Work](https://www.meetup.com/rladies-rome/events/312910723) | [Presentation](https://tinyurl.com/ms5n8z9h) | [Recording](https://tinyurl.com/bdczzcf6) |  [Intro presentation 01292026](https://tinyurl.com/5w332kau) |
+| 2026/02/16 | [Priyanka Schnell](https://www.linkedin.com/in/federicagazzelloni) | [From Data to Decisions: Using Digital Twins for Smarter Maintenance](https://www.meetup.com/rladies-rome/events/313125588) | [Presentation]() | [Recording]() |  [Intro presentation 02162026]() |
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
 
