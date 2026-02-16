@@ -1,0 +1,248 @@
+---
+title: "R-Ladies Rome Presents"
+subtitle: "Interactive Quarto Dashboards<br>Speaker: Derek E. Sollberger<br>24 August, 2025"
+format: 
+  rladies-revealjs:
+    #title-slide-attributes:
+       # data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-image="images/1118-disclaimer.png" background-opacity=0.35}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+**`Ensuring a safe, inclusive, and harassment-free space is our priority. We are committed to promoting a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# Welcome Everyone!{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjU1d2E1a2R0bmdubWphazdqdDFraGg4bmhtNGxtM2J0Nzk0ZGVtMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YQM4ykMCGpMd2/giphy.gif" background-opacity=0.2}
+
+Happy to welcome you to our August Event! 
+
+I’m **`Federica Gazzelloni`**, **`R-Ladies Rome`** chapter Organizer.
+
+We are thrilled to have you join us today. 🤩
+
+Get ready for an engaging and informative experience! 🔥
+
+
+# What to expect from this talk? {background-image="https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png" background-size=contain background-position="bottom" background-opacity=0.2}
+
+An interactive workshop where you’ll learn to build dynamic R dashboards with Shiny and Quarto, enabling teams to visualize, explore, and share data effectively.
+
+```
+- 📊 Learn to create interactive dashboards 
+- 🛠️ Hands-on techniques for filtering, sorting, visualizing data, and uncovering trends
+- 🌍 Explore advanced features like tools and workflows useful for academic research groups, and business teams.
+
+```
+
+
+# What is R-Ladies? {background-image="https://rladiesrome.org/images/world-map.png" background-size=cover background-opacity=0.5}
+
+\
+
+``` 
+- R-Ladies is a global community with the mission of promoting the R language at all user levels by building a collaborative global network. It is a friendly community founded in 2012 by Gabriela de Queiroz
+    
+```     
+
+# R-Ladies Rome {background-image="https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif" background-opacity=0.5}
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**It is a local chapter of `R-Ladies Global` dedicated to
+promoting `inclusivity` in the R language community.
+Our monthly meetings provide a platform to discuss current trends and hot topics in R 💜.**
+
+
+## R-Ladies Rome in Numbers{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnp5YmxpZTFoYWd2bDFpbHVnMDVhcDhkcmtrbmo2eXlrdXlhYXJhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TrOMR6REnWN1u/giphy.gif" background-opacity=0.5}
+
+::: {.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+**`R-Ladies Rome`** has grown into a **`widely recognized community`**. 
+
+Here are the filled-in statistics for R-Ladies Rome:
+Since January 2023, we’ve welcomed over **1.7K members** on Meetup, gained **3K+ RSVPs**, and successfully organized **40+ events**.
+
+::: {#fig-members layout-ncol=2}
+
+![Members-August25](images/rladiesrome-members-august25.png){#fig-members}
+
+![Members by Event](images/rladiesrome-members-by-event.png){#fig-event}
+
+R-Ladies Rome Members Growth (left) and Members by Event (right)
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+```
+
+
+##  {.smaller}
+
+::: callout-tip
+# Join us!
+
+If you'd like to contribute to our Rome chapter and being a co-organizer
+let us know:👉 <https://forms.gle/SkBiab8LhLcehpKu6>
+:::
+
+::::::: panel-tabset
+### R-Ladies Rome Team
+
+::::: columns
+::: {.column width="40%"}
+
+`Founders` and `Organizers` of the chapter are:
+
+- [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+
+- [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+
+- [Lucy Michaels](https://www.linkedin.com/in/lucymichaels/)
+
+- [Letícia Lopes](https://orcid.org/0000-0003-2020-9269)
+:::
+
+::: {.column width="60%"}
+![](images/group-organizers.png){width="100%"}
+:::
+:::::
+
+### Propose a Talk or Become a Future Speaker {.smaller}
+
+If you are interested in speaking at one of our events, or would like to
+propose a speaker or workshop, please scan the `QR-Code` and fill out the form:
+
+::::columns
+:::{.column width="50%"}
+<center>
+![**`Suggest a Speaker or a Topic`**](images/suggest-speaker.png){width="50%"}
+</center>
+:::
+:::{.column width="50%"}
+<center>
+![**`Speak at R-Ladies Rome`**](images/speaking.png){width="50%"}
+</center>
+:::
+::::
+
+### Next Events
+
+**Future Speakers:**
+
+- September: [Nicola Rennie](https://www.linkedin.com/in/nicola-rennie/) - Data Visualization Specialist
+- October: [Rahul Sangole](https://www.linkedin.com/in/rahulsangole/) - "Target workshop"
+- November: [Jakub Nowosad](https://www.linkedin.com/in/jakub-nowosad-r/) - Author of geocompx.org 
+    
+:::::::
+
+
+# R-Ladies Rome presents: {.smaller background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3F5N2FwNGZnZ2s1b2hlY2ppbXU0bmIwa2JhN3U1MDNzOTcyYXdtZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ySvZaRKnzCdvG/giphy.gif" background-opacity=0.2}
+
+We are thrilled to have with us [Derek Sollberger](https://www.linkedin.com/in/derek-sollberger/), a lecturer at the Center for Statistics and Machine Learning (CSML), where he teaches Data Science, AI Methods, and Bayesian Analysis.
+
+Derek is a Posit Certified Tidyverse Instructor with extensive experience leading R programming workshops and serving as a data analysis consultant for research projects in pedagogy. His passion lies in making complex statistical tools approachable and useful for real-world applications.
+
+Today, he’ll guide us through building interactive Quarto dashboards—powerful tools for academic teams, business groups, and anyone who needs clear, interactive data communication.
+
+Please join me in giving a warm welcome to Derek Sollberger! 🌟
+
+

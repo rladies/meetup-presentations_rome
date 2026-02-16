@@ -1,0 +1,194 @@
+---
+title: "Welcome to <br> R-Ladies Rome & R-Ladies NYC"
+subtitle: "Modeling infectious diseases<br><br>April 22, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+Talks will be recorded and posted on
+[Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Feel free to turn off your cameras if you do not want to be recorded
+-   Please make sure to turn off your microphone during the talk
+-   Please consider any pop-ups (audio/video) that are not related to
+    the talk to be excluded from your machine during the talk.
+-   Feel free to use the chat to ask questions
+
+[https://rladies.org/code-of-conduct/](https://rladies.org/code-of-conduct/){.uri
+style="color: #562457"}
+
+# Materials for tonight {.smaller}
+
+Get ready with all tools.
+
+-   Have R and RStudio ready, if you do not have them installed in your
+    computer, get into the cloud: <https://posit.cloud/>
+
+-   Install & load the following packages
+
+```{r }
+#| eval: false
+#| echo: true
+sir_pkgs <- c("tidyverse","deSolve")
+install.packages(sir_pkgs)
+```
+
+# Welcome Everyone! {.smaller}
+
+Welcome to this exciting event hosted by `R-Ladies Rome & R-Ladies NYC`.
+
+My name is `Katie Wood`, one of the chapter's organizers, and I am
+thrilled to have you all here tonight. We are also delighted to be
+joined by `Dorota Rizik` from `R-Ladies NYC` and
+`Jacqueline Buros & Federica Gazzelloni` our speakers for this event.\
+\
+Benvenuti! A questo evento in partnership
+`R-Ladies Rome e R-Ladies NYC`.
+
+Io sono Katie Wood una delle organizzatrici. Siamo in compagnia di
+Dorota Rizik di R-Ladies NYC e Jacqueline Buros & Federica Gazzelloni,
+le nostre relatrici per questa sera.
+
+Tutto il materiale verrà condiviso durante la presentazione se volete
+potete dare un'occhiata alla documentazione relativa a [Bayesian
+workflow for disease transmission modeling in
+Stan](https://mc-stan.org/users/documentation/case-studies/boarding_school_case_study.html)
+di cui parleremo.
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language and for empowering women at all user levels by building a
+    collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 218 chapters in
+    29 countries and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We expect more co-organizers to join us soon.
+
+<br>
+
+### Rome 2023 fall schedule
+
+| When       | Event                                                                                                                | Speaker                                                                                         |
+|------------------|--------------------------|----------------------------|
+| `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                          |
+| `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                   |
+| `March`    | What's new in the tidyverse                                                                                          | [Isabella Velasquez](https://ivelasq.rbind.io/about.html)                                       |
+| `April`    | [R-Ladies New York](https://www.meetup.com/rladies-newyork/) & [R-Ladies Rome](https://www.meetup.com/rladies-rome/) | [Jacqueline Buros & Federica Gazzelloni](https://www.meetup.com/rladies-rome/events/292629944/) |
+| `May`      | [R4DS Community Learning](https://www.rfordatasci.com/)                                                              | [Jon Harmon](https://www.linkedin.com/in/jonthegeek/)                                           |
+| `June`     | TBD                                                                                                                  | [Simina Boca](https://twitter.com/siminaboca)                                                   |
+| `July`     | `R kick start`                                                                                                       |                                                                                                 |
+
+### R-Ladies NYC
+
+> `R-Ladies NYC` is a local chapter of `R-Ladies Global` dedicated to promoting gender diversity in the R language community.
+We are open to all members with an interest in coding, particularly R programming. We are focused on increasing the representation of women and gender minorities in the global R community through meetups, mentorship, and collaborative learning and support.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is `Soumya Kalra`
+
+`Organizer` of the chapter is `Dorota Rizik`
+
+`Co-Organizers` are `Ayanthi Gunawardana`, `Kristin Akey`, `Mei Guan`, `Jacqueline Buros`, and `Clara Wang`.
+
+
+### NYC 2023 fall schedule
+
+
+We have two in-person events coming up! Details will be posted on our Meetup page: [https://www.meetup.com/rladies-newyork/](https://www.meetup.com/rladies-newyork/)
+
+- In May, we are planning a `"code-llaboration"` meetup at a café NYC. Come and spend some time working on personal projects with us.
+- In June we are planning our `Summer Social` to meet fellow R-Ladies. It's always a blast. 
+
+
+### News
+
+::: {style="color: #88398A"}
+Important upcoming: Registrations are now open!
+:::
+::: columns
+::: {.column width="50%"}
+<img src="https://pbs.twimg.com/media/FmS6UE1aUAA7V0B?format=jpg&name=medium">
+`Posit Conf 2023` will take place at the Hyatt Regency Chicago from Sunday, September 17 - Wednesday, September 20, 2023. [https://posit.co/conference/](https://posit.co/conference/)
+:::
+
+::: {.column width="50%"}
+
+![](images/bioconductor.png)
+The `BioC2023` conference will take place in Boston, MA, Dana Farber Cancer Institute.
+`European Bioconductor Conference 2023` will take place in Ghent, Belgium September 20, 2023.
+⏰ Abstract submission deadline is April 24, 5pm CEST.
+[http://eurobioc2023.bioconductor.org/](http://eurobioc2023.bioconductor.org/)
+:::
+:::
+:::
+
+# Tonight's presentation {.smaller}
+
+Welcome to this exciting event where we will be exploring the world of
+`modeling diseases with R`.
+
+Our speakers, `Federica Gazzelloni` and `Jacqueline Buros`, will be
+taking us on a journey through both `deterministic` and `Bayesian` SIR model
+methods, providing us with fascinating insights into each field.
+
+At the heart of our discussion is the well-known Sir model, which will
+help us understand how an epidemic might unfold and what measures can be
+taken to prevent its spread. Whether you are a student of science, a
+healthcare professional, or simply someone who wants to understand more
+about how to use R for modeling diseases, this talk promises to be
+insightful!
+
+We will begin with a quick intro assessment of the SIR model with R by
+Federica Gazzelloni. Jacqueline Buros will then take us through a
+Bayesian workflow for disease transmission.
+
+At the end of the event we will be hosting a `Q&A session`.

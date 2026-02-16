@@ -1,0 +1,384 @@
+import pandas as pd
+import numpy as np
+import warnings
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from sklearn.ensemble import IsolationForest
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import classification_report, confusion_matrix
+
+warnings.filterwarnings("ignore")
+np.random.seed(42)
+
+# ==========================================
+# 1. DIGITAL TWIN PHYSICS ENGINE (STACK DRILLING)
+# ==========================================
+class DrillingDigitalTwin:
+    """
+    A321 wing stack drilling simulation (Al -> Ti within each hole) with a Digital Twin baseline.
+
+    - torque_twin: physics baseline (healthy tool) as function of regime + feed setpoint
+    - torque_actual: twin + sensor noise + hardness variation + Point-P onset shift + accelerating wear
+    - vibration: separate sensor channel that rises with Point-P + wear
+
+    Labels:
+      state = 0 healthy, 1 degrading (Point P reached), 2 functional failure (Point F and beyond)
+    """
+    def __init__(
+        self,
+        n_holes: int = 220,
+        samples_per_hole: int = 12,   # aligns with "6 of 12" persistence
+        hole_p: int = 140,            # Point P (potential failure onset)
+        hole_f: int = 200,            # Point F (functional failure)
+        drill_diameter_mm: float = 8.0,
+        sample_dt_s: float = 10.0     # 12 samples/hole => ~120s/hole
+    ):
+        self.n_holes = n_holes
+        self.samples_per_hole = samples_per_hole
+        self.hole_p = hole_p
+        self.hole_f = hole_f
+        self.sample_dt_s = sample_dt_s
+
+        # Stack split within each hole: Al first, then Ti
+        self.n_al_steps = int(round(samples_per_hole * 0.6))
+        self.n_ti_steps = samples_per_hole - self.n_al_steps
+
+        # Drill geometry -> area for MRR proxy
+        self.drill_diameter_mm = drill_diameter_mm
+        self.area_mm2 = np.pi * (drill_diameter_mm / 2.0) ** 2
+
+        # Nominal controller setpoints (example values)
+        self.rpm_setpoint = {"Al": 2600.0, "Ti": 1800.0}
+        self.feed_mm_rev_setpoint = {"Al": 0.12, "Ti": 0.055}  # Ti lower feed
+
+        # Baseline torque model (healthy)
+        # torque_twin = base + slope * (feed_mm_rev - feed_ref)
+        self.torque_base = {"Al": 15.0, "Ti": 45.0}
+        self.feed_ref = {"Al": 0.12, "Ti": 0.055}
+        self.torque_slope = {"Al": 60.0, "Ti": 220.0}
+
+        # Point-P onset shift (step-change at P to enable ~2h lead time to F)
+        self.p_torque_offset = {"Al": 2.0, "Ti": 6.0}
+        self.p_vib_offset = {"Al": 0.04, "Ti": 0.08}
+
+        # Wear sensitivity (Ti tends to show stronger rise)
+        self.wear_torque_gain = {"Al": 0.45, "Ti": 1.15}
+        self.wear_vib_gain = {"Al": 0.03, "Ti": 0.06}
+
+        # Baseline vibration levels
+        self.vib_base = {"Al": 0.55, "Ti": 0.90}
+
+    def _regime_for_step(self, step: int) -> str:
+        return "Al" if step < self.n_al_steps else "Ti"
+
+    def _physics_torque_twin(self, regime: str, feed_mm_rev: float) -> float:
+        return self.torque_base[regime] + self.torque_slope[regime] * (feed_mm_rev - self.feed_ref[regime])
+
+    def _wear_factor(self, hole_id: int) -> float:
+        """
+        Accelerating wear after P.
+        Returns 0 before P, then grows "exponential-like" from P to F (and clamps after F).
+        """
+        if hole_id < self.hole_p:
+            return 0.0
+
+        span = max(1, self.hole_f - self.hole_p)
+        stage = (hole_id - self.hole_p) / span   # 0..1 over P->F
+        stage = float(np.clip(stage, 0.0, 1.0))
+
+        # exponential-ish growth: 0 -> ~19 when stage=1 (expm1(3))
+        return float(np.expm1(3.0 * stage))
+
+    def generate_telemetry(self) -> pd.DataFrame:
+        rows = []
+        ts = 0
+
+        for hole in range(self.n_holes):
+            wear = self._wear_factor(hole)
+
+            # hole-level hardness variation (nuisance variability)
+            hardness = np.random.normal(loc=0.0, scale=0.6)
+
+            for step in range(self.samples_per_hole):
+                regime = self._regime_for_step(step)
+
+                # Setpoints with small jitter
+                rpm = self.rpm_setpoint[regime] + np.random.normal(0, 25.0)
+                feed_mm_rev = self.feed_mm_rev_setpoint[regime] * (1.0 + np.random.normal(0, 0.02))
+
+                # Derived physics
+                omega_rad_s = rpm * 2.0 * np.pi / 60.0
+                feed_mm_s = feed_mm_rev * rpm / 60.0
+                mrr_mm3_s = self.area_mm2 * feed_mm_s
+
+                # Twin baseline
+                torque_twin = self._physics_torque_twin(regime, feed_mm_rev)
+
+                # Actual torque = baseline + variability + Point-P step + wear + noise
+                noise = np.random.normal(0, 1.0 + 0.15 * wear)  # noise grows with wear
+                torque_actual = torque_twin + hardness + noise
+
+                # Point P onset: a small but meaningful shift (friction starts dominating)
+                if hole >= self.hole_p:
+                    torque_actual += self.p_torque_offset[regime]
+
+                # Accelerating wear term
+                torque_actual += wear * self.wear_torque_gain[regime]
+
+                # After Point F: progressive instability + one final spike
+                if hole >= self.hole_f:
+                    torque_actual += 10 + 4 * (hole - self.hole_f)
+                    if hole == self.n_holes - 1 and step == self.samples_per_hole - 1:
+                        torque_actual += 30
+
+                # Vibration sensor channel (separate from torque)
+                vib_noise = np.random.normal(0, 0.05 + 0.01 * wear)
+                vibration = self.vib_base[regime] + vib_noise
+
+                if hole >= self.hole_p:
+                    vibration += self.p_vib_offset[regime]
+                vibration += wear * self.wear_vib_gain[regime]
+
+                # Ground truth P-F labeling
+                if hole < self.hole_p:
+                    state = 0
+                elif hole < self.hole_f:
+                    state = 1
+                else:
+                    state = 2
+
+                rows.append({
+                    "timestamp": ts,
+                    "time_s": ts * self.sample_dt_s,
+                    "hole_id": hole,
+                    "step_in_hole": step,
+                    "regime": regime,
+
+                    "rpm": rpm,
+                    "omega_rad_s": omega_rad_s,
+                    "feed_mm_rev": feed_mm_rev,
+                    "feed_mm_s": feed_mm_s,
+                    "mrr_mm3_s": mrr_mm3_s,
+
+                    "torque_twin": torque_twin,
+                    "torque_actual": torque_actual,
+                    "vibration": vibration,
+                    "wear_factor": wear,
+
+                    "state": state,  # 0 healthy, 1 degrading, 2 failure
+                    "ground_truth_P_or_worse": 1 if state >= 1 else 0,
+                    "ground_truth_failure_only": 1 if state == 2 else 0,
+                    "is_point_P": 1 if hole == self.hole_p and step == 0 else 0,
+                    "is_point_F": 1 if hole == self.hole_f and step == 0 else 0,
+                })
+                ts += 1
+
+        return pd.DataFrame(rows)
+
+# ==========================================
+# 2. PHYSICS-INFORMED FEATURE ENGINEERING
+# ==========================================
+def engineer_physics_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Physics features:
+      - Specific Cutting Energy: u = (Torque * omega) / MRR
+      - Sim-to-real gap: torque_actual - torque_twin
+      - Vibration score: rolling RMS of vibration per hole (no NaNs)
+    """
+    df_eng = df.sort_values("timestamp").copy()
+    eps = 1e-9
+
+    df_eng["u_energy"] = (df_eng["torque_actual"] * df_eng["omega_rad_s"]) / (df_eng["mrr_mm3_s"] + eps)
+    df_eng["torque_gap"] = df_eng["torque_actual"] - df_eng["torque_twin"]
+
+    def rolling_rms(x: pd.Series, window: int = 5) -> pd.Series:
+        r = x.rolling(window=window, min_periods=1).apply(
+            lambda a: np.sqrt(np.mean(a ** 2)),
+            raw=True
+        )
+        return r.fillna(0.0)
+
+    df_eng["vibration_score"] = df_eng.groupby("hole_id")["vibration"].transform(rolling_rms)
+
+    return df_eng
+
+# ==========================================
+# 3. REGIME NORMALIZATION + IF + PERSISTENCE
+# ==========================================
+def train_iforest_per_regime(train_df: pd.DataFrame, features: list, contamination: float = 0.01):
+    """
+    Regime normalization:
+      - one StandardScaler per regime
+      - one IsolationForest per regime
+    Trained ONLY on healthy baseline data.
+    """
+    models = {}
+    scalers = {}
+
+    for regime in sorted(train_df["regime"].unique()):
+        df_r = train_df[train_df["regime"] == regime].copy()
+
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(df_r[features])
+
+        model = IsolationForest(
+            n_estimators=200,
+            contamination=contamination,
+            random_state=42,
+            n_jobs=-1
+        )
+        model.fit(X_train)
+
+        models[regime] = model
+        scalers[regime] = scaler
+
+    return models, scalers
+
+def score_with_regime_models(df: pd.DataFrame, models: dict, scalers: dict, features: list) -> pd.DataFrame:
+    out = df.copy()
+    out["anomaly_score"] = np.nan
+    out["pred_anomaly"] = 0  # 1 = anomaly
+
+    for regime, model in models.items():
+        idx = (out["regime"] == regime)
+        if idx.sum() == 0:
+            continue
+
+        X = scalers[regime].transform(out.loc[idx, features])
+        out.loc[idx, "anomaly_score"] = model.decision_function(X)
+
+        pred = model.predict(X)  # -1 anomaly, +1 normal
+        out.loc[idx, "pred_anomaly"] = (pred == -1).astype(int)
+
+    return out
+
+def apply_persistence_filter(df: pd.DataFrame, window_n: int = 12, k_of_n: int = 6) -> pd.DataFrame:
+    """
+    K-of-N persistence:
+      Alert if >= k_of_n anomalies occur in the last window_n consecutive samples.
+    """
+    out = df.sort_values("timestamp").copy()
+    roll_sum = out["pred_anomaly"].rolling(window=window_n, min_periods=window_n).sum()
+    out["persistent_alert"] = (roll_sum >= k_of_n).astype(int)
+    out["persistent_alert"] = out["persistent_alert"].fillna(0).astype(int)
+    return out
+
+# ==========================================
+# 4. MAIN
+# ==========================================
+def main():
+    print("Step 1: Simulating stack drilling telemetry...")
+    dt_engine = DrillingDigitalTwin(
+        n_holes=220,
+        samples_per_hole=12,
+        hole_p=140,
+        hole_f=200,
+        drill_diameter_mm=8.0,
+        sample_dt_s=10.0
+    )
+
+    df_raw = dt_engine.generate_telemetry()
+    df_features = engineer_physics_features(df_raw)
+
+    # Train on known healthy data only (temporal split)
+    train_df = df_features[df_features["hole_id"] < 100].copy()
+    test_df = df_features[df_features["hole_id"] >= 100].copy()
+
+    features = ["u_energy", "torque_gap", "vibration_score"]
+
+    print("Step 2: Training Isolation Forest per regime (Al vs Ti)...")
+    models, scalers = train_iforest_per_regime(train_df, features, contamination=0.01)
+
+    print("Step 3: Scoring anomalies and applying persistence (6 of 12)...")
+    test_scored = score_with_regime_models(test_df, models, scalers, features)
+    test_scored = apply_persistence_filter(test_scored, window_n=12, k_of_n=6)
+
+    # ==========================================
+    # 5. EVALUATION (P-or-worse detection)
+    # ==========================================
+    y_true = test_scored["ground_truth_P_or_worse"]
+    y_pred = test_scored["persistent_alert"]
+
+    print("\n=== Classification report: Detect Point P (degrading) or worse ===")
+    print(classification_report(y_true, y_pred, target_names=["Healthy", "Degrading/Failure"]))
+
+    cm = confusion_matrix(y_true, y_pred)
+    fig_cm = px.imshow(
+        cm,
+        text_auto=True,
+        labels=dict(x="Predicted", y="Actual"),
+        x=["Healthy", "Degrading/Failure"],
+        y=["Healthy", "Degrading/Failure"],
+        title="Persistent Alert vs Ground Truth (P or worse)",
+        color_continuous_scale="Blues"
+    )
+    fig_cm.show()
+
+    # Lead time estimate: first persistent alert after P -> Point F
+    p_time_s = df_features.loc[df_features["is_point_P"] == 1, "time_s"].min()
+    f_time_s = df_features.loc[df_features["is_point_F"] == 1, "time_s"].min()
+
+    first_alert_s = test_scored.loc[
+        (test_scored["persistent_alert"] == 1) & (test_scored["time_s"] >= p_time_s),
+        "time_s"
+    ].min()
+
+    if not np.isnan(first_alert_s) and not np.isnan(f_time_s):
+        lead_time_hr = (f_time_s - first_alert_s) / 3600.0
+        print(f"\nEstimated lead time (first persistent alert → Point F): {lead_time_hr:.2f} hours")
+    else:
+        print("\nLead time could not be computed (no alert or missing Point F).")
+
+    # ==========================================
+    # 6. DASHBOARD
+    # ==========================================
+    fig = make_subplots(
+        rows=3, cols=1, shared_xaxes=True,
+        subplot_titles=(
+            "Torque: Twin Baseline vs Actual (stack drilling Al→Ti)",
+            "Anomaly Score (Isolation Forest per regime)",
+            "Persistent Alert (6 of 12 consecutive samples)"
+        )
+    )
+
+    fig.add_trace(
+        go.Scatter(x=test_scored["timestamp"], y=test_scored["torque_actual"], name="Actual Torque"),
+        row=1, col=1
+    )
+    fig.add_trace(
+        go.Scatter(x=test_scored["timestamp"], y=test_scored["torque_twin"],
+                   name="Twin Baseline", line=dict(dash="dash")),
+        row=1, col=1
+    )
+
+    fig.add_trace(
+        go.Scatter(x=test_scored["timestamp"], y=test_scored["anomaly_score"],
+                   name="Anomaly Score", fill="tozeroy"),
+        row=2, col=1
+    )
+
+    fig.add_trace(
+        go.Scatter(x=test_scored["timestamp"], y=test_scored["persistent_alert"],
+                   name="Persistent Alert"),
+        row=3, col=1
+    )
+
+    # Mark Point P and Point F
+    p_ts = df_features.loc[df_features["is_point_P"] == 1, "timestamp"].min()
+    f_ts = df_features.loc[df_features["is_point_F"] == 1, "timestamp"].min()
+    if not np.isnan(p_ts):
+        fig.add_vline(x=p_ts, line_dash="dash", annotation_text="Point P")
+    if not np.isnan(f_ts):
+        fig.add_vline(x=f_ts, line_dash="dash", annotation_text="Point F")
+
+    fig.update_layout(
+        height=950,
+        title_text="Condition-Based Maintenance Dashboard (A321 Wing Stack Drilling)",
+        showlegend=True,
+        template="plotly_white"
+    )
+    fig.show()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,192 @@
+---
+title: "R-Ladies Rome Presents:"
+subtitle: "Building a Website in R<br>Speaker: Federica Gazzelloni<br>28 June, 2024"
+format: 
+  rladies-revealjs:
+    title-slide-attributes:
+        data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Welcome to R-Ladies Rome 
+
+
+    rladies_global |>
+      filter(city %in% c('Rome'))
+
+
+
+::: columns
+::: {.column width="60%"}
+As a local chapter of **`R-Ladies Global`** we are dedicated to promoting `inclusivity` in the R language community. 
+
+Our monthly meetings provide a platform to discuss `current trends` and `hot topics in R`  💜 .
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif){width="70%"}
+:::
+:::
+
+## About R-Ladies Rome 
+
+`R-Ladies Rome` is now a **`well recognized community`**. From January 2023 to June 2024, we have hosted **`24`** events, with more than **`1,600`** RSVPs, and reached **`1K+`** members on meetup.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+
+```{r}
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_point(size=0.2) +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+```
+
+:::{.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::::: panel-tabset
+### R-Ladies Rome Team
+
+:::: {.columns}
+::: {.column width="40%"}
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
+`R-Ladies Global`.
+
+`Organizer` of the chapter are:
+
+- [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+- [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+- [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+
+::: callout-tip
+# JONI US!
+
+We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: 
+👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+:::
+
+
+:::
+
+::: {.column width="60%"}
+![](images/rladiesrome-team.png){width="100%"}
+:::
+::::
+
+
+
+### 2024 Rome Chapter Schedule
+
+-   January - `Introduction to Quarto` with [Torin White](https://www.linkedin.com/in/torinwhite/) & R-Ladies Paris
+-   February 17 - `Building a CahtBot with Shiny and R` with [James Wade](https://www.linkedin.com/in/james-h-wade/)
+    & TunisR User Group
+-   February 20 - `Debugging in R` with [Shannon Pileggi](https://www.linkedin.com/in/shannon-m-pileggi/)
+-   March 22 - `Vetiver and model deployment` with [Isabel Zimmerman](https://www.linkedin.com/in/isabel-zimmerman/)
+-   April 16 - `R for geospatial ds and public health surveillance` with [Dr. Paula Moraga](https://www.paulamoraga.com/)
+-   May 24 - R in Production: An Evening with [Dr.Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)
+
+<center>
+
+> **TODAY: June 24 - `Building a Website in R` with [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)**
+
+</center>
+
+-   mid-July - `Quarto dashboards` with [Isabella Velasquez](https://ivelasq.rbind.io/)
+
+**`Future Speakers:`**
+[Yanina Bellini Saibene](https://www.linkedin.com/in/yabellini/), [Julia Stewart Lowndes](https://www.linkedin.com/in/julia-stewart-lowndes/), [Gwynn Gebeyehu](https://www.linkedin.com/in/gwynn-gebeyehu-83694280/)
+
+
+
+
+
+
+
+:::::
+
+# R-Ladies Rome & NYC present: {.smaller}
+
+Today's workshop is lead by our R-Ladies Rome Organizer Federica Gazzelloni. She is a Statistician and an Actuary interested in machine learning application to health data. More about her ongoing projects and teaching experiences can be found here: <https://federicagazzelloni.com/>
+
+So without further ado, let's get started developping our brand new Website in R! 🚀

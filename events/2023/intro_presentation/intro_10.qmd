@@ -1,0 +1,138 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "Career Development Talk<br><br>October 27, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on [Youtube @rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be recorded!
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+
+
+# Welcome Everyone! {.smaller}
+
+Welcome to the October event hosted by the `R-Ladies Rome chapter`.
+
+I'm `Federica Gazzelloni`, one of the chapter's organizers, and I'm absolutely delighted to have each and every one of you here with us tonight.
+
+It brings me great joy to introduce you to `Francesca Picone`, our newest co-organizer, Statistician, and Actuary with a rich background in data analysis and risk management. Francesca's expertise it is a valuable addition to our team.
+
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Lead Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Organizer` is [Francesca
+Picone](https://www.linkedin.com/in/francesca-picone-481783175/)
+
+`Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+
+We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: [rome@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### Rome Chapter Schedule - Year 2023
+
+> **`Join us as we explore the fascinating world of data visualization!`**
+
+Looking forward to the upcoming months, we're excited to announce that our events will be focusing on `data visualizations`. Get ready for a deep journey into the art of data visualization, taking place on `November 10th and 30th`.
+
+Our featured speakers for these sessions are none other than `Cédric Scherer` and `Cara Thompson`, gurus in the field of data visualization techniques. 
+
+
+
+In recent months, `R-Ladies Rome` has been buzzing with a diverse array of events, including `talks`, `hands-on workshops`, `coding sessions`, and engaging `panel discussions`. These gatherings have all shared a common theme: our passion for `R programming`, `data science`, and `statistics.`
+
+Recent highlights include discussions on topics such as `Machine Learning`, `Quarto`, and the `tidyverse`. We've delved into `infectious disease modeling` and other fascinating subjects by experts in the field.
+
+
+
+### News & Announcements
+
+::: {style="color: #88398A"}
+
+
+> **`Your support and involvement are crucial to our success.`**
+
+:::
+::: columns
+::: {.column width="50%"}
+- We're proud to have the support of `R Consortium`, a key `sponsor` that shares our passion for advancing the world of data science and R programming. 
+
+![](images/rconsortium.png)
+:::
+
+::: {.column width="50%"}
+- As an `open collective`, we rely on the contributions and engagement of our members to continue our mission and expand our community. 
+
+![](images/opencollective.png)
+:::
+:::
+:::
+
+
+
+
+# Today's Event {.smaller}
+
+Welcome to this event dedicated to exploring the world of `Career and Development` in Data Science, Statistics, and STEM fields, in general.  
+
+We would like to hear about your individual career journeys, the challenges you've encountered, and the valuable experiences you've gained. Most importantly, we would like you to share your insights into the world of data science, statistics, and R programming from the perspective of women in science.
+
+By sharing our stories and experiences, we can all learn from one another and gain a deeper understanding of the exciting paths that await us in these fields.
+
+
+
+
+
+

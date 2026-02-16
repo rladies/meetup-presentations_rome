@@ -1,0 +1,177 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "Ten Tips for better text: typography meets ggplot and friends <br>November 30, 2023"
+format: 
+  rladies-revealjs:
+    embed-resources: true
+    progress: true
+    logo: images/logo.png
+    footer: "[R-Ladies Rome](https://rladies.org/) sponsored by [R Consortium](https://www.r-consortium.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+
+<center>[Youtube.com/\@rladiesrome](https://www.youtube.com/@rladiesrome)</center>
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>.
+
+> `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Feel free to use the chat or raise your hand ✋ to ask questions.
+
+# Materials for today {.smaller}
+
+This is a **`Watch & Learn`** session, all materials will be shared
+during the presentation.
+
+If you'd like to **`Do & Learn`**:
+
+-   Make sure you have the latest R and RStudio otherwise you can
+    download it here: <https://posit.co/download/rstudio-desktop/>
+
+-   If you do not want to install anything, you can access all of the R
+    capabilities from `Posit Cloud`: <https://login.posit.cloud/>
+
+# Welcome Everyone! {.smaller}
+
+Welcome to the second `Data Visualization Event` of November. This month
+holds a special significance for `exploratory data analysis`, and we're
+fortunate to host not one but two fabulous events featuring expert data
+visualization professionals. `Cara Thompson`, our speaker for this
+session, after having hosted `Cédric Scherer` on November 10th event.
+
+::: columns
+::: {.column width="60%"}
+:::
+
+We are honored to welcome Cara, a field expert in Building a story with data.
+:::
+
+I'll be sharing more about our chapter activities and initiatives before
+handing over the floor to our speaker.
+
+# Who are we? {.smaller}
+
+We are `Federica Gazzelloni` and `Francesca Picone`, respectively the Lead Organizer and an Organizer for `R-Ladies Rome` Events. We organize talks, workshops and tutorials, generously sponsored by the `R Consortium`, all with the mission of
+`promoting the R language` within the `Data Science community`.
+We both are Statisticians and Actuaries, Federica is  passionate about Data
+Visualization and Francesca is passionate about Risk Management. 
+
+![](images/rladiesrome_team.png){fig-align="center" width="900"}
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language and for empowering women at all user levels by
+    building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 219 chapters in
+    63 countries, 3943 events and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/). She is also a
+Co-founder of `R-Ladies Global`
+
+`Lead Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Organizer` is [Francesca
+Picone](https://www.linkedin.com/in/francesca-picone-481783175/)
+
+`Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We are always open to new joiners, so if you'd like to contribute to our
+Rome chapter and being a co-organizer let us know:
+[rome\@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### Rome Chapter Schedule
+
+In recent months, `R-Ladies Rome` has been buzzing with a diverse array
+of events, including `talks`, `hands-on workshops`, `coding sessions`,
+and engaging `panel discussions`. These gatherings have all shared a
+common theme: our passion for `R programming`, `data science`, and
+`statistics.`
+
+Recent highlights include discussions on topics such as
+`Machine Learning`, `Quarto`, and the `tidyverse`. We've delved into
+`infectious disease modeling` and other fascinating subjects by experts
+in the field.
+
+In January, we will be partnering with `R-Ladies Paris`. More info is
+coming soon. Stay tuned!
+
+### News & Announcements
+
+::: {style="color: #88398A"}
+> **`Your support and involvement are crucial to our success.`**\n Click
+> 👉 <https://opencollective.com/r-ladies-rome> support `R-Ladies Rome`!
+:::
+
+::: columns
+::: {.column width="50%"}
+-   We're proud to have the support of `R Consortium`, a key `sponsor`
+    that shares our passion for advancing the world of data science and
+    R programming.
+
+![](images/rconsortium.png)
+:::
+
+::: {.column width="50%"}
+-   As an `open collective`, we rely on the contributions and engagement
+    of our members to continue our mission and expand our community.
+
+![](images/opencollective.png)
+:::
+:::
+:::
+
+# Today's presentation {.smaller .r-fit-text}
+
+Cara is a data visualisation consultant with an academic background, specialising in helping research teams and data-driven organisations turn their data insights into to clear and compelling visualisations.
+
+She lives in Edinburgh, Scotland, with her husband and two young daughters. Cara regularly shares coding tips for dataviz online, and genuinely enjoys helping others level up their dataviz skills through talks, bespoke organisational training, and one-to-one coaching.
+
+In this talk, we will explore how to make text work for us, by first considering how much of it we really need. Once we've decluttered and explored how we can use colours to be less text-dependent, we'll look at how to optimise text hierarchy in descriptions and in-plot annotations to keep the main thing the main thing, and how to create dynamic content and alignments. Finally, we'll explore coding tricks to apply these typography tips to tables and interactive plots, giving readers additional information on demand.
+Throughout the talk, Cara will share the packages and code snippets used to create and modify plots in R straight from readily available data.
+
+<center>🚀 `Are you ready to elevate your data storytelling skills? Let's dive in!` 🌟</center>
+

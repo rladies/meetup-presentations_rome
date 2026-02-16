@@ -1,0 +1,154 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "R/Bioconductor watch party for #BioC2023<br><br>August 28, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+[Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/code-of-conduct/>.
+
+> `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Feel free to use the chat or raise your hand ✋ to ask questions.
+
+# Agenda for Today {.smaller}
+
+-   Introduction to Bioconductor
+-   Watch party:
+    -   Keynote:
+        -   `Reproducible Manuscripts with Quarto` (J.J. Allaire) 
+    -   Short talks:
+        -   Spatial Transcriptomics: `{SPAMMER}` package
+        -   Infrastructure: `{rworkflows}` package
+        -   Single-cell: `Dimensionality Reduction`
+    -   Workshop talks:
+        -   `Epidemiology for Bioinformaticians` 
+        -   `Differential Expression Analysis`
+-   Conclusions        
+
+# Materials for Today
+
+::: fragment
+-   BioC2023 <https://bioc2023.bioconductor.org/workshops/>
+:::
+::: fragment
+-   Bioconductor R/Galaxi: <https://workshop.bioconductor.org/>
+:::
+::: fragment
+-   We will be using several packages. If you'd like to follow along, please log in to `Galaxi`, where an `RStudio environment` will be provided to start practicing with `R/Bioconductor` packages.
+:::
+
+# Welcome Everyone!
+
+::: fragment
+Welcome to this event hosted by the `R-Ladies Rome` chapter. This is our August event, the first of this kind as we are `in person in Rome` at the Department of Statistics of La Sapienza University.
+:::
+::: fragment
+My name is `Federica Gazzelloni`, lead organizer of R-Ladies Rome. I am a statistician and an actuary with a diverse range of experience in both academic and industry sectors. I have a keen interest in all aspects of Data Science.
+:::
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+::: fragment
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+:::
+::: fragment    
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+:::
+::: fragment
+-   `R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally.
+:::
+
+::: fragment
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+::: fragment
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+:::
+
+<br>
+
+### Rome 2023 Fall Scedule {.smaller}
+::: columns
+::: {.column width="50%"}
+As we step into this second part of the Year, we find ourselves
+reflecting on the incredible journey we've had so far this year. Our
+R-Community of learners has grown, and we've had the privilege of
+learning from experts in the field.
+
+August marks the beginning of a new chapter, and we're excited to see
+what the rest of the year has in store for us. Stay tuned for more
+exciting experiences and opportunities to learn and grow together!
+:::
+
+::: {.column width="50%"}
+![](https://media.giphy.com/media/l0HlTvwNTvPpJVQNG/giphy.gif)
+:::
+
+:::
+
+
+### News
+
+::: {style="color: #88398A"}
+Important upcoming:
+
+RLadies Rome is now officially sponsored by the
+`RConsortium`
+![](images/rconsortium.png)
+:::
+
+
+:::
+
+# Today's Event {.smaller}
+
+It's time for the R/Bioconductor watch party.
+
+![xkcd](https://imgs.xkcd.com/comics/flash_games.png){fig-align="center"}
+

@@ -1,0 +1,44 @@
+- source: intro_02.qmd
+  quarto-pub:
+    - id: 4001bc9d-b6c6-4d19-a460-4fe0b1b364e5
+      url: https://rladiesrome.quarto.pub/02202024
+- source: intro_03.qmd
+  quarto-pub:
+    - id: cf0db282-7b29-4018-a346-8b788a4fd053
+      url: https://rladiesrome.quarto.pub/03222024
+- source: intro_04.qmd
+  quarto-pub:
+    - id: 90feccce-9b5c-4003-b47c-e2c6947ae4c5
+      url: https://rladiesrome.quarto.pub/april162024
+- source: intro_05.qmd
+  quarto-pub:
+    - id: 592af8a7-70ab-49a9-9ade-bce41add1674
+      url: https://rladiesrome.quarto.pub/may242024
+- source: intro_06.qmd
+  quarto-pub:
+    - id: 088abdde-5cec-429b-bf01-63e5c7314ae1
+      url: https://rladiesrome.quarto.pub/june282024
+- source: intro_0718.qmd
+  quarto-pub:
+    - id: ec8c66ee-5b3c-4ab8-80fc-1e5b3253f401
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
+- source: intro_0729.qmd
+  quarto-pub:
+    - id: d68c77a5-d2c1-47b6-841b-b426fa3b0c1b
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
+- source: intro_0930.qmd
+  quarto-pub:
+    - id: 6ed0ddee-7b40-42eb-bf1b-3e3637f84dcb
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents
+- source: intro_1030.qmd
+  quarto-pub:
+    - id: 4ff05239-1589-46aa-8bbd-1ef5c265ad44
+      url: https://rladiesrome.quarto.pub/october302024
+- source: intro_1118.qmd
+  quarto-pub:
+    - id: 00c0444c-6d6f-4d43-9245-4f8b921b7d97
+      url: https://rladiesrome.quarto.pub/november182024
+- source: intro_1210.qmd
+  quarto-pub:
+    - id: 0468fe5c-be32-4574-aaad-c390c1f45971
+      url: https://rladiesrome.quarto.pub/r-ladies-rome-presents-853b

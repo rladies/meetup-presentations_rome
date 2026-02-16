@@ -1,0 +1,160 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "Mastering R II: The Journey Continues<br><br>September 22, 2023"
+format: 
+  rladies-revealjs:
+    logo: images/logo.png
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on [Youtube @rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be recorded!
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+
+
+# Set-up: Materials for today {.smaller}
+
+
+Please follow these steps to make sure you are ready to start:
+
+1.  Get inside your `Posit Cloud account` at <https://posit.cloud/>
+
+2.  Follow the link in the chat
+
+3.  Please have these packages installed on your cloud:
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages("markdown")
+install.packages("tidyverse")
+```
+
+4.  Load the package:
+
+```{r}
+#| eval: false
+#| echo: true
+library(tidyverse)
+```
+
+
+
+
+# Welcome Everyone!{.smaller} 
+
+We're starting our second `R-Crash` course called `Mastering R II: The Journey Continues`
+
+My name is `Francesca Picone`. I have just joined the `R-Ladies Rome` organizers' team. As a Statistician and an Actuary my background includes expertise in data analysis and Risk management.
+
+Together with `Federica Gazzelloni`, we're excited to have you here for our second R-Crash course.
+
+`Federica` will help you revisit the basics of R, reinforcing your understanding of its core concepts. After that, we'll dive into the world of data wrangling, reshape, and prepare messy data for analysis. To eventually apply the first line of regression models.
+
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Francesca
+Picone](https://www.linkedin.com/in/francesca-picone-481783175/)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+
+We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: [rome@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### Monthly Event Highlights: A Year of Learning and Networking {.smaller}
+
+We continue to contribute to the `R-Community of learners`. Our journey has been enriched with valuable insights from some of the most experienced professionals in the field. And the best part? We're just getting started! More awaits us in the months ahead.
+
+<center>
+![](images/calendar2023.png){height=400px}
+</center>
+
+::: {style="color: #e89075"}
+:::
+
+
+
+### News
+
+::: {style="color: #88398A"}
+Important upcoming:
+:::
+
+`R_Ladies Rome is now a Non-Profit Collective.` What this means?
+We have taken the steps to formalize our operations. 
+We place a strong emphasis on transparency and accountability to our sponsors, including members, donors, and the general public. 
+
+<center>
+![](images/opencollective.png){width=780px}
+</center>
+
+
+
+:::
+
+# Today's R-Crash Course {.smaller}
+
+<center>![](https://media.giphy.com/media/3o72F7RrTPW6jymXew/giphy.gif)</center>
+
+We're all set and ready to begin! We'll be utilizing `Posit Cloud`, which means you won't need to install anything – we can jump right into the coding.
+
+In this second session, I'll walk you through the steps of `using R to analyze data` and eventually `create a report`. After the demonstration, you'll have the opportunity to continue your data analysis just as we did together.
+
+Once the course concludes, you'll receive an email containing a brief assignment. Upon successful completion of the assignment and the submission of your report at <rome@rladies.org>, you'll be awarded a `Certificate of Successful Completion of the R-Crash` from `R-Ladies Rome`.
+
+So, let's dive right in and make the most of this hands-on `R-data analysis adventure`!

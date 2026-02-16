@@ -1,0 +1,235 @@
+---
+title: "R-Ladies Rome Presents"
+subtitle: "Developing your data visualisation skills in ggplot2<br>Speaker: Nicola Rennie<br>04 November, 2025"
+format: 
+  rladies-revealjs:
+    #title-slide-attributes:
+       # data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-image="images/1118-disclaimer.png" background-opacity="0.35"}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+**`Ensuring a safe, inclusive, and harassment-free space is our priority. We are committed to promoting a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# Welcome Everyone! {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjU1d2E1a2R0bmdubWphazdqdDFraGg4bmhtNGxtM2J0Nzk0ZGVtMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YQM4ykMCGpMd2/giphy.gif" background-opacity="0.2"}
+
+Happy to welcome you to our **November** Event!
+
+I’m **`Federica Gazzelloni`**, **`R-Ladies Rome`** chapter Organizer.
+
+We are thrilled to have you join us today. 🤩
+
+Get ready for an engaging and informative experience! 🔥
+
+# What to expect from this talk? {background-image="https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png" background-size="contain" background-position="bottom" background-opacity="0.2"}
+
+
+In this hands-on session, Nicola will guide us through the creative and technical process behind building impactful visualisations in R using ggplot2. You’ll learn how to move from data exploration to polished, communicative graphics.
+
+``` 
+- 🛠 Build and refine a complete chart in ggplot2, from sketch to final design.
+- 📊 Gain practical tips on balancing aesthetics and clarity in your visual storytelling.
+- 🌍 Explore strategies for translating ideas into effective data visuals.
+```
+
+# What is R-Ladies? {background-image="https://rladiesrome.org/images/world-map.png" background-size="cover" background-opacity="0.5"}
+
+\
+
+```         
+- R-Ladies is a global community with the mission of promoting the R language at all user levels by building a collaborative global network. It is a friendly community founded in 2012 by Gabriela de Queiroz
+    
+```
+
+# R-Ladies Rome {background-image="https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif" background-opacity="0.5"}
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**It is a local chapter of `R-Ladies Global` dedicated to promoting
+`inclusivity` in the R language community. Our monthly meetings provide a platform to discuss current trends and hot topics in R 💜.**
+
+## R-Ladies Rome in Numbers {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnp5YmxpZTFoYWd2bDFpbHVnMDVhcDhkcmtrbmo2eXlrdXlhYXJhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TrOMR6REnWN1u/giphy.gif" background-opacity="0.5"}
+
+::: {.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+**`R-Ladies Rome`** has grown into a **`widely recognized community`**.
+
+Here are the filled-in statistics for R-Ladies Rome: Since January 2023, we’ve welcomed over **1.7K members** on Meetup, gained **3K+ RSVPs**, and successfully organized **40+ events**.
+
+::: {#fig-members layout-ncol="2"}
+![Members-August25](images/rladiesrome-events-rsvp-growth.png){#fig-members width="80%"}
+
+![Members by Event](images/rladiesrome-members-by-event.png){#fig-event}
+
+R-Ladies Rome Members Growth (left) and Members by Event (right)
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+
+rladies_rome <- meetupr::get_group_events("rladies-rome", "past")
+rladies_rome_members <- meetupr::get_group_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome-11-25.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members-11-25.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome-11-25.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members-11-25.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+events_rsvp <- rladies_rome %>%
+  select(id,date_time,rsvps_count)%>%
+  mutate(date_time = as.Date(date_time,origin="1970-01-01"),
+         time_id=row_number(date_time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,date_time) %>%
+  reframe(going = sum(rsvps_count))%>%
+  mutate(tot_going = cumsum(going))
+
+
+# tot_members <- rladies_rome_members%>%
+#   mutate(created = # as.Date(created,origin="1970-01-01"))%>%
+#   group_by(created)%>%
+#   reframe(members=n())%>%
+#   mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+events_rsvp%>%
+  ggplot(aes(x = date_time, y = tot_going)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+ggsave("images/rladiesrome-events-rsvp-growth.png",
+       width=8,height=5)
+```
+
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+
+```
+
+##  {.smaller}
+
+::: callout-tip
+# Join us!
+
+If you'd like to contribute to our Rome chapter and being a co-organizer
+
+let us know:👉 <https://forms.gle/SkBiab8LhLcehpKu6>
+:::
+
+::::::::: panel-tabset
+### R-Ladies Rome Team
+
+::::: columns
+::: {.column width="40%"}
+`Founders` and `Organizers` of the chapter are:
+
+-   [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+
+-   [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+
+-   [Lucy Michaels](https://www.linkedin.com/in/lucymichaels/)
+
+:::
+
+::: {.column width="60%"}
+![](images/group-organizers.png){width="100%"}
+:::
+:::::
+
+### Propose a Talk or Become a Future Speaker {.smaller}
+
+If you are interested in speaking at one of our events, or would like to propose a speaker or workshop, please scan the `QR-Code` and fill out the form:
+
+<https://docs.google.com/spreadsheets/d/1AGw2CwkVUgMw2fQ4xPgfbRPkdCO1EDMto6YDMdCRgkE>
+
+
+### Next Events
+
+**Future Speakers:** [Jakub Nowosad](https://www.linkedin.com/in/nowosad/)
+
+![Jakub Nowosad presenting at R-Ladies Rome](images/jakub-intro.png){fig-align="center" width="45%"}
+
+:::::::::
+
+# R-Ladies Rome presents: {.smaller background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWF3djVlOW11OTBqOG9jZTNzZmJiYnJ5N2o1d2sya3h6ZWtqdWU3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12zFlnyyTRmIkU/giphy.gif" background-opacity="0.2"}
+
+✨ We’re glad to welcome **Nicola Rennie** to R-Ladies Rome for this  inspiring talk on ggplot2!
+
+She is a data visualisation specialist with a background in statistics and data science. She is also the author of **The Art of Visualization with ggplot2** and a co-author of the Royal Statistical Society’s Best Practices for Data Visualisation guidance. Nicola advocates for open-source tools and effective communication through data.
+
+

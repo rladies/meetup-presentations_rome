@@ -1,0 +1,187 @@
+---
+title: "R-Ladies Rome Introduction"
+subtitle: "R in Production: An Evening with Dr.Hadley Wickham<br>24 May, 2024"
+format: 
+  rladies-revealjs:
+    title-slide-attributes:
+        data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Welcome to R-Ladies Rome 
+
+
+    rladies_global |>
+      filter(city %in% c('Rome'))
+
+
+
+::: columns
+::: {.column width="60%"}
+As a local chapter of **`R-Ladies Global`** we are dedicated to promoting `inclusivity` in the R language community. 
+
+Our monthly meetings provide a platform to discuss `current trends` and `hot topics in R`  💜 .
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif){width="70%"}
+:::
+:::
+
+## About R-Ladies Rome 
+
+`R-Ladies Rome` is now a **`well recognized community`**. From January 2023 to May 2024, we have hosted **`23`** events, with **`1,643`** RSVPs, and reached **`985`** members on meetup.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(meetupr)
+library(tidyverse)
+
+rladies_rome <- get_events("rladies-rome")
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  scale_x_date(date_labels = "%b-%Y",date_breaks="4 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold"),
+        plot.subtitle = element_text(size=14,face="bold"),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_point(size=0.2) +
+  scale_x_date(date_labels = "%b-%Y") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold"),
+        plot.subtitle = element_text(size=14,face="bold"),
+        plot.caption = element_text(size=10,face="italic"))
+```
+
+:::{.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::::: panel-tabset
+### R-Ladies Rome Team
+
+:::: {.columns}
+::: {.column width="40%"}
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
+`R-Ladies Global`.
+
+`Lead Organizer` of the chapter is [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+
+`Organizers` are [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+and [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+
+::: callout-tip
+# JONI US!
+
+We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: 
+👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+:::
+
+
+:::
+
+::: {.column width="60%"}
+![](images/rladiesrome-team.png){width="100%"}
+:::
+::::
+
+
+
+### 2024 Rome Chapter Schedule
+
+-   January - `Introduction to Quarto` with [Torin White](https://www.linkedin.com/in/torinwhite/) & R-Ladies Paris
+-   February 17 - `Building a CahtBot with Shiny and R` with [James Wade](https://www.linkedin.com/in/james-h-wade/)
+    & TunisR User Group
+-   February 20 - `Debugging in R` with [Shannon Pileggi](https://www.linkedin.com/in/shannon-m-pileggi/)
+-   March 22 - `Vetiver and model deployment` with [Isabel Zimmerman](https://www.linkedin.com/in/isabel-zimmerman/)
+-   April 16 - `R for geospatial data science and public health surveillance` with [Dr. Paula Moraga](https://www.paulamoraga.com/)
+
+<center>
+
+> **TODAY: May 24 - R in Production: An Evening with [Dr.Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)**
+
+</center>
+
+-   mid-July - `Quarto dashboards` with [Isabella Velasquez](https://ivelasq.rbind.io/)
+
+**`Future Speakers:`**
+[Yanina Bellini Saibene](https://www.linkedin.com/in/yabellini/), [Julia Stewart Lowndes](https://www.linkedin.com/in/julia-stewart-lowndes/), [Gwynn Gebeyehu](https://www.linkedin.com/in/gwynn-gebeyehu-83694280/)
+
+
+
+
+
+### Slido Survey
+
+::: {style="color: black"}
+Please scan this QR code or head to <https://slido.com> and type
+`#rinproduction` to join our interactive survey. We'd love to hear your thoughts.
+:::
+
+![](images/rinproduction.png){style="fig-align: center" width="80%"}
+
+
+:::::
+
+# R-Ladies Rome & NYC present: {.smaller}
+
+It's now time to hand the floor over to our esteemed speaker. Tonight's event, we have the honor of hosting Dr. Hadley Wickham, Chief Scientist at Posit PBC (formerly RStudio), and a renowned figure in the world of data science.
+
+Dr. Wickham is not only an Adjunct Professor of Statistics at the University of Auckland, Stanford University, and Rice University, but he's also the mastermind behind some of the most widely-used tools and packages in the R programming language. His contributions to the field have revolutionized the way we approach data analysis, visualization, and software development in R.
+
+Tonight, Dr. Wickham will be talking 'R in Production,' sharing insights and best practices on how to deploy R solutions effectively in real-world environments. 
+
+So without further ado, please join me in welcoming `Dr. Hadley Wickham`.

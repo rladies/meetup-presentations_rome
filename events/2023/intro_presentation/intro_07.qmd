@@ -1,0 +1,205 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "Mastering R: An Intensive Crash Course for Data Enthusiasts!<br><br>July 27, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+[@rladiesrome - Youtube](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be recorded
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our `Code of Conduct` 👉 <https://rladies.org/code-of-conduct/>
+- Use the chat for introducing yourself and ask questions (or raise your hand ✋)
+
+
+
+
+
+# Set-up: Materials for today {.smaller}
+
+This is for all of you who already know how to do it; for all the others, we are going to show you the steps.
+
+Please follow these steps:
+
+1.  Get inside your `Posit Cloud account` at <https://posit.cloud/>
+
+2.  Follow the link in the chat
+
+3.  Please have these packages installed on your cloud:
+```{r}
+#| eval: false
+#| echo: true
+install.packages("tidyverse")
+install.packages("tidytuesdayR")
+```
+
+4.  Load the packages:
+```{r}
+#| eval: false
+#| echo: true
+library(tidyverse)
+library(tidytuesdayR)
+```
+
+
+
+# Welcome Everyone! {.smaller}
+
+Welcome to `Mastering R: An Intensive Crash Course for Data Enthusiasts!`
+
+My name is `Katie Wood`, one of the chapter's organizers, along with `Federica Gazzelloni`. We are excited to have you all here today for this crash course.
+
+`Federica` will be introducing us to the `R programming language`, demonstrating how to take simple baby steps towards data analysis with R.
+
+--In Italian --
+
+Benvenuti a `Mastering R: An Intensive Crash Course for Data Enthusiasts!`. Io sono `Katie Wood` una delle organizzatrici con `Federica Gazzelloni`. 
+Siamo molto contente di avervi tutti qui oggi per il nostro R-Crash course. 
+`Federica` ci illustrerà passo per passo come utilizzare R per analizzare i dati.  
+
+
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language and for empowering women at all user levels by building a
+    collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 218 chapters in
+    29 countries and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We are always open to new joiners, so if you'd like to contribute to our
+Rome chapter and being a co-organizer let us know:
+[rome\@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### First Half 2023 Events{.smaller}
+
+We have made it through half of the year, contributing to the R-Community of learners. We have gained valuable insights from the most experienced professionals in the field.
+
+So far, so good! We expect more to come!
+
+::: {style="color: #e89075"}
+| When       | Event                                                                                                                | Speaker                                                                                         |
+|-------------------|--------------------------|----------------------------|
+| `January 24`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                          |
+| `February 13` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                   |
+| `March 22`    | What's new in the tidyverse                                                                                          | [Isabella Velasquez](https://ivelasq.rbind.io/about.html)                                       |
+| `April 22`    | Modeling infectious diseases [R-Ladies New York](https://www.meetup.com/rladies-newyork/) & [R-Ladies Rome](https://www.meetup.com/rladies-rome/) | [Jacqueline Buros & Federica Gazzelloni](https://www.meetup.com/rladies-rome/events/292629944/) |
+| `May 17`      | Why I hate summer time [R4DS](https://www.rfordatasci.com/)                                                              | [Jon Harmon](https://www.linkedin.com/in/jonthegeek/)                                           |
+| `June 12`  | Data Science Best Practices                                                                                        | [Simina Boca](https://twitter.com/siminaboca)                                                   |
+| `June 30`  | One Health and the Politics of Coronaviruses                                                                      | [Laura Kahn](https://twitter.com/LauraKahn1)                                                    |
+:::
+
+### Second Half 2023 Events
+
+::: {style="color: #e89075"}
+
+<center>
+![](https://media.giphy.com/media/3o72F7RrTPW6jymXew/giphy.gif)
+</center>
+
+
+| When   | Event          | Speaker |
+|--------|----------------|---------|
+| `July 27` | `Mastering R: An Intensive Crash Course for Data Enthusiasts!` | [RLadies Rome Team](https://rladiesrome.quarto.pub/website/about.html)     |
+| `August 2-4` | `R/Bioconductor watch party for BioC 2023 at R-Ladies Rome` | [RLadies Rome Team](https://rladiesrome.quarto.pub/website/about.html)     |  
+| `September`| meet-and-greet in-person event |   RLadies Rome |
+
+
+
+
+
+:::
+
+
+### News
+
+::: {style="color: #88398A"}
+Important upcoming:
+:::
+
+::: columns
+::: {.column width="50%"}
+![](images/bioconductor.png)
+
+- The `BioC2023` conference will take place in Boston, MA, Dana Farber Cancer Institute.
+
+- `European Bioconductor Conference 2023` will take place in Ghent, Belgium September 20, 2023.
+[http://eurobioc2023.bioconductor.org/](http://eurobioc2023.bioconductor.org/)
+:::
+
+::: {.column width="50%"}
+<img src="https://pbs.twimg.com/media/FmS6UE1aUAA7V0B?format=jpg&name=medium">
+
+- `Posit Conf 2023` will take place at the Hyatt Regency Chicago from Sunday, September 17 - Wednesday, September 20, 2023. [https://posit.co/conference/](https://posit.co/conference/)
+:::
+
+:::
+:::
+
+# Today's R-Crash Course {.smaller}
+
+We are ready to get started! We will be diving into some basic code for analyzing data from the `#TidyTuesday` project. It's a weekly event within the R-Community, offering diverse datasets for practice with a variety of different types of data content. 
+
+We'll be using Posit Cloud, eliminating the need for any installations, so we can jump right into coding.
+
+In this session, I'll guide you through the steps for analyzing some data. After that, we'll split into breakout rooms, where you can continue the data analysis just as we did together. It's a fantastic opportunity to apply what we've learned and collaborate with your fellow participants.
+
+At the end of the course you will receive an email with a little assignment.
+
+So, let's dive in and make the most of this hands-on data analysis adventure! 
+

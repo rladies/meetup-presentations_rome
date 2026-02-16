@@ -1,0 +1,19 @@
+---
+title: "From R to Python: A Gentle Introduction"
+date: "2025-04-27"
+author: Federica Gazzelloni<br><span style="color:#ff66c4;">R-Ladies Rome</span>
+format: 
+  rladies-revealjs:
+    #title-slide-attributes:
+       # data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Welcome Everyone! 
+
+Introduction slides are here: <https://rladiesrome.quarto.pub/from-r-to-python-a-gentle-introduction>

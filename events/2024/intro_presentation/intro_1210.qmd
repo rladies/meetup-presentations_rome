@@ -1,0 +1,228 @@
+---
+title: "R-Ladies Rome Presents:"
+subtitle: "Using GitHub Copilot (and others LLM) with R<br>Speaker: Yanina Bellini Saibene<br>10 December, 2024"
+format: 
+  rladies-revealjs:
+    title-slide-attributes:
+      # data-background-color: "#f8f8f8"
+      data-background-image: "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmRocmdlbWdpd2t4emM2NHl5ejlnYjNyMzh1dWUyazNveTFvZ2Z1bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wPn31WOCzkvKg/giphy.gif"
+      data-background-size: "cover"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-image="images/1118-disclaimer.png" background-opacity=0.35}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+**`Ensuring a safe, inclusive, and harassment-free space is our priority. We are committed to promoting a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# What to expect from this talk? {background-image="https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png" background-size=contain background-position="bottom" background-opacity=0.3}
+
+This talk will provide you with essential insights to enhance your R coding skills with AI support.
+
+```
+🔍 Explore the Integration of GitHub Copilot with R
+🤖 AI and Large Language Models (LLMs) in Action
+📚 Challenges and Opportunities in Education
+🚀 Hands-on Learning
+```
+
+# Welcome Everyone!{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJ1ZnV1b2x0OTduYm13MHJuOXY2NW8yODM2ZTRheHJwbHRuYWRqYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xm3Juhtur1axDo8Ljo/giphy-downsized-large.gif" background-opacity=0.9}
+
+**Happy to welcome you to our December event! 🎉**
+
+**I’m `Federica Gazzelloni`, `R-Ladies Rome` chapter Organizer.**
+
+**We are thrilled to have you join us today. 🤩**
+
+**Get ready for an engaging and informative experience! 🔥**
+
+# What is R-Ladies? {background-image="https://rladiesrome.org/images/world-map.png" background-size=cover background-opacity=0.5}
+
+-   **`R-Ladies`** is a global community with the mission of promoting the R
+    language and for empowering women at all user levels by building a
+    collaborative global network.**
+
+-   It is a friendly community founded in 2012 by [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+
+# R-Ladies Rome {background-image="https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif" background-opacity=0.5}
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**It is a local chapter of `R-Ladies Global` dedicated to
+promoting `inclusivity` in the R language community.
+Our monthly meetings provide a platform to discuss current trends and hot topics in R 💜.**
+
+
+## R-Ladies Rome in Numbers{background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNjb2xqdXUyZmtudG1sdW51YmhubjMyNDVvdndqemJobWJ1bzlreCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iZGpuaRKdEZoI/giphy.gif" background-opacity=0.5}
+
+::: {.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+**`R-Ladies Rome`** has grown into a **`widely recognized community`**. 
+
+Since January 2023, we’ve welcomed over **`1.2K members`** on Meetup, gained **`2K+ RSVPs`**, and successfully organized **`25+ events`**.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+```{r}
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_smooth(color = "purple", se = F)+
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+```
+
+
+##  {.smaller}
+
+::: callout-tip
+# Join us!
+
+If you'd like to contribute to our Rome chapter and being a co-organizer
+let us know:👉 <https://forms.gle/SkBiab8LhLcehpKu6>
+:::
+
+::::::: panel-tabset
+### R-Ladies Rome Team
+
+::::: columns
+::: {.column width="40%"}
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
+`R-Ladies Global`.
+
+`Organizers` of the chapter are:
+
+-   [Federica Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+-   [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+:::
+
+::: {.column width="60%"}
+![](images/rladiesrome-team.png){width="100%"}
+:::
+:::::
+
+### Propose a Talk or Become a Future Speaker {.smaller}
+
+If you are interested in speaking at one of our events, or would like to
+propose a speaker or workshop, please scan the `QR-Code` and fill out the form:
+
+::::columns
+:::{.column width="50%"}
+<center>
+![**`Suggest a Speaker or a Topic`**](images/suggest-speaker.png){width="50%"}
+</center>
+:::
+:::{.column width="50%"}
+<center>
+![**`Speak at R-Ladies Rome`**](images/speaking.png){width="50%"}
+</center>
+:::
+::::
+
+### Next Events
+
+**Future Speakers:**
+
+-   [Eli Holder](https://www.linkedin.com/in/eliholder/) - Founder of
+    3iap (**January**)
+-   [Laura Kahn, MD](https://www.linkedin.com/in/laura-kahn-79b01510/) -
+    Author of "One Health and the Politics of COVID-19"
+- [Isabella Velásquez](https://www.linkedin.com/in/ivelasq/) - Sr. Product Marketing Manager at Posit PBC
+    
+:::::::
+
+
+# R-Ladies Rome presents: {.smaller background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3F5N2FwNGZnZ2s1b2hlY2ppbXU0bmIwa2JhN3U1MDNzOTcyYXdtZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ySvZaRKnzCdvG/giphy.gif" background-opacity=0.5}
+
+We are thrilled to have with us `Yanina Bellini Saibene`, `rOpenSci Community Manager`, who will be sharing her insights on how to use `GitHub Copilot with R`.
+
+Yanina is a data science researcher and educator, specializing in teaching computational skills and fostering inclusive communities. She is the coordinator of the Agroecosystem Modeling Network and a professor at UNAB and UDE. As a co-founder of MetaDocencia, LatinR, and R-Ladies Santa Rosa, she has been instrumental in building welcoming spaces for programming scientists. Yanina is also a valued contributor to global initiatives like the Carpentries and R-Ladies Global.
+
+Please join me in welcoming Yanina! 🌟
+

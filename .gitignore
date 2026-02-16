@@ -1,0 +1,20 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+images
+events/2023/events_presentation
+events/2023/intro_presentation/_extensions
+events/2023/intro_presentation/gif
+events/2023/intro_presentation/images
+events/2023/intro_presentation/images_intro
+events/2024/intro_presentation/_extensions
+events/2024/intro_presentation/data
+events/2024/intro_presentation/images
+events/2024/intro_presentation/scripts
+events/2025/intro_presentation/_extensions
+events/2025/intro_presentation/data
+events/2025/intro_presentation/images
+events/2025/intro_presentation/scripts
+~/Library/Application Support/meetupr/meetupr-token.rds

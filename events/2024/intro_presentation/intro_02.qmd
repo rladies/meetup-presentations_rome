@@ -1,0 +1,134 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "Title: Debugging in R<br>Speaker: Shannon Pileggi<br><br>20 February, 2024"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on [Youtube @rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be recorded!
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+
+# Set up Material for Today {.smaller}
+
+- Log-in to [https://posit.cloud/](https://posit.cloud/)
+- Find the Workshop material in the chat
+
+<center>
+![](https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png)
+<center/>
+
+
+
+# Welcome Everyone!{.smaller}
+
+This the first sole event of 2024 hosted by `R-Ladies Rome`. 
+My name is `Federica Gazzelloni`, one of the chapter's organizers, and I am thrilled to have you all here tonight. 
+We are also delighted to be joined by ***`Shannon Pileggi`***, who will be our speaker.
+
+<center>
+![](https://rladiesrome.quarto.pub/website/about/organizers_picts/background.png){width=80%}
+</center>
+
+
+
+
+
+# What is R-Ladies? 
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting the R language and for empowering women at all user levels by building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by [Gabriela de Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/) in San Francisco.
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+`R-Ladies` is now a **world-wide organization** with 219 chapters in 63 countries, 3943 events and more than 93,000 members globally.
+For more information, please visit [rladies.org](rladies.org)
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`** dedicated to promoting gender diversity in the R language community. Our monthly meetings provide a platform to discuss current trends and **hot topics in R**, and we encourage active participation and engagement from all attendees. We welcome your suggestions and comments, and invite you to get in touch to join our vibrant community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Lead Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Organizer` is [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+
+
+
+:::{.callout-tip}
+## We are always open to new joiners, so if you'd like to contribute to our Rome chapter and being a co-organizer let us know: [https://forms.gle/SkBiab8LhLcehpKu6](https://forms.gle/SkBiab8LhLcehpKu6)
+:::
+
+### 2024 Rome Chapter Schedule
+
+- January - `Introduction to Quarto` with Torin White & R-Ladies Paris
+- February 17 - `Building a CahtBot with Shiny and R` with James Wade & TunisR User Group
+- February 20 - `Debugging in R` with Shannon Pileggi
+- March 22 - `Vetiver and model deployment` with Isabel Zimmerman
+- April - `Causal Inference` with Jennifer Hill & R-Ladies NYC
+- May - `Hadley Wickham`
+- June - `rOpenSci` with Yanina Bellini Saibene
+- July ?
+- August - `Nasa-Openescapes` with Julia Stewart Lowndes
+
+
+### Slido Survey
+
+::: {style="color: black"}
+Please scan this QR code or head to slido.com and type #debuggingR
+:::
+
+<center>
+![](images/debuggingR.png){width=80%}
+</center>
+::: columns
+::: {.column width="50%"}
+:::
+::: {.column width="50%"}
+:::
+:::
+
+:::
+
+
+
+
+# Today's presentation {.smaller}
+
+Welcome to this exciting event where we will be exploring the world of Debugging in R, this will be an interactive session where you can expand your knowledge about R learning code troubleshooting tips. 
+
+`Dr. Shannon Pileggi` is Lead Data Scientist at The Prostate Cancer Clinical Trials Consortium, a frequent blogger, and a member of the R-Ladies Global team. She enjoys automating data wrangling and data outputs, and making both data insights and learning new material digestible.
+[https://www.pipinghotdata.com/](https://www.pipinghotdata.com/)

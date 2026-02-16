@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+
+$link-color: #ff66c4;
+
+$presentation-h1-font-size:	1.8em;
+
+// fonts
+$font-family-sans-serif:
+  SourceSansProRegular,
+  Arial,
+  sans-serif;
+
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+// increase the size of the logo
+.reveal .slide img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+// logo on the top right corner
+.reveal .slide-logo {
+  display: block !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 10px !important;
+  max-height: 15% !important;
+  height: 100% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+
+
+// increase font of the footer
+.reveal .footer {
+  font-family: $presentation-heading-font;
+  font-size: 1.2em;
+  color: #9d709e;
+}

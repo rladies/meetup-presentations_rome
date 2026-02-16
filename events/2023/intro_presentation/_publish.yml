@@ -1,0 +1,62 @@
+- source: intro_03.qmd
+  quarto-pub:
+    - id: c27f392a-bc72-43d1-817e-8a094cc1e887
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-mar23'
+    - id: 77067a86-5753-4f50-8296-6185f752d300
+      url: 'https://quartopub.com/sites/rladiesrome/mar222023'
+- source: intro_04.qmd
+  quarto-pub:
+    - id: b40150d3-ba80-44c6-a287-e32507f35b3b
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-to-r-ladies-rome-apr23'
+    - id: dd0b1740-7375-47cd-9065-c4e748591fc7
+      url: 'https://quartopub.com/sites/rladiesrome/apr222023'
+- source: intro_05.qmd
+  quarto-pub:
+    - id: 2259d492-f363-49a7-ad8b-45146f17eb9f
+      url: 'https://quartopub.com/sites/fgazzelloni/welcome-tobrr-ladies-rome'
+    - id: fc0cab4f-f06a-4130-a3b7-f12d61a3e8ee
+      url: 'https://quartopub.com/sites/rladiesrome/may172023'
+- source: intro_01.qmd
+  quarto-pub:
+    - id: ecd08edf-dd7b-4a70-bca7-176b8fe0d420
+      url: 'https://quartopub.com/sites/rladiesrome/jan242023'
+- source: intro_02.qmd
+  quarto-pub:
+    - id: d8b28eee-e672-4f65-8e94-02859ba20576
+      url: 'https://quartopub.com/sites/rladiesrome/feb132023'
+- source: intro_06.qmd
+  quarto-pub:
+    - id: 72f8ab7e-c7a3-46e5-b154-29428ffc365d
+      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome-6'
+- source: intro_06_2.qmd
+  quarto-pub:
+    - id: 324d5b7b-e695-4d85-9645-45955b9c2cca
+      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome-june23'
+- source: intro_07.qmd
+  quarto-pub:
+    - id: c8e87cc9-27a1-4122-9d1e-18ea9c706fb3
+      url: 'https://quartopub.com/sites/rladiesrome/july272023'
+- source: intro_08.qmd
+  quarto-pub:
+    - id: a0339a17-ada2-4e94-a2cf-13ee7dbabfda
+      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome'
+- source: intro_09.qmd
+  quarto-pub:
+    - id: bb7e5735-9e72-4066-a423-298e970a0967
+      url: 'https://quartopub.com/sites/rladiesrome/september2023'
+- source: intro_10.qmd
+  quarto-pub:
+    - id: 8faf726a-a99b-4c04-8a90-81bc4f751244
+      url: 'https://rladiesrome.quarto.pub/october272023'
+- source: intro_11.qmd
+  quarto-pub:
+    - id: e3fdbf6a-c7f7-4884-b58b-1896ecd0a4e9
+      url: 'https://quartopub.com/sites/rladiesrome/november112023'
+- source: intro_11_2.qmd
+  quarto-pub:
+    - id: 27441dc9-5ae7-4a1d-986e-cf998250b376
+      url: 'https://quartopub.com/sites/rladiesrome/welcome-to-r-ladies-rome'
+- source: intro_12.qmd
+  quarto-pub:
+    - id: 63fae6a7-7373-4eb0-b7e8-f804e85831f6
+      url: 'https://quartopub.com/sites/rladiesrome/december152023'

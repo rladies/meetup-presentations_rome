@@ -1,0 +1,184 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "What's new in the tidyverse<br><br>March 22, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+All `R-Ladies Rome` talks will be recorded and posted on
+[Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Feel free to turn off your cameras if you do not want to be recorded
+-   Please make sure to turn off your microphone during the talk
+-   Please consider any pop-ups (audio/video) that are not related to
+    the talk to be excluded from your machine during the talk.
+-   Feel free to use the chat to ask questions
+
+[https://rladies.org/code-of-conduct/](https://rladies.org/code-of-conduct/){.uri
+style="color: #562457"}
+
+# Materials for tonight {.smaller}
+
+**Watch & Learn**
+
+-   All materials will be shared during the presentation: **What's new
+    in the tidyverse**.
+
+**Do & Learn**
+
+-   Make sure you have the latest R and RStudio or to download here:
+    <https://posit.co/download/rstudio-desktop/>
+
+-   We will be using the `{tidyverse}` meta-package.
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+More resources: <https://www.tidyverse.org/blog/>
+
+# Welcome Everyone!
+
+Welcome to the third event hosted by the R-Ladies Rome chapter. My name
+is Federica Gazzelloni, one of the chapter's organizers, and I am
+thrilled to have you all here tonight. We are also delighted to be
+joined by ***`Isabella Velásquez`***, who will be our esteemed speaker
+for the evening.\
+\
+Benvenuti! Questo è il terzo evento per questo gruppo RLadies Rome. Io
+sono Federica Gazzelloni una delle organizzatrici. Siamo in compagnia di
+**Isabella Velásquez**, la nostra relatrice per questa sera. Tutto il
+materiale verrà condiviso durante la presentazione se volete potete dare
+un'occhiata alla documentazione relativa a Tidyverse di cui parleremo.
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language for empowering women at all user levels by building a
+    collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 206 chapters
+    and more than 93,000 members globally. For more information, please
+    visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+## R-Ladies Rome {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We expect more co-organizers to join us soon.
+
+<br>
+
+### 2023 fall schedule
+
+| When       | Event                                                                                                                | Speaker                                                                                                                             |
+|--------------|---------------------------|-------------------------------|
+| `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                                                              |
+| `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                                                       |
+| `March`    | What's new in the tidyverse                                                                                          | [Isabella Velásquez](https://ivelasq.rbind.io/about.html)                                                                           |
+| `April`    | [R-Ladies New York](https://www.meetup.com/rladies-newyork/) & [R-Ladies Rome](https://www.meetup.com/rladies-rome/) | [Dr. Laura Kahn](https://www.linkedin.com/in/laura-kahn-79b01510/) will present her new book about **One Health and Coronaviruses** |
+| `May`      | **`R4DS Community Learning`**                                                                                        | [Jon Harmon](http://jonthegeek.com/)                                                                                                |
+| `June`     | TBD                                                                                                                  |                                                                                                                                     |
+| `July`     | TBD                                                                                                                  |                                                                                                                                     |
+
+### How to get in touch
+
+> **Would you like to be involved?** <br> **Would you like to propose a
+> talk, or discuss about something in particular?**
+
+<br>
+
+Get in touch here: [rome\@rladies.org](rome@rladies.org)
+
+Twitter: [\@rladiesrome](https://twitter.com/RLadiesRome)
+
+GitHub:
+[meetup-presentations_rome](https://github.com/rladies/meetup-presentations_rome)
+
+LinkedIn:
+[\@R-LadiesRome](https://www.linkedin.com/company/r-ladies-rome)
+
+### Job Board
+
+::: {style="color: #88398A"}
+We have a **Job Board** to share with our members interesting openings.
+:::
+
+We are excited to share that we recently posted a request for new
+organizers on LinkedIn, and the response has been fantastic! So far,
+we've received 14 enthusiastic responses from highly qualified
+individuals who are eager to be part of this new venture.
+
+We're especially thrilled to have heard from two individuals based in
+Rome who are excited about joining our team. Their local expertise and
+passion for our mission will be invaluable as we expand into in-person
+gatherings.
+
+We're truly grateful for the overwhelming interest we've received and
+can't wait to see what the future holds for our chapter with such
+talented and dedicated individuals on board.
+:::
+
+# Tonight presentation {.smaller}
+
+Tonight speaker is **`Isabella Velásquez`**, for those of you who do not
+know about her...
+
+Isabella is an R enthusiast, first learning the programming language
+during her MSc in Analytics. Previously, Isabella conducted data
+analysis and research, developed infrastructure to support the use of
+data, and created resources and trainings. Her work on the **Posit
+(formerly RStudio) Marketing team** draws on these experiences to create
+content that supports and strengthens data science teams. In her spare
+time, Isabella enjoys playing with her tortoiseshell cat, watching film
+analysis videos, and hiking in the mountains around Seattle. **Find her
+on Twitter and Mastodon: @ivelasq3**
+
+In this meetup, we will be learning about **What's new in the
+tidyverse** a suite of packages that's revolutionized data wrangling,
+visualization, and analysis.
+
+At the end of the meetup we will be hosting a `Q&A session`.

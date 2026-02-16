@@ -1,0 +1,141 @@
+---
+title: "Welcome to R-Ladies Rome"
+subtitle: "One Health and the Politics of Coronaviruses<br>Speaker: Dr. Laura Kahn<br><br>June 30, 2023"
+format: 
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on
+[Youtube](https://www.youtube.com/@rladiesrome)
+
+-   Feel free to turn off your cameras, if you do not want to be
+    recorded
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct`: <https://rladies.org/code-of-conduct/>.
+
+> `We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Feel free to use the chat or raise your hand to ask questions.
+
+# Materials for today's talk {.smaller}
+
+Get ready for an eye-opening talk by the renowned physician, author, and educator, `Dr. Laura H. Kahn`! She'll be sharing some fascinating findings from her research for the book `"One Health and the Politics of Coronaviruses"`.
+
+
+# Welcome Everyone! {.smaller}
+
+Welcome to the seventh event hosted by the `R-Ladies Rome` chapter. 
+My name is `Katie Wood`, one of the chapter's organizers, together with `Federica Gazzelloni`.
+I am delighted to have you here today for this groundbreaking research's talk been spoken in various prestigious journals.
+
+We are delighted to be joined by ***`Dr. Laura Kahn`***, our esteemed speaker for today.
+
+Benvenuti! Questo è il settimo evento per `RLadies Rome`. Io sono Katie Wood una delle organizzatrici con Federica Gazzelloni. Oggi siamo in compagnia della **Dottoressa Laura Kahn**, che ci parlerà del suo ultimo libro. Tutto il materiale e la registrazione di questo evento verranno condivisi su GitHub, Twitter, Youtube e sul nostro sito: <https://rladiesrome.quarto.pub/website/>
+
+
+# What is R-Ladies? {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   `R-Ladies` is a global organization with the mission of promoting
+    the R language and for empowering women at all user levels by
+    building a collaborative global network.
+-   It is a gender diversity friendly community founded in 2012 by
+    [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.
+-   `R-Ladies` is now a **world-wide organization** with 218 chapters in
+    29 countries and more than 93,000 members globally.
+
+For more information, please visit [rladies.org](rladies.org)
+:::
+
+::: {.column width="40%"}
+![](https://media.giphy.com/media/meziKcZ0Jm1E0H6eqC/giphy.gif){width="70%"}
+:::
+:::
+
+
+## R-Ladies {.smaller}
+
+::: panel-tabset
+### R-Ladies Rome
+
+> **`R-Ladies Rome`** is a local chapter of **`R-Ladies Global`**
+> dedicated to promoting gender diversity in the R language community.
+> Our monthly meetings provide a platform to discuss current trends and
+> **hot topics in R**, and we encourage active participation and
+> engagement from all attendees. We welcome your suggestions and
+> comments, and invite you to get in touch to join our vibrant
+> community.
+
+Organizers and Volunteers:
+
+`Founder` of the chapter is [Claudia
+Vitolo](https://rladies.org/italy-rladies/name/claudia-vitolo/). She is
+also a Co-founder of `R-Ladies Global`
+
+`Organizer` of the chapter is [Federica
+Gazzelloni](https://federicagazzelloni.netlify.app)
+
+`Co-Organizer` is [Katie
+Wood](https://www.linkedin.com/in/katie-wood-omca%E2%84%A2-92060817/)
+
+We are always open to new joiners, so if you'd like to contribute to our
+Rome chapter and being a co-organizer let us know:
+[rome\@rladies.org](mailto:rome@rladies.org){.email}
+
+<br>
+
+### First Half 2023 Events
+
+We have made it through half of the year, contributing to the R-Community of learners. We have gained valuable insights from the most experienced professionals in the field.
+
+So far, so good! We expect more to come!
+
+::: {style="color: #e89075"}
+| When       | Event                                                                                                                | Speaker                                                                                         |
+|-------------------|--------------------------|----------------------------|
+| `January`  | MLOps with Vetiver                                                                                                   | [Julia Silge](https://juliasilge.com/)                                                          |
+| `February` | RLadies Quarto                                                                                                       | [Mine Çetinkaya-Rundel](https://mine-cr.com/)                                                   |
+| `March`    | What's new in the tidyverse                                                                                          | [Isabella Velasquez](https://ivelasq.rbind.io/about.html)                                       |
+| `April`    | Modeling infectious diseases [R-Ladies New York](https://www.meetup.com/rladies-newyork/) & [R-Ladies Rome](https://www.meetup.com/rladies-rome/) | [Jacqueline Buros & Federica Gazzelloni](https://www.meetup.com/rladies-rome/events/292629944/) |
+| `May`      | Why I hate summer time [R4DS Community Learning](https://www.rfordatasci.com/)                                                              | [Jon Harmon](https://www.linkedin.com/in/jonthegeek/)                                           |
+| `June 12`  | Data Science Best Practices                                                                                        | [Simina Boca](https://twitter.com/siminaboca)                                                   |
+| `June 30`  | One Health and the Politics of Coronaviruses                                                                      | [Laura Kahn](https://twitter.com/LauraKahn1)                                                    |
+:::
+
+### Second Half 2023 Events
+
+::: {style="color: #88398A"}
+| When   | Event          | Speaker |
+|--------|----------------|---------|
+| `last week of July` | `R kick start` | `R-Ladies Rome Team`     |
+
+
+<center>
+![](https://media.giphy.com/media/G8a1cgnNNKJs9fjg8g/giphy.gif)
+</center>
+:::
+:::
+
+
+# Today's presentation {.smaller}
+
+Hold on tight as we introduce you to the remarkable `Dr. Laura H. Kahn`. For those of you who don't know about her. She is a physician, an author, and educator who has dedicated almost two decades to the `Program on Science and Global Security at Princeton University School of Public and International Affairs`. 
+
+Dr. Kahn's groundbreaking work is not only transforming the way we approach public health crises, but it has also launched a global initiative - the `One Health Initiative`. Her visionary 2006 publication "Confronting Zoonoses, Linking Human and Veterinary Medicine" in the CDC journal Emerging Infectious Diseases set the stage for this revolutionary movement that recognizes the interconnectivity between human, animal, plant, environmental, and ecosystem health. 
+
+# Today's presentation {.smaller}
+
+With two books already under her belt, including `"Who's in Charge?"` and `"One Health and the Politics of Antimicrobial Resistance"` Dr. Kahn has become a celebrated leader in public health. 
+
+Her most recent venture, a Coursera course titled `"Bats, Ducks, and Pandemics: An Introduction to One Health Policy"`, has attracted thousands of students worldwide. Her efforts have earned her numerous awards, including the prestigious K.F. Meyer-James H. Steele Gold Head Cane Award from the American Veterinary Epidemiology Society. With her next book on `One Health and coronaviruses` set to be released soon, there's no doubt that Dr. Kahn's groundbreaking work will continue to have a lasting impact on global health for years to come.

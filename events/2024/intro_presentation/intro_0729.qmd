@@ -1,0 +1,222 @@
+---
+title: "R-Ladies Rome Presents:"
+subtitle: "Building Reproducible Pipelines with R, Docker and Nix<br>Speaker: Bruno Rodrigues<br>29 July, 2024"
+format: 
+  rladies-revealjs:
+    #title-slide-attributes:
+       # data-background-image: "images/background.png"
+    footer: "Visit our Website at [rladiesrome.org](https://rladiesrome.org/)"
+incremental: false
+embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Disclaimer {background-color="#562457"}
+
+This talk is recorded and will be posted on [Youtube
+\@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+🚫 Feel free to turn off your cameras, if you do not want to be
+recorded!
+
+`We prioritize creating a safe and inclusive space, free from any form of harassment, fostering a respectful environment for everyone to learn and connect.`
+
+-   Please remember that all our attendees are expected to adhere to our
+    `Code of Conduct` 👉 <https://rladies.org/coc/>
+-   Use the chat for introducing yourself and ask questions (or raise
+    your hand ✋)
+
+# What to expect from this talk? {.smaller}
+
+- Best Coding Practices: Moving beyond “script-based” workflows for more robust solutions.
+- Docker: Techniques for containerizing your analyses for consistency and portability.
+- Nix: A powerful package manager that enhances reproducibility both within and outside Docker environments.
+
+![](https://posit.co/wp-content/uploads/2023/09/conf23-hero2-static.png){fig-align="center"
+width="507"}
+
+# Welcome Everyone!
+
+To the second July's event hosted by R-Ladies Rome! I’m Federica
+Gazzelloni, chapter’s organizer. I’m thrilled to have you all here.
+Today, we have the honor of welcoming our speaker, **`Bruno Rodrigues`**,
+**Head of the Statistics Department at the Ministry of Research Higher education in Luxembourg**, who will be sharing his
+expertise on `reproducible pipelines with R, Docker an Nix`.
+
+# What is R-Ladies? {background-image="https://rladiesrome.org/images/world-map.png"}
+
+-   **R-Ladies is a global community with the mission of promoting the R
+    language and for empowering women at all user levels by building a
+    collaborative global network.**
+
+-   **It is a friendly community founded in 2012 by [Gabriela de
+    Queiroz](https://rladies.org/united-states-rladies/name/gabriela-de-queiroz/)
+    in San Francisco.**
+
+# R-Ladies Rome {background-image="https://media.giphy.com/media/3o7abBphHJngINCHio/giphy.gif"}
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+```         
+Local chapter of R-Ladies Global dedicated to
+promoting `inclusivity` in the R language community.
+Our monthly meetings provide a platform to discuss current trends and hot topics in R 💜.
+```
+
+## R-Ladies Rome in Numbers
+
+`R-Ladies Rome` is now a **`well recognized community`**. Since January
+2023, we reached **`1K+`** members on meetup, with more than **`1,600`**
+RSVPs, and **`20+`** events organized.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: false
+library(meetupr)
+rladies_rome <- get_events("rladies-rome")
+rladies_rome_members <- meetupr::get_members("rladies-rome")
+saveRDS(rladies_rome, "data/rladies_rome.rds")
+saveRDS(rladies_rome_members, "data/rladies_rome_members.rds")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+rladies_rome <- readRDS("data/rladies_rome.rds")
+rladies_rome_members <- readRDS("data/rladies_rome_members.rds")
+```
+
+```{r}
+events_rsvp <- rladies_rome %>%
+  select(id,time,going)%>%
+  mutate(time = as.Date(time,origin="1970-01-01"),
+         time_id=row_number(time)) %>%
+  arrange(time_id)%>%
+  group_by(time_id,time) %>%
+  reframe(going = sum(going))%>%
+  mutate(tot_going = cumsum(going))
+
+
+tot_members <- rladies_rome_members%>%
+  mutate(created = as.Date(created,origin="1970-01-01"))%>%
+  group_by(created)%>%
+  reframe(members=n())%>%
+  mutate(tot=cumsum(members))
+```
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+events_rsvp%>%
+  ggplot(aes(x = time, y = tot_going)) +
+  geom_line() +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Events RSVP",
+       subtitle = "Cumulative number of reservations",
+       x = "Time(month-year)",
+       y = "Number of Attendees",
+  caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal()+
+    theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+
+  
+tot_members%>%
+  ggplot(aes(x = created,y=tot)) +
+  geom_line() +
+  geom_point(size=0.2) +
+  scale_x_date(date_labels = "%b-%y",date_breaks="3 months") +
+  labs(title = "R-Ladies Rome Membership Registration Growth",
+       subtitle = "Cumulative number of members",
+       x = "Time(month-year)",
+       y = "Number of Members",
+       caption = "DataSource: {meetupr} R-package | Graphics: Federica Gazzelloni") +
+  theme_minimal() +
+  theme(plot.title = element_text(size=18,face="bold",hjust=0.5),
+        plot.subtitle = element_text(size=14,face="bold",hjust=0.5),
+        plot.caption = element_text(size=10,face="italic"))
+```
+
+::: {.callout .callout-info}
+For more information, please visit [rladiesrome.org](rladiesrome.org)
+:::
+
+##  {.smaller}
+
+::: callout-tip
+# Join us!
+
+If you'd like to contribute to our Rome chapter and being a co-organizer
+let us know:👉 <https://forms.gle/SkBiab8LhLcehpKu6>
+:::
+
+::: panel-tabset
+### R-Ladies Rome Team
+
+::: columns
+::: {.column width="40%"}
+`Founder` of the chapter is [Claudia
+Vitolo](https://www.linkedin.com/in/claudiavitolo/), and Co-founder of
+`R-Ladies Global`.
+
+`Organizers` of the chapter are:
+
+-   [Federica
+    Gazzelloni](https://www.linkedin.com/in/federicagazzelloni)
+
+-   [Silvana Acosta](https://www.linkedin.com/in/silacos/)
+
+-   [Rafaela Ribeiro Lucas](https://www.linkedin.com/in/rafaelagrlucas/)
+:::
+
+::: {.column width="60%"}
+![](images/rladiesrome-team.png){width="100%"}
+:::
+:::
+
+### Next Events
+
+| Date    | Speaker                                                           | Event                                                                                                                 |
+|-------------|-------------|------------------------------------------|
+| 16-Jan  | [Torin White](https://www.linkedin.com/in/torinwhite/)            | [Introduction to Reproducible Publications with Quarto](https://www.meetup.com/rladies-rome/events/298379981/)        |
+| 17-Feb  | [James Wade](https://www.linkedin.com/in/james-h-wade/)           | [Building a Chatbot with OpenAI, Shiny & R](https://www.meetup.com/rladies-rome/events/298860669/)                    |
+| 20-Feb  | [Shannon Pileggi](https://www.linkedin.com/in/shannon-m-pileggi/) | [Debugging in R](https://www.meetup.com/rladies-rome/events/298710129/)                                               |
+| 22-Mar  | [Isabel Zimmerman](https://www.isabelizimm.me/)                   | [Extending the data science workflow: {vetiver} and {pins}](https://www.meetup.com/rladies-rome/)                     |
+| 16-Apr  | [Dr. Paula Moraga](https://www.paulamoraga.com)                   | [R for geospatial data science and public health surveillance](https://www.meetup.com/rladies-rome/events/299977481/) |
+| 24-May  | [Dr. Hadley Wickham](https://www.linkedin.com/in/hadleywickham/)  | [R in Production: An Evening with Hadley Wickham](https://www.meetup.com/rladies-rome/events/300478052/)              |
+| 28-June | [Federica Gazzelloni](https://federicagazzelloni.com/)            | [Building a Website in R](https://www.meetup.com/rladies-rome/events/300477874/)                                      |
+|  18-July  | [Isabella Velasquez](https://www.linkedin.com/in/ivelasq/)        | [Quarto Dashboards](https://www.meetup.com/rladies-rome/events/302078218/)                                            |
+| TODAY | [Bruno Rodrigues](https://www.linkedin.com/in/brodriguesco/)      | [Building reproducible pipelines with R, Docker and Nix](https://www.meetup.com/rladies-rome/events/302078600/)       |
+
+**Future Speakers:** [Yanina Bellini
+Saibene](https://www.linkedin.com/in/yabellini/), [Julia Stewart
+Lowndes](https://www.linkedin.com/in/julia-stewart-lowndes/), [Gwynn
+Gebeyehu](https://www.linkedin.com/in/gwynn-gebeyehu-83694280/)
+
+
+### News
+
+**PositConf 2024**
+![](images/positconf24.png){width="70%" fig-align="center"}
+[https://posit.co/conference/](https://posit.co/conference/)
+
+
+:::
+
+# R-Ladies Rome presents: {.smaller}
+
+Today's workshop is lead by our Expert [Bruno Rodrigues](https://www.brodrigues.co/) **Head of the Statistics Department at the Ministry of Research and Higher Education in Luxembourg**. His background spans across academia and data science consulting, where he has developed a strong foundation in data analysis and research methodologies.
+
+Before transitioning to the public sector, Bruno gained valuable experience as a data science consultant with one of the Big Four accounting firms. His career began as a teaching and research assistant, where he developed a strong foundation in data analysis and research methodologies.
+
+We’re thrilled to have Bruno share his insights with us today. So without further ado, let's get started with **Building Reproducible Pipelines with R, Docker and Nix**! 🚀

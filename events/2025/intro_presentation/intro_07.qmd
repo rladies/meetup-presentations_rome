@@ -1,0 +1,58 @@
+---
+title: "R-Ladies Rome Presents:"
+subtitle: "<br><span style='color:#ff66c4;'>Forecasting Time Series with Linear Regression:<br>A Feature-Driven Approach</span><br><br>Speaker: **Rami Krispin**<br>July 03, 2025"
+footer: "[Visit our website: rladiesrome.org](http://www.rladiesrome.org)"
+logo: images/logo.png 
+logo-alt: "rladiesrome"
+format: 
+  revealjs:
+    theme: [blood, custom.scss]
+    scrollable: true
+    transition: slide
+    background-transition: fade
+    incremental: true
+editor: visual
+---
+
+# Welcome<br>Everyone! {background-image="images/logo.png" background-size="400px" background-position="right"}
+
+# Disclaimer {.smaller}
+
+This talk is recorded and will be posted on [Youtube \@rladiesrome](https://www.youtube.com/@rladiesrome)
+
+Please remember that all our attendees are expected to adhere to our `Code of Conduct` 👉 <https://rladies.org/coc/>
+
+<br>
+
+**`We ensure a safe, inclusive, and harassment-free space for learning. We are committed to providing a respectful environment where everyone feels welcome to learn, connect, and grow.`**
+
+# Who we are?
+
+```         
+rladies_global |>
+  filter(city %in% c('Rome'))
+```
+
+**`R-Ladies Rome` is a local chapter of `R-Ladies Global` dedicated to promoting `continuous learning` in the Open Source Community. Our monthly meetings provide a platform to discuss current trends and hot topics, such as `Git` 😈 and `Python` 🐍**
+
+# Join us! {background-image="images/background-joinus.png" background-size="800px" background-position="right"}
+
+If you’d like to join our team and contribute<br>to our community, we have a few open positions!
+
+<br>
+
+Fill out the form here 👇 <https://forms.gle/SkBiab8LhLcehpKu6>
+
+# Next Events
+
+July 22, 2025
+
+**R-Ladies Rome Presents: "Visualizzare data per i pazienti" by Rita Giordano**
+
+Event in Italian for healthcare professionals, focusing on data visualization for patient care.
+
+# R-Ladies Rome presents: {.smaller background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHI4YTBjaGF4OXp6N3dldXEzb3ltM21xdzF3Z2x6ZHRocDUyZmFiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Ztah2Jo4BQReDIs/giphy.gif" background-opacity="0.7"}
+
+We’re very excited to welcome [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) to R-Ladies Rome! Rami leads the Data Science and Engineering team at Apple Finance – Services and Infra, where he helps transform complex business questions into data-driven solutions using machine learning and statistical modeling.
+
+He’s also an open-source contributor and the author of Hands-On Time Series Analysis with R. Today, he’s joining us to share practical insights on feature-driven time series forecasting using linear regression. Please give a warm welcome to Rami Krispin!
